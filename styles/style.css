@@ -136,7 +136,7 @@ a.menu_button .menu_icon{
   vertical-align: middle;
   height: 43px;
   width: 140px;
-  background-image: url("../Images/Menu_Asset.jpg");
+  background-image: url("../images/Menu_Asset.jpg");
   background-size: contain;
   position: relative;
   right: 30px;
@@ -160,7 +160,7 @@ a.menu_button {
   vertical-align: middle; 
   width: 100px; 
   height: 43px; 
-  background-image: url("../Images/Menu_Asset.jpg");
+  background-image: url("../images/Menu_Asset.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100px 430px;
@@ -228,7 +228,7 @@ a {
   margin-bottom: 10px;
   width: 160px;
   height: 40px;
-  background-image: url(../Images/explore_redo.png);
+  background-image: url(../images/explore_redo.png);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -310,13 +310,13 @@ a {
 }
 
 .map-control-zoomin {
-  background-image: url("../Images/zoom_in_2.jpg");
+  background-image: url("../images/zoom_in_2.jpg");
   top: 20px;
   background-color:#eee;
   object-fit: fill;
 }
 .map-control-zoomout {
-  background-image: url("../Images/zoom_out_2.jpg");
+  background-image: url("../images/zoom_out_2.jpg");
   top: 50px;
   background-color: red;
   object-fit: fill;
@@ -382,7 +382,7 @@ a {
 
 .site_header .brand_area {
   position: relative;
-  background-image: url("../Images/header_website_rocket.png");
+  background-image: url("../images/header_website_rocket.png");
   background-size: 100%;
   z-index: 300;
   display: inline-block;
@@ -400,7 +400,7 @@ a {
 .footer_brand_area {
   position: relative;
   /*since this css file is nested within its own style folder, it has to go backwards ( ../ ) before it can go into the images folder*/
-  background-image: url("../Images/NASA_Logo.jpg");
+  background-image: url("../images/NASA_Logo.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center center;
