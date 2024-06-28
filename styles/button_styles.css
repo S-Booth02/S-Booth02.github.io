@@ -1,0 +1,64 @@
+/* exit button for the instructions/information screen */
+.close_button {
+  z-index:1050;
+  position: relative;
+  background-color: transparent;
+  background-image: url("../images/exit.png");
+  background-size: contain;
+  display: block;
+  border:none;
+  opacity: 0.5;
+  height: 15px;
+  width: 15px;
+  cursor:pointer;
+  background-repeat: no-repeat;
+  right: -5px;
+  margin-top: 60px;
+  margin-right: 24px;
+  float:right;
+}
+/* increase the opacity when the button is hovered over*/
+.close_button:hover {
+  opacity: 1;
+}
+
+/* open the menu screen */
+.menu-button {
+  z-index:2000;
+  position: relative;
+  background-color: transparent;
+  background-image: url("../images/menu_icon.png");
+  background-size: contain;
+  display: block;
+  border:none;
+  height: 50px;
+  width: 50px;
+  cursor:pointer;
+  background-repeat: no-repeat;
+  right: -5px;
+  margin-top: -78px;
+  margin-right: 40px;
+  float:right;
+}
+
+/*info button to toggle the info text */ 
+.instructions_button {
+  z-index: 1000;
+  position: absolute;
+  right: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  opacity: 0.5;
+  background-image: url("../images/info_button.png");
+  width: 30px;
+  height:30px;
+  background-size: contain;
+  display: block;
+  border: none;
+  background-color: transparent;
+}
+/* increase the opacity of the button when it is hovered over */
+.instructions_button:hover {
+  opacity:1;
+}
+/* will put the styling for the go back button when that gets added */

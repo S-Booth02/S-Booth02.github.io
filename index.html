@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 
-<html>
+<html class="js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video autio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths jPanelMenu fontawesome-i2svg-active fontawesome-i2svg-complete." lang="en">
+
 <head>
   <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <style>
+  * {font-family: Verdana, Helvetica, sans-serif;}
+  </style>
   <link rel="stylesheet" href="styles/style.css"/>
+  <link rel="stylesheet" href="styles/button_styles.css"/>
+  <link rel="stylesheet" href="styles/marker_styles.css"/>
+  <link rel="stylesheet" href="styles/menu_panel.css"/>
+  <link rel="stylesheet" href="styles/overlay_styles.css"/>
+  <link rel="stylesheet" href="styles/explore_more_styles.css"/>
   <title>Map Testing</title>
 </head>
-<body>
+<body class="light_background logged_out mobile_menu" data-menu-position="closed">
   <!-- header info -->
   <div class="jPanelMenu-panel" style="position: relative; transform: translated3d(0px, 0px, 0px);">
     <div class="site_header_area drop_show">
@@ -16,58 +25,432 @@
         </a>
         <a class="visuallyhidden focusable" href="#main">Skip Navigation</a>
         <div class="nav_area">
-          <a id="main" class="menu_button" href="javascript:void(0);" title="menu button">
-            <span class="menu_icon">menu and search</span>
-          </a>
+          <button id="menu-button" class="menu-button" alt="Menu Button" onclick="openNav()" type="button"></button>
         </div>
       </header>
     </div>
-  <!-- this will be the image section-->
-    <div id="map-wrapper">
-      <div class="container">
-        <!-- zoom area -->
-        <div class="map">
-          <div class ="maps-container unselectable sites_shows_content" style="overflow: auto; top: 105px; height: 648px;">
-            <!-- needs events -->
-            <div class="map-control map-control-zoomin"></div>
-            <div class="map-control map-control-zoomout"></div>
+      <!-- this will be the go back & overlay-->
+      <div id="overlay" class="sites-info-overlay" >
+        <!--<div class="sites-info-content" style="top: 105px ;height: 3000px;">  this element will have scrollable overflow -->
+          <div class="close-sites-info-overlay" onclick = "hidePopup()">
+            <span id="stop-player" style="font-size:0.7em!important;padding: 4px; padding-right: 7px; padding-left: 7px; background-color: #0b3d91; border-radius:20px; color:#fff!important">
+              GO BACK
+              <!-- this is where there should be an svg with the arrow symbol, since the others didnt work am leaving this blank till i get another one-->
+            </span>
+          </div>
+          <!-- this is currently in a testing phase -->
+          <div class="sites_info_data"> <!--this is where the green is coming from -->
             
-  <div class="maps-container-inner zoomedElement zoomedElement414 zoomedElement323" style="transform: scale(10); left: 0px; top: 60.5px; position: absolute;">
-    <div class="maps-zoomed-container">
-      <div  class="map-image" style="display:block;" >
-        <img src="Images/Marshall_Map.jpg" alt="Map of MSFC" width="700" height="600"/>
-      </div>
-      <div id ="group-marker-4221" class="marker-all marker-group" style="display:block; transform: scale(0.0519886);">
-        <a href="javascript:void(0);" aria-label= "Building 4221"></a>
-      </div>
-    </div>  
-  </div>
-  </div>
-    </div>
-      </div>
-    </div>
-    <!-- end of image section -->
-  </div>
-  <!-- footer -->
-  <div class ="site_footer_area">
-    <footer  class="site_footer">
-      <a href="https://www.nasa.gov" aria-label="home_footer_area">
-        <div class="footer_brand_area"></div>
-        
-      </a>
-      <div class="footer_info">
-        <div class="nasa-center">NASA Marshall Space Flight Center</div>
-        <div class="nasa-responsible">Responsible NASA Official:</div>
-        <div class="nasa-curator">Page Editor: Simone Booth</div>
-        <div class="footer-legal">
-          <div class="nasa-privacy-accesiblity">
-            <a href="https://www.nasa.gov/nasa-web-privacy-policy-and-important-notices/" aria-label="Privacy Policy">Privacy Policy</a>
-            |
-            <a href="https://www.nasa.gov/accessibility/" aria-label="Accessibility">Accessibility</a>
+            <div id= "location-specific-description"><!--this is the start of location-->
+            
+              <div id="4221_slideshow_images" class="image-center">
+                <!-- testing slideshow container from w3 schools-->
+                <div class="slideshow-containter-4221">
+                  <!--full-width images with number and caption text -->
+                  <div class="mySlides fade">
+                    <img title="Slideshow Image One" alt="Image of MSFC Building 4221" src="Images/4221.jpg" style="object-fit: fill;margin: 0 auto;height: 500px; width: 100%;" >
+                    <div class="text">Arial view of Building 4221 and surrounding area</div>
+                 </div> 
+                <div class="mySlides fade">
+                  <img title="Slideshow Image Two" alt="Image of space" src="Images/MSFC_4221.jpg" style="object-fit: fill;margin: 0 auto;height: 500px; width: 100%;">
+                  <div class="text">Caption Text #2</div>
+                </div>  
+                <div class="mySlides fade">
+                  <img title="Slideshow Image Three" alt="image of rocket" src="Images/MSFC_4221_sunset.jpg" style="object-fit: fill;margin: 0 auto;height: 500px; width: 100%;">
+                  <div class="text">Image of building near 4221</div>
+                </div>
+                
+                <!-- next and prev buttons -->
+                <a class="prev" onclick="pushSlides(-1)">&#10094;</a>
+                <a class="next" onclick="pushSlides(1)">&#10095;</a>
+                
+              </div> <!-- end of the slideshow container -->
+              <br>
+              
+              <!-- the dots -->
+              <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+              </div>
+            
+          </div> <!--this is the break for image center 2-->
+              
+              <div id="hosc_images" class="image-center">
+                <!-- testing slideshow container from w3 schools-->
+                <div class="slideshow-containter-4221">
+                  <!--full-width images with number and caption text -->
+                  <div class="mySlides fade">
+                    <img title="Slideshow Image One" alt="Image of MSFC Building 4221" src="Images/hosc.png" style="object-fit: fill;margin: 0 auto;height: 500px; width: 100%;" >
+                    <div class="text">Arial view of Building 4221 and surrounding area</div>
+                 </div> 
+                
+                
+                <!-- next and prev buttons -->
+                <a class="prev" onclick="pushSlides(-1)">&#10094;</a>
+                <a class="next" onclick="pushSlides(1)">&#10095;</a>
+                
+              </div> <!-- end of the slideshow container -->
+              <br>
+              
+              <!-- the dots -->
+              <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+              </div>
+            
+          </div> <!--this is the break for image center -->
+            
+              <!-- Text and Descriptions -->
+              <div id="description-title"></div>
+              <div id="description-paragraph" ></div>
+            <!-- end of text and descriptions -->
+              <hr>
+              <br>
+              </div><!--end of location_specific_description-->
+            
+            <!-- start of exploration section as a whole -->
+            <div id="exploration-div"> 
+            <!-- this i think needs an outer div to make it show up when explore is clicked -> may need other spots to be the ones to have the outer div -->
+              <div class="explore-more" >EXPLORE MORE!</div>
+              <!-- start of table -->
+              <div class="explore-table">
+                <!-- start flight hardware -->
+                <div class="explore-info">
+                  <div class="info-icon">
+                    <img src="Images/transformation_icon@2x.png" alt="">
+                  </div>
+                  <!-- this is having issues with the font size only applying correctly if both of these only have an id attached and not a class -->
+                  <div class="info" >
+                    <div class="info-title">Flight&nbsp;Hardware&nbsp;Facility</div>
+                    -
+                  </div>
+                </div>
+                <!-- end flight hardware -->                
+                <!-- start - engineering -->
+                <div class="explore-info">
+                  <div class="info-icon">
+                    <img src="Images/lab_icon@2x.png" alt="">
+                  </div>
+                  <div class="info" >
+                    <div class="info-title">Engineering&nbsp;Complex</div>
+                    -
+                  </div>
+                </div>
+                <!-- end - engineering -->
+                <!-- start - payload operations -->
+                <div class="explore-info">
+                  <div class="info-icon">
+                    <img src="Images/aero_icon@2x.png" alt="">
+                  </div>
+                  <!-- this is having issues with the font size only applying correctly if both of these only have an id attached and not a class -->
+                  <div class="info" >
+                    <div class="info-title">Payload&nbsp;Operations</div>
+                    -
+                  </div>
+                </div>
+                <!-- end - payload operations -->
+                
+                <!-- start - admin complex -->
+                <div class="explore-info">
+                  <div class="info-icon">
+                    <img src="Images/transformation_icon@2x.png" alt="">
+                  </div>
+                  <!-- this is the basis for adding the images into the explore section, need to make the text align to this  -->
+                  <div>
+                  <img src="Images/4221.jpg" style="object-fit:scale-down; height: 100px; width: auto; float: left;padding-left:14px;">
+                  <!-- this is having issues with the font size only applying correctly if both of these only have an id attached and not a class -->
+                  <div class="info" >
+                    <div class="info-title">
+                      Administration&nbsp;Complex
+                    </div>
+                    -
+                  </div>
+                  </div>
+                </div>
+                <!-- end - admin complex -->
+                
+                <!-- start historic-->
+                <div class="explore-info">
+                  <div class="info-icon">
+                    <img src="Images/transformation_icon@2x.png" alt="">
+                  </div>
+                  <!-- this is having issues with the font size only applying correctly if both of these only have an id attached and not a class -->
+                  <div class="info" >
+                    <div class="info-title">Historic</div>
+                    -
+                  </div>
+                </div>
+                <!-- end historic -->
+                
+                <!-- start activities -->
+                <div class="explore-info">
+                  <div class="info-icon">
+                    <img src="Images/transformation_icon@2x.png" alt="">
+                  </div>
+                  <!-- this is having issues with the font size only applying correctly if both of these only have an id attached and not a class -->
+                  <div class="info" >
+                    <div class="info-title">Activities</div>
+                    -
+                  </div>
+                </div>
+                <!-- end activities -->
+                
+                <!-- start - propulsion research and dev lab -->
+                <div class="explore-info" onclick="propulsionClick()">
+                  <div class="info-icon">
+                    <img src="Images/transformation_icon@2x.png" alt="">
+                  </div>
+                  <!-- this is having issues with the font size only applying correctly if both of these only have an id attached and not a class -->
+                  <div class="info" >
+                    <div class="info-title">Propulsion&nbsp;Research&nbsp;Development&nbsp;Lab</div>
+                    -
+                  </div>
+                </div>
+                <!-- end - propulsion research and dev lab -->
+              </div> <!-- end of table -->
+            </div> <!-- end of exploration section as a whole -->
+          </div> <!-- end of sites_info_data -->
+      </div> <!-- end of overlay -->
+      
+    
+    
+      <!-- this will be the image section-->
+      <div id="map-wrapper">
+        <div class="container">
+          <!-- zoom area -->
+          <div class="map">
+            <div class ="maps-container unselectable sites_shows_content" style="overflow: auto; top: 105px; height: 648px;">
+              <!-- commenting out the zoom buttons - will include instructions in info pop-up : if gets included again, still needs events -->
+              <!--
+                    <div class="map-control map-control-zoomin"></div>
+                    <div class="map-control map-control-zoomout"></div> 
+              -->
+              <!-- created button with attributes to make the info icon be the backgrond -->
+              <button class="instructions_button" alt="Information Button" onclick="info_click()" type="button"></button>
+              <button id="close_button" class="close_button" alt="Close Button" onclick="info_click()" z-index="1000" type="button"></button>
+              <div id = "map-instructions" class="map-instructions" style="display: block">
+                <span class="map-box-header">
+                </span>
+                <span class="map-box-text">
+                  Click on the dots to show more information. Use the scroll wheel or pinch the touch screen to zoom. *Update Later*
+                </span>
+              </div>
+              <div id ="map-origin" class="maps-container-inner zoomedElement zoomedElement414 zoomedElement987" style="transform: scale(1); left: 0px; top: 60.5px; position: absolute;">
+                <div class="maps-zoomed-container">
+                  <div  class="map-image" style="display:block;" >
+                    <img src="Images/TestMap.png" alt="Map of MSFC" />
+                      ::before
+                    </img>
+                  </div>
+                  <div id ="group-marker-4221" class="marker-all marker-group" style="display:block; transform: scale(1);" onclick="f4221()">
+                    <a href="javascript:void(0);" aria-label= "Admin Complex"></a>
+                    <span>Administration Complex</span>
+                  </div>
+                <div id ="group-marker-eng" class="marker-all marker-group" style="display:block; transform: scale(1);" onclick="feng()">
+                    <a href="javascript:void(0);" aria-label= "Engineering Complex"></a>
+                    <span>Engineering Complex</span>
+                  </div>
+                <div id="group-marker-4205" class="marker-all marker-group" style="display:block; transform: scale(1);" onclick="f4205()">
+                    <a href="javascript:void(0);" aria-label="Propulsion R&D Lab"></a>
+                    <span>Propulsion R&D Lab</span>
+                  </div>
+                <div id="group-marker-4665" class="marker-all marker-group" style="display:block; transform: scale(1);" onclick="fhistoric()">
+                    <a href="javascript:void(0);" aria-label="Historic Redstone Test Site"></a>
+                    <span>Historic Redstone Test Site</span>
+                  </div>
+                <div id="group-marker-hosc" class="marker-all marker-group" style="display:block; transform: scale(1);" onclick="fhosc()">
+                    <a href="javascript:void(0);" aria-label="Payload Operations Intergation Center"></a>
+                    <span>Payload Operations Intergation Center</span>
+                  </div>
+                <div id="group-marker-4316" class="marker-all marker-group" style="display:block; transform: scale(1);" onclick="f4316()">
+                    <a href="javascript:void(0);" aria-label="Activities Center"></a>
+                    <span>Activities Center</span>
+                  </div>
+                </div>  
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </footer>
+      <!-- end of image section -->
+    </div>
+    <!-- footer -->
+    <div class ="site_footer_area">
+      <footer  class="site_footer">
+        <a href="https://www.nasa.gov" aria-label="home_footer_area">
+          <div class="footer_brand_area"></div>
+        </a>
+        <div class="footer_info">
+          <div class="nasa-center">NASA Marshall Space Flight Center</div>
+          <div class="nasa-responsible">Responsible NASA Official:</div>
+          <div class="nasa-curator">Page Editor: Simone Booth</div>
+          <div class="footer-legal">
+            <div class="nasa-privacy-accesiblity">
+              <a href="https://www.nasa.gov/nasa-web-privacy-policy-and-important-notices/" aria-label="Privacy Policy">Privacy Policy</a>
+              |
+              <a href="https://www.nasa.gov/accessibility/" aria-label="Accessibility">Accessibility</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!--side navigation menu -->
+    <div id="sidenav-menu" class="sidenav">
+      <div class="menu-title-text"> Explore NASA Marshall Guide</div>
+      <hr class="solid">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div>
+        <div class="pin" onclick="map()">&nbsp;</div>
+        <a href="#" style="display: inline-block; width: 100%"onclick="map()">&nbsp;&nbsp;&nbsp;Map</a>  
+      </div>
+      <hr class="solid">
+      <div>
+        <div class="explore"onclick ="exploreMore()">&nbsp;</div>
+        <a href="#" style="display: inline-block; width: 100%"onclick ="exploreMore()">&nbsp;&nbsp;&nbsp;Explore</a>
+      </div>
+      <hr class="solid">
+      <div>
+        <div class="info">&nbsp;</div>
+        <a href="#" style="display: inline-block; width: 100%">&nbsp;&nbsp;&nbsp;Info</a>
+      </div>
+      <hr class="solid">
+      <div>
+        <div class="feedback">&nbsp;</div>
+        <a href="mailto:simone.booth1002@gmail.com?subject=Virtual Tour Feedback" style="display: inline-block; width: 100%">&nbsp;&nbsp;&nbsp;Feedback</a>
+      </div>
+      <hr class="solid">
+    </div>
   </div>
+  <!-- Script area - has function definitions below -->
+  <!-- info_click - this function will toggle the visibility of the  instructions and close button if either the close button or the info button is clicked -->
+  <!-- openNav - this function will change the width of the sidenav from 0 to 300 on menu click -->
+  <!-- closeNav -  this function will change the width of the sidenav from 300 to 0 on exit menu click -->
+  <!-- btest - *****SHOULD RENAME FUNC AND ADD DESCRIPTION -->
+  <!-- hidePopup -  -->
+  <script>
+  function info_click() {
+    var instruction = document.getElementById("map-instructions");
+    var close = document.getElementById("close_button");
+    if (instruction.style.display ==="none") {
+      instruction.style.display = "block";
+      close.style.display ="block";
+    } else {
+      instruction.style.display = "none";
+      close.style.display = "none";
+    }
+  }
+
+  function openNav() {
+    document.getElementById("sidenav-menu").style.width = "300px";
+  }
+
+  function closeNav() {
+    document.getElementById("sidenav-menu").style.width = "0px";
+  }
+
+  function hidePopup() {
+    document.getElementById("overlay").style.display = "none";
+    document.getElementById("map-origin").style.display = "block"; 
+    document.getElementById("location-specific-description").style.display = "block";
+    document.getElementById("hosc_images").style.display ="none"; 
+    document.getElementById("4221_slideshow_images").style.display ="none"; 
+    
+  }
+  function f4221() {
+    document.getElementById("overlay").style.display = "block";
+    document.getElementById("map-origin").style.display = "none";
+    document.getElementById("description-title").textContent = "Admin Section";
+    document.getElementById("description-paragraph").textContent = "Admin description.";
+  }
+
+  function feng() {
+    document.getElementById("overlay").style.display = "block";
+    document.getElementById("map-origin").style.display = "none";
+    document.getElementById("description-title").textContent = "Eng Section";
+    document.getElementById("description-paragraph").textContent = "Engineeering description.";
+  }
+
+  function f4205() {
+    document.getElementById("overlay").style.display = "block";
+    document.getElementById("map-origin").style.display = "none";
+    document.getElementById("description-title").textContent = "Propulsion Section";
+    document.getElementById("description-paragraph").textContent = "Propulsion description.";
+  }
+
+function fhosc() {
+    document.getElementById("overlay").style.display = "block";
+    document.getElementById("map-origin").style.display = "none";
+    document.getElementById("description-title").textContent = "Payload Operations Intergation Center";
+    document.getElementById("description-paragraph").textContent = "hosc";
+    document.getElementById("hosc_images").style.display= "block";
+  }
+
+function fhistoric() {
+    document.getElementById("overlay").style.display = "block";
+    document.getElementById("map-origin").style.display = "none";
+    document.getElementById("description-title").textContent = "Historic Redstone Test Site";
+    document.getElementById("description-paragraph").textContent = "historic description.";
+  }
+function f4316() {
+  document.getElementById("overlay").style.display = "block";
+    document.getElementById("map-origin").style.display = "none";
+    document.getElementById("description-title").textContent = "Activities Building";
+    document.getElementById("description-paragraph").textContent = "activities.";
+}
+  function exploreMore() {
+    document.getElementById("overlay").style.display = "block";
+    document.getElementById("map-origin").style.display = "none";
+    document.getElementById("location-specific-description").style.display = "none";
+    closeNav();
+  }
+
+  function map() {
+     document.getElementById("overlay").style.display = "none";
+    document.getElementById("map-origin").style.display = "block";
+    closeNav();
+  }
+function propulsionClick() {
+  document.getElementById("overlay").style.display = "none";
+  document.getElementById("map-origin").style.display = "block";
+  document.getElementById("location-specific-description").style.display = "block";
+  window.scrollTo(0,0);
+}
+
+  </script>
+  <!-- slideshow script-->
+  <script>
+    let slideIndex =1;
+    showSlides(slideIndex);
+
+    function pushSlides(n) {
+      showSlides(slideIndex +=n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides= document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if(n>slides.length) {slideIndex =1}
+      if(n< 1) { slideIndex = slides.length}
+        for ( i = 0; i < slides.length; i++) {
+          slides[i].style.display="none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+    }
+  </script>
+
+  <script src="scripts/main.js"></script>
+  <script src="scripts/zoom.js"></script>
+  <script src="scripts/click_listener.js"></script>
 </body>
 </html>

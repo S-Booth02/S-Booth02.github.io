@@ -1,0 +1,207 @@
+/* INFO OVERLAY*/
+/* for now just copying from the ref site*/
+.sites-info-overlay {
+  display: none; /* this is the thing that needs to be changed back when map is copied back in*/
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  position: absolute;
+  top: 0;
+  left:0;
+  min-height: 100%;
+  width: 100%;
+  z-index: 2100;
+  height: 3000px;
+  background-color: #fff;
+}
+.sites-info-content {
+  z-index: 4000;
+  position: absolute;
+  top: 100;
+  left: 100;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: firebrick;
+  display: block;
+}
+.close-sites-info-overlay,
+.notification-screen-close {
+  /* for now commenting out potential issues*/
+  display: block;
+  margin-left:10px;
+  width:80px;
+  height: 40px;
+  cursor: pointer;
+  position: fixed;
+  width: 100%;
+  background-color: #e4e9ef;
+  border-bottom: 1px solid #ddd;
+  margin: 0;
+  padding: 0;
+  z-index: 2200;
+  -webkit-box-shadow: 0 4px 4px -1px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0 4px 4px -2px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 4px -2px rgba(0,0,0,0.15);
+  /*temp line below*/
+  top:107px;
+  left: 0;
+}
+.close-sites-info-overlay span,
+.notification-screen-close span {
+  margin: 9px 0 0 9px; 
+  position: absolute;
+}
+
+.image_content{
+  width: auto;
+  height: 500px;
+  padding: 40px 10px 20px 10px;
+}
+
+.sites_info_data {
+  background-color: seagreen;
+  background-size: auto;
+  display: block;
+  height: 500px;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.content_page {
+  padding: 40px 10px 20px 10px;
+}
+.article_image_container {
+  margin-bottom:0;
+}
+@media (min-width: 769px){
+  .content_page .main_feature .master-slider {height: 600px;}
+}
+@media(min-width: 600px) {
+  .content_page .main_feature .master-slider {height: 400px;}
+}
+.content_page .main_feature .master-slider {
+  width: 100%;
+  height: 300px;
+}
+.content_page .main_feature .master-slider .gradient_container_bottom {
+  height: 80px;
+}
+* {box-sizing: border-box}
+/*slideshow container */
+.slideshow-container-4221 {
+  overflow: hidden;
+  position: relative;
+  height: 500px;
+  margin: auto;
+  width:100%;
+  background-color: blue;
+}
+/*hide images by default*/
+.mySlides {
+  display: none;
+  height: 500px;
+}
+/*next and prev buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  width: auto;
+  top:300px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  z-index:2150;
+}
+/* position the next button to the right*/
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* on hover add black background color with small opacity*/
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+/* caption text */
+.text {
+  /*color: #f2f2f2;*/
+  color: red;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  z-index: 5000;
+}
+/* number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+/*dot indicators*/
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  z-index: 2150;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+/*fading animation*/
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+.image-center {
+  margin: 0 auto;
+  width: 100%;
+}
+#description-title {
+  color: #444;
+  font-size: 18px;
+  font-weight: bold;
+}
+#description-paragraph {
+  color: #444;
+  font-size: 12px;
+  font-weight: normal;
+}
+.admin::after {
+    content: "Admin Complex";
+    color: blue;
+}
+.admin-desc::after {
+  content: "Description of Admin Complex";
+}
+.test::after {
+  content: "Test Section";
+  color: teal;
+}
+.test-desc::after {
+  content: "Description of Test";
+}
+#hosc_images {
+  display: none;
+}
+#4221_slideshowImages {
+  display: none;
+}

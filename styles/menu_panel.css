@@ -1,0 +1,115 @@
+/* menu side nav */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 3000;
+  top: 0;
+  right:0;
+  background-color: #0b3d91;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+/* links within the menu */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* change color of links on mouse hover */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* close button for nav */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 36px;
+  margin-left: 50px;
+  
+}
+
+/* for smaller screens, change the font size and padding */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/*styling for the title text within nav manu */
+.menu-title-text {
+  color: white;
+  padding: 15px;
+  font-size: 30px;
+}
+
+/* border style */
+hr.solid {
+  border-top:1px solid white;
+}
+.pin {
+  display: inline-block;
+  padding: 0;
+  margin-top: 1px;
+  zoom:5;
+  background-image: url("../Images/pin.png");
+  background-size: 100%;
+  width: 5px;
+  height: 10px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 3px;
+}
+.explore {
+  display: inline-block;
+  padding: 0;
+  margin-top: 1px;
+  zoom:5;
+  /*need to find an icon*/
+  /*background-image: url("../Images/pin.png");*/
+  background-size: 100%;
+  width: 5px;
+  height: 10px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 3px;
+}
+.info {
+  display: inline-block;
+  padding: 0;
+  margin-top: 1px;
+  zoom:5;
+  /*need to find an icon*/
+  /*background-image: url("../Images/pin.png");*/
+  background-size: 100%;
+  width: 5px;
+  height: 10px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 3px;
+}
+.feedback {
+  display: inline-block;
+  padding: 0;
+  margin-top: 1px;
+  zoom:5;
+  /*need to find an icon*/
+  /*background-image: url("../Images/pin.png");*/
+  background-size: 100%;
+  width: 5px;
+  height: 10px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 3px;
+}
