@@ -64,23 +64,23 @@
                 <a class="prev" onclick="pushSlides(-1)">&#10094;</a>
                 <a class="next" onclick="pushSlides(1)">&#10095;</a>
                 
-              </div> <!-- end of the slideshow container -->
-              <br>
+                </div> <!-- end of the slideshow container -->
+                <br>
               
-              <!-- the dots -->
-              <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-              </div>
+                <!-- the dots -->
+                <div style="text-align:center">
+                  <span class="4221Dot dot" onclick="currentSlide(1)"></span>
+                  <span class="4221Dot dot" onclick="currentSlide(2)"></span>
+                  <span class="4221Dot dot" onclick="currentSlide(3)"></span>
+                </div>
             
-          </div> <!--this is the break for image center 2-->
+              </div> <!--this is the break for image center 2-->
               
               <div id="hosc_images" class="image-center">
                 <!-- testing slideshow container from w3 schools-->
                 <div class="slideshow-containter-4221">
                   <!--full-width images with number and caption text -->
-                  <div class="mySlides fade">
+                  <div class="hoscSlides fade">
                     <img title="Slideshow Image One" alt="Image of MSFC Building 4221" src="images/hosc.png" style="object-fit: fill;margin: 0 auto;height: 500px; width: 100%;" >
                     <div class="text">Arial view of Building 4221 and surrounding area</div>
                  </div> 
@@ -95,9 +95,7 @@
               
               <!-- the dots -->
               <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="hoscDot dot" onclick="currentSlide(1)"></span>
               </div>
             
           </div> <!--this is the break for image center -->
@@ -312,7 +310,7 @@
       </div>
       <hr class="solid">
       <div>
-        <div class="info">&nbsp;</div>
+        <div class="info_menu">&nbsp;</div>
         <a href="#" style="display: inline-block; width: 100%">&nbsp;&nbsp;&nbsp;Info</a>
       </div>
       <hr class="solid">
@@ -363,6 +361,9 @@
     document.getElementById("map-origin").style.display = "none";
     document.getElementById("description-title").textContent = "Admin Section";
     document.getElementById("description-paragraph").textContent = "Admin description.";
+    document.getElementById("4221_slideshow_images").style.display ="block"; 
+    slideSet = "mySlides";
+    dotSet = "4221Dot"
   }
 
   function feng() {
@@ -385,6 +386,8 @@ function fhosc() {
     document.getElementById("description-title").textContent = "Payload Operations Intergation Center";
     document.getElementById("description-paragraph").textContent = "hosc";
     document.getElementById("hosc_images").style.display= "block";
+    slideSet = "hoscSlides";
+    dotSet = "hoscDot"
   }
 
 function fhistoric() {
@@ -415,6 +418,7 @@ function propulsionClick() {
   document.getElementById("overlay").style.display = "none";
   document.getElementById("map-origin").style.display = "block";
   document.getElementById("location-specific-description").style.display = "block";
+  
   window.scrollTo(0,0);
 }
 
@@ -423,6 +427,8 @@ function propulsionClick() {
   <script>
     let slideIndex =1;
     showSlides(slideIndex);
+    var slideSet;
+    var dotSet;
 
     function pushSlides(n) {
       showSlides(slideIndex +=n);
@@ -434,8 +440,8 @@ function propulsionClick() {
 
     function showSlides(n) {
       let i;
-      let slides= document.getElementsByClassName("mySlides");
-      let dots = document.getElementsByClassName("dot");
+      let slides= document.getElementsByClassName(slideSet);
+      let dots = document.getElementsByClassName(dotSet);
       if(n>slides.length) {slideIndex =1}
       if(n< 1) { slideIndex = slides.length}
         for ( i = 0; i < slides.length; i++) {
