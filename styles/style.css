@@ -228,7 +228,7 @@ a {
   margin-bottom: 10px;
   width: 160px;
   height: 40px;
-  background-image: url(../images/explore_redo.png);
+  background-image: url("../images/explore.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -382,7 +382,7 @@ a {
 
 .site_header .brand_area {
   position: relative;
-  background-image: url("../images/header_website_rocket.png");
+  background-image: url("../images/MSFC_Header.svg");
   background-size: 100%;
   z-index: 300;
   display: inline-block;
@@ -400,7 +400,7 @@ a {
 .footer_brand_area {
   position: relative;
   /*since this css file is nested within its own style folder, it has to go backwards ( ../ ) before it can go into the images folder*/
-  background-image: url("../images/NASA_Logo.jpg");
+  background-image: url("../images/NASA_logo.svg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center center;
