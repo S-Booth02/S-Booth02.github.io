@@ -61,7 +61,7 @@
 }
 
 .sites_info_data {
-  background-color: seagreen;
+  background-color:white;
   background-size: auto;
   display: block;
   height: 500px;
@@ -96,7 +96,7 @@
   height: 500px;
   margin: auto;
   width:100%;
-  background-color: blue;
+  background-color: black;
 }
 /*hide images by default*/
 .mySlides {
@@ -108,7 +108,7 @@
   cursor: pointer;
   position: absolute;
   width: auto;
-  top:300px;
+  top:340px;
   padding: 16px;
   color: white;
   font-weight: bold;
@@ -216,4 +216,10 @@
 }
 #propulsion_images {
   display: none;
+}
+.all_slideshows {
+  margin: 0 auto;
+  height: 500px; 
+  width: auto; 
+  display:block;
 }

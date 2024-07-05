@@ -27,19 +27,20 @@
         <div class="nav_area">
           <button id="menu-button" class="menu-button" alt="Menu Button" onclick="openNav()" type="button"></button>
         </div>
+        
       </header>
     </div>
       <!-- this will be the go back & overlay-->
       <div id="overlay" class="sites-info-overlay" >
         <!--<div class="sites-info-content" style="top: 105px ;height: 3000px;">  this element will have scrollable overflow -->
-          <div class="close-sites-info-overlay" onclick = "hidePopup()">
-            <span id="stop-player" style="font-size:0.7em!important;padding: 4px; padding-right: 7px; padding-left: 7px; background-color: #0b3d91; border-radius:20px; color:#fff!important">
+          <div id="close_overlay"class="close-sites-info-overlay" onclick = "hidePopup()" style="top: 105px;">
+            <span id="stop-player" style="font-size:0.7em;padding: 4px; padding-right: 7px; padding-left: 7px;  background-color: #0b3d91; border-radius:20px; color:#fff!important">
               GO BACK
               <!-- this is where there should be an svg with the arrow symbol, since the others didnt work am leaving this blank till i get another one-->
             </span>
           </div>
           <!-- this is currently in a testing phase -->
-          <div class="sites_info_data"> <!--this is where the green is coming from -->
+          <div class="sites_info_data" style="padding-top:87px;"> <!--this is where the green is coming from -->
             
             <div id= "location-specific-description"><!--this is the start of location-->
             
@@ -47,16 +48,16 @@
                 <!-- testing slideshow container from w3 schools-->
                 <div class="slideshow-containter-4221">
                   <!--full-width images with number and caption text -->
-                  <div class="mySlides fade">
-                    <img title="Slideshow Image One" alt="Image of MSFC Building 4221" src="images/4221.jpg" style="object-fit: fill;margin: 0 auto;height: 500px; width: 100%;" >
+                  <div class="mySlides fade"style="background-color: #0b3d91;">
+                    <img class="all_slideshows" title="Slideshow Image One" alt="Image of MSFC Building 4221" src="images/4221.jpg">
                     <div class="text">Arial view of Building 4221 and surrounding area</div>
                  </div> 
                 <div class="mySlides fade">
-                  <img title="Slideshow Image Two" alt="Image of space" src="images/MSFC_4221.jpg" style="object-fit: fill;margin: 0 auto;height: 500px; width: 100%;">
+                  <img class="all_slideshows" title="Slideshow Image Two" alt="Image of space" src="images/MSFC_4221.jpg">
                   <div class="text">Caption Text #2</div>
                 </div>  
                 <div class="mySlides fade">
-                  <img title="Slideshow Image Three" alt="image of rocket" src="images/MSFC_4221_sunset.jpg" style="object-fit: fill;margin: 0 auto;height: 500px; width: 100%;">
+                  <img class="all_slideshows" title="Slideshow Image Three" alt="image of rocket" src="images/MSFC_4221_sunset.jpg">
                   <div class="text">Image of building near 4221</div>
                 </div>
                 
@@ -80,8 +81,8 @@
                 <!-- testing slideshow container from w3 schools-->
                 <div class="slideshow-containter-4221">
                   <!--full-width images with number and caption text -->
-                  <div class="hoscSlides fade">
-                    <img title="Slideshow Image One" alt="Image of MSFC Building 4221" src="images/hosc.png" style="object-fit: fill;margin: 0 auto;height: 500px; width: 100%;" >
+                  <div class="hoscSlides fade"style="background-color: #0b3d91;">
+                    <img class="all_slideshows" title="Slideshow Image One" alt="Image of MSFC Building 4221" src="images/hosc.png">
                     <div class="text">Arial view of Building 4221 and surrounding area</div>
                  </div> 
                 
@@ -104,15 +105,15 @@
                 <!-- testing slideshow container from w3 schools-->
                 <div class="slideshow-containter-4221">
                   <!--full-width images with number and caption text -->
-                  <div class="propulsionSlides fade">
-                    <img title="Slideshow Image One" alt="Image of MSFC Building 4221" src="images/temp.jpg" style="object-fit: fill;margin: 0 auto;height: 500px; width: 100%;" >
+                  <div class="propulsionSlides fade" style="background-color: #0b3d91;">
+                    <img class="all_slideshows" title="Slideshow Image One" alt="Image of MSFC Building 4221" src="images/temp.jpg">
                     <div class="text">temp</div>
                  </div> 
                 
                 
-                <!-- next and prev buttons -->
-                <a class="prev" onclick="pushSlides(-1)">&#10094;</a>
-                <a class="next" onclick="pushSlides(1)">&#10095;</a>
+                  <!-- next and prev buttons -->
+                  <a class="prev" onclick="pushSlides(-1)">&#10094;</a>
+                  <a class="next" onclick="pushSlides(1)">&#10095;</a>
                 
                 </div> <!-- end of the slideshow container -->
                 <br>
@@ -128,8 +129,8 @@
                 <!-- testing slideshow container from w3 schools-->
                 <div class="slideshow-containter-4221">
                   <!--full-width images with number and caption text -->
-                  <div class="historicSlides fade">
-                    <img title="Slideshow Image One" alt="Image of MSFC Building 4221" src="images/temp.jpg" style="object-fit: fill;margin: 0 auto;height: 500px; width: 100%;" >
+                  <div class="historicSlides fade"style="background-color: #0b3d91;">
+                    <img class="all_slideshows" title="Slideshow Image One" alt="Image of MSFC Building 4221" src="images/temp.jpg" >
                     <div class="text">temp</div>
                  </div> 
                 
@@ -152,8 +153,8 @@
                 <!-- testing slideshow container from w3 schools-->
                 <div class="slideshow-containter-4221">
                   <!--full-width images with number and caption text -->
-                  <div class="activitiesSlides fade">
-                    <img title="Slideshow Image One" alt="Image of MSFC Building 4221" src="images/temp.jpg" style="object-fit: fill;margin: 0 auto;height: 500px; width: 100%;" >
+                  <div class="activitiesSlides fade"style="background-color: #0b3d91;">
+                    <img class="all_slideshows" title="Slideshow Image One" alt="Image of MSFC Building 4221" src="images/temp.jpg">
                     <div class="text">temp</div>
                  </div> 
                 
@@ -176,8 +177,8 @@
                 <!-- testing slideshow container from w3 schools-->
                 <div class="slideshow-containter-4221">
                   <!--full-width images with number and caption text -->
-                  <div class="4205Slides fade">
-                    <img title="Slideshow Image One" alt="Image of MSFC Building 4221" src="images/temp.jpg" style="object-fit: fill;margin: 0 auto;height: 500px; width: 100%;" >
+                  <div class="4205Slides fade"style="background-color: #0b3d91;">
+                    <img class="all_slideshows" title="Slideshow Image One" alt="Image of MSFC Building 4221" src="images/temp.jpg">
                     <div class="text">temp</div>
                  </div> 
                 
@@ -200,8 +201,8 @@
                 <!-- testing slideshow container from w3 schools-->
                 <div class="slideshow-containter-4221">
                   <!--full-width images with number and caption text -->
-                  <div class="engSlides fade">
-                    <img title="Slideshow Image One" alt="Image of MSFC Building 4221" src="images/temp.jpg" style="object-fit: fill;margin: 0 auto;height: 500px; width: 100%;" >
+                  <div class="engSlides fade"style="background-color: #0b3d91;">
+                    <img class="all_slideshows" title="Slideshow Image One" alt="Image of MSFC Building 4221" src="images/temp.jpg" >
                     <div class="text">temp</div>
                  </div> 
                 
@@ -339,7 +340,7 @@
         <div class="container">
           <!-- zoom area -->
           <div class="map">
-            <div class ="maps-container unselectable sites_shows_content" style="overflow: auto; top: 105px; height: 648px;">
+            <div class ="maps-container unselectable sites_shows_content" style="overflow: auto; top: 90px; height: 648px;">
               <!-- commenting out the zoom buttons - will include instructions in info pop-up : if gets included again, still needs events -->
               <!--
                     <div class="map-control map-control-zoomin"></div>
@@ -358,7 +359,7 @@
               <div id ="map-origin" class="maps-container-inner zoomedElement zoomedElement414 zoomedElement987" style="transform: scale(1); left: 0px; top: 60.5px; position: absolute;">
                 <div class="maps-zoomed-container">
                   <div  class="map-image" style="display:block;" >
-                    <img src="images/TestMap.png" alt="Map of MSFC" />
+                    <img src="images/Map001.png" alt="Map of MSFC" />
                       ::before
                     </img>
                   </div>
