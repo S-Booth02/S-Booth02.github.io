@@ -31,12 +31,14 @@
 .info {
   margin-left: 60px;
   font-size: 12px;
+  left:5px;
+  position: relative;
   /* margin left was og 83px */
 }
 .info-title {
   font-weight: bold;
   font-size: 18px;
-  
+  position: relative;
 }
 #titleone{
   font-size: 1.0em;
