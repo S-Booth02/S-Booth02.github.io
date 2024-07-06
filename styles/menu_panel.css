@@ -74,8 +74,8 @@ hr.solid {
   margin-top: 1px;
   zoom:5;
   /*need to find an icon*/
-  /*background-image: url("../images/pin.png");*/
-  background-size: 100%;
+  background-image: url("../images/explore_svg.svg");
+  background-size: 130%;
   width: 5px;
   height: 10px;
   background-color: transparent;
@@ -89,7 +89,7 @@ hr.solid {
   margin-top: 1px;
   zoom:5;
   /*need to find an icon*/
-  /*background-image: url("../images/pin.png");*/
+  background-image: url("../images/info.svg");
   background-size: 100%;
   width: 5px;
   height: 10px;
@@ -104,7 +104,7 @@ hr.solid {
   margin-top: 1px;
   zoom:5;
   /*need to find an icon*/
-  /*background-image: url("../images/pin.png");*/
+  background-image: url("../images/feedback_02.svg");
   background-size: 100%;
   width: 5px;
   height: 10px;
