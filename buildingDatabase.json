@@ -1,8 +1,8 @@
 {"buildingList":[
 	{"buildingName": "Office Building", "buildingNumber": "Building 4203"},
 	{"buildingName": "Office Building", "buildingNumber": "Building 4221", "active":true},
-	{"buildingName": "Propulsion R&D Lab", "buildingNumber": "Building 4205", "active":true, "imageFiles":["4205.jpg", "temp.jpg"], "iconType": "aero"},
-	{"buildingName": "Multipurpose Facility", "buildingNumber": "Building 4316", "active":true},
+	{"buildingName": "Propulsion R&D Lab", "buildingNumber": "Building 4205", "active":true, "imageFiles":["4205.jpg", "temp.jpg"], "iconType": 1, "label": "Propulsion R&D Lab", "description": "Placeholder: Propulsion Description"},
+	{"buildingName": "Multipurpose Facility", "buildingNumber": "Building 4316", "active":true, "imageFiles":["activities.JPG", "temp.jpg"], "iconType": 2, "label": "Activities Building", "description": "Placeholder: Activities Description"},
 	
 	{"buildingName": "Historic Redstone Test", "buildingNumber": "Building 4665"},
 	{"buildingName": "Historic Redstone Test", "buildingNumber": "Building 4665A"},
