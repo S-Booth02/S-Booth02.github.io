@@ -17,6 +17,7 @@
   <title>Map Testing</title>
 </head>
 <body class="light_background logged_out mobile_menu" data-menu-position="closed">
+  var jsonTest = new Spry.Data.JSONDataSet(buildingDatabase.json", {path: "buildingList});
   <!-- header info -->
   <div class="jPanelMenu-panel" style="position: relative; transform: translated3d(0px, 0px, 0px);">
     <div class="site_header_area drop_show">
@@ -358,6 +359,16 @@
                 </div>
                 </div>
                 <!-- end - propulsion research and dev lab -->
+
+                <div class="sampleTest" spry:region="jsonTest">
+                  <table class="dataTable">
+                    <tr>
+                      <th spry:sort="buildingNumber">Building Number</th>
+                      <th spry:sort="buildingName">Name</th>
+                    </tr>
+                  </table>
+                </div
+                
               </div> <!-- end of table -->
             </div> <!-- end of exploration section as a whole -->
           </div> <!-- end of sites_info_data -->
@@ -417,6 +428,8 @@
                     <a href="javascript:void(0);" aria-label="Activities Center"></a>
                     <span>Activities Center</span>
                   </div>
+
+                  
                 </div>  
               </div>
             </div>
