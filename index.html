@@ -374,12 +374,7 @@
         <div class="container">
           <!-- zoom area -->
           <div class="map">
-            <div class ="maps-container unselectable sites_shows_content" style="top: 90px; height: 648px;">
-              <!-- commenting out the zoom buttons - will include instructions in info pop-up : if gets included again, still needs events -->
-              <!--
-                    <div class="map-control map-control-zoomin"></div>
-                    <div class="map-control map-control-zoomout"></div> 
-              -->
+            <div class ="maps-container unselectable sites_shows_content" style="top: 90px; height: 400px;">
               <!-- created button with attributes to make the info icon be the backgrond -->
               <button class="instructions_button" alt="Information Button" onclick="info_click()" type="button"></button>
               <button id="close_button" class="close_button" alt="Close Button" onclick="info_click()" z-index="1000" type="button"></button>
@@ -390,7 +385,7 @@
                   Click on the dots to show more information. Use the scroll wheel or pinch the touch screen to zoom. *Update Later*
                 </span>
               </div>
-              <div id ="map-origin" class="maps-container-inner zoomedElement zoomedElement414 zoomedElement987" style="transform: scale(1); left: 0px; top: 60.5px; position: absolute;">
+              <div id ="map-origin" class="maps-container-inner zoomedElement zoomedElement414 zoomedElement987" style="transform: scale(1); left: auto;right:auto; top: 60px; position: absolute;">
                 <div class="maps-zoomed-container">
                   <div  class="map-image" style="display:block;" >
                     <img src="images/Map001.png" alt="Map of MSFC" usemap="#areaMap" />
