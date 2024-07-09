@@ -269,7 +269,7 @@ a {
   right:0;
   position: relative;
   /*overflow: hidden !important; dont think this was needed, can put back in if find a reason*/
-  background: #b3631e;
+  background: #dcdcdc;
   z-index: 3;
 }
 
