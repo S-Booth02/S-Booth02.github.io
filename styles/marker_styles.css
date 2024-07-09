@@ -194,13 +194,12 @@
     width: auto;
     height: auto;
     display: none;
-    background-color: #c4c4c4;
-    /* isnt a positioned element so the z index doesnt apply*/
-    /*z-index: 27;*/
+    background-color: #708090;
     padding: 20px 150px;
     font-size: 7em;
     margin-left: 190px;
     color: #004576;
+    border: 2px solid #00008B;
   }
   
   .marker-all:hover span {
