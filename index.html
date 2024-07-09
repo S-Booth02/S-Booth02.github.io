@@ -27,8 +27,8 @@
         </a>
         <a class="visuallyhidden focusable" href="#main">Skip Navigation</a>
         <label for="view-select">Select View:</label>
-        <select name="views" id="view-select">
-          <option value="0">0 Degrees</option>
+        <select name="views" id="view-select" onchange="changeImage()">
+          <option value=0>0 Degrees</option>
           <option value="45">45 Degrees</option>
           <option value="90">90 Degrees</option>
           <option value="135">135 Degrees</option>
@@ -399,13 +399,9 @@
               <div id ="map-origin" class="maps-container-inner zoomedElement zoomedElement414 zoomedElement987" style="transform: scale(1); left: 100px;right:100px; top: 60px; position: absolute;">
                 <div class="maps-zoomed-container">
                   <div  class="map-image" style="display:block;" >
-                    <img src="images/Map001.png" alt="Map of MSFC" usemap="#areaMap" />
+                    <img id="map-image-changable"src="images/315deg.png" alt="Map of MSFC"/>
                       ::before
                     </img>
-                    <!-- test use of  area map for complexes -->
-                    <map name="areaMap">
-                      <area shape="poly" coords="30, 100, 50, 110, 70, 200, 30, 220, 10, 150" href="https://en.wikipedia.org/wiki/Croissant">
-                    </map>
                   </div>
                   <div id ="group-marker-4221" class="marker-all marker-group" style="display:block; transform: scale(1);" onclick="f4221()">
                     <a href="javascript:void(0);" aria-label= "Admin Complex"></a>
@@ -632,6 +628,36 @@ function f4316() {
     hidePopup();
     feng();
     window.scrollTo(0,0);
+  }
+  function changeImage() {
+    switch(document.getElementById("view-select").value){
+      case "0":
+        document.getElementById("map-image-changable").src = "images/0deg.png";
+      break;
+      case "45":
+        document.getElementById("map-image-changable").src = "images/45deg.png";
+      break;
+      case "90":
+        document.getElementById("map-image-changable").src = "images/90deg.png";
+      break;
+      case "135":
+        document.getElementById("map-image-changable").src = "images/135deg.png";
+      break;
+      case "180":
+        document.getElementById("map-image-changable").src = "images/180deg.png";
+      break;
+      case "225":
+        document.getElementById("map-image-changable").src = "images/225deg.png";
+      break;
+      case "270":
+        document.getElementById("map-image-changable").src = "images/270deg.png";
+      break;
+      case "315":
+        document.getElementById("map-image-changable").src = "images/315deg.png";
+      break;
+      default:
+      document.getElementById("map-image-changable").src = "images/315deg.png";
+    }
   }
 
   </script>
