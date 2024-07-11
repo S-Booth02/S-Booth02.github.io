@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
   fetch('../buildingDatabase.json')
     .then((response)=>response.json())
-    .then((json) => json.filter(function(x){ return x.active == true;}))
+    .then((json) => json.filter(item => item.active === true))
     .then((json) => {
       console.log(json);
 
