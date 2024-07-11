@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="styles/overlay_styles.css"/>
   <link rel="stylesheet" href="styles/explore_more_styles.css"/>
   <link rel="icon" href="images/MSFC_Site_Icon.svg"/>
-  <title>Map Testing</title>
+  <title>MSFC Virtual Tour</title>
 </head>
 <body class="light_background logged_out mobile_menu" data-menu-position="closed">
   
@@ -26,6 +26,8 @@
             <div class="brand_area"></div>
         </a>
         <a class="visuallyhidden focusable" href="#main">Skip Navigation</a>
+
+        <!-- this is a temporary dropdown selection to gain feedback on the image orientation -->
         <label for="view-select">Select View:</label>
         <select name="views" id="view-select" onchange="changeImage()">
           <option value="315">315 Degrees</option>
@@ -37,13 +39,14 @@
           <option value="225">225 Degrees</option>
           <option value="270">270 Degrees</option>
         </select>
+        
         <div class="nav_area">
           <button id="menu-button" class="menu-button" alt="Menu Button" onclick="openNav()" type="button"></button>
         </div>
         
       </header>
     </div>
-      <!-- this will be the go back & overlay-->
+      <!-- this contains the go back button & overlay-->
       <div id="overlay" class="sites-info-overlay" >
         <!--<div class="sites-info-content" style="top: 105px ;height: 3000px;">  this element will have scrollable overflow -->
           <div id="close_overlay"class="close-sites-info-overlay" onclick = "hidePopup()" style="top: 105px;">
@@ -51,10 +54,8 @@
               GO BACK
               <!-- this is where there should be an svg with the arrow symbol, since the others didnt work am leaving this blank till i get another one-->
             </span>
-          </div>
-          <!-- this is currently in a testing phase -->
-          <div class="sites_info_data" style="padding-top:87px;"> <!--this is where the green is coming from -->
-            
+          </div>          
+          <div class="sites_info_data" style="padding-top:87px;">
             <div id= "location-specific-description"><!--this is the start of location-->
             
               <div id="admin_images" class="image-center">
@@ -254,7 +255,6 @@
             
             <!-- start of exploration section as a whole -->
             <div id="exploration-div"> 
-            <!-- this i think needs an outer div to make it show up when explore is clicked -> may need other spots to be the ones to have the outer div -->
               <div class="explore-more" >EXPLORE MORE!</div>
               <!-- start of table -->
               <div class="explore-table">
@@ -265,7 +265,6 @@
                   </div>
                   <div>
                     <img src="images/temp.jpg" style="object-fit:fill; height: 100px; width: 150px; float: left;padding-left:14px;">
-                  <!-- this is having issues with the font size only applying correctly if both of these only have an id attached and not a class -->
                   <div class="info" >
                     <div class="info-title">Flight&nbsp;Hardware&nbsp;Facility</div>
                     -
@@ -370,9 +369,6 @@
                 </div>
                 </div>
                 <!-- end - propulsion research and dev lab -->
-
-                
-                
               </div> <!-- end of table -->
             </div> <!-- end of exploration section as a whole -->
           </div> <!-- end of sites_info_data -->
@@ -380,10 +376,9 @@
       
     
     
-      <!-- this will be the image section-->
+      <!-- this will be the map image section-->
       <div id="map-wrapper">
         <div class="container">
-          <!-- zoom area -->
           <div class="map">
             <div class ="maps-container unselectable sites_shows_content" style="top: 90px; height: 400px;">
               <!-- created button with attributes to make the info icon be the backgrond -->
@@ -484,13 +479,11 @@
       <hr class="solid">
     </div>
   </div>
-  <!-- Script area - has function definitions below -->
+  <!-- Script area - has function definitions and description below -->
   <!-- info_click - this function will toggle the visibility of the  instructions and close button if either the close button or the info button is clicked -->
-  <!-- openNav - this function will change the width of the sidenav from 0 to 300 on menu click -->
-  <!-- closeNav -  this function will change the width of the sidenav from 300 to 0 on exit menu click -->
-  <!-- btest - *****SHOULD RENAME FUNC AND ADD DESCRIPTION -->
-  <!-- hidePopup -  -->
+
   <script>
+  /*this function will toggle the visibility of the  instructions and close button if either the close button or the info button is clicked*/
   function info_click() {
     var instruction = document.getElementById("map-instructions");
     var close = document.getElementById("close_button");
@@ -502,15 +495,19 @@
       close.style.display = "none";
     }
   }
-
+    
+  /*this function will change the width of the sidenav from 0 to 300 on menu click*/
   function openNav() {
     document.getElementById("sidenav-menu").style.width = "300px";
   }
 
+  /*this function will change the width of the sidenav from 300 to 0 on exit menu click*/
   function closeNav() {
     document.getElementById("sidenav-menu").style.width = "0px";
   }
 
+  /*this function toggles the visibility of any items that can be included in the overlay
+    there is one line for each of the image slide shows to account for any of them being open*/
   function hidePopup() {
     document.getElementById("overlay").style.display = "none";
     document.getElementById("map-origin").style.display = "block"; 
@@ -523,6 +520,8 @@
     document.getElementById("activities_images").style.display ="none"; 
     window.scrollTo(0,0);
   }
+
+  /*the following functions are building specific, attached to the map dots*/
   function f4221() {
     document.getElementById("overlay").style.display = "block";
     document.getElementById("map-origin").style.display = "none";
@@ -587,6 +586,7 @@ function f4316() {
   dotSet = "activitiesDot"
   showSlides(slideIndex);
 }
+    /*this function shows the explore more section when clicked in the menu*/
   function exploreMore() {
     document.getElementById("overlay").style.display = "block";
     document.getElementById("map-origin").style.display = "none";
@@ -599,6 +599,7 @@ function f4316() {
     document.getElementById("map-origin").style.display = "block";
     closeNav();
   }
+    /*these functions are building specific, attached to the explore more section*/
   function propulsionClick() {
     hidePopup();
     f4205();
@@ -629,6 +630,7 @@ function f4316() {
     feng();
     window.scrollTo(0,0);
   }
+    /*this is a relative temporary function that will change the map image being displayed based on what the user selects in the drop down*/
   function changeImage() {
     switch(document.getElementById("view-select").value){
       case "0":
@@ -692,7 +694,7 @@ function f4316() {
           dots[slideIndex-1].className += " active";
     }
   </script>
-
+  <!--these scripts are probably not needed since everything so far is incorporated into this document-->
   <script src="scripts/main.js"></script>
   <script src="scripts/zoom.js"></script>
   <script src="scripts/click_listener.js"></script>
