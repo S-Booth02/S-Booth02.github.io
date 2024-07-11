@@ -19,7 +19,7 @@ function createEle(){
         newDiv.onclick  = "";
         var newA =  document.createElement("a");
         newA.href = "javascript:void(0);";
-        newA.aria-label = "Admin Complex"
+        newA.aria-label = "Admin Complex";
         var newSpan = document.createElement("span");
         newSpan.textContent = "test";
         newDiv.appendChild(newA);
