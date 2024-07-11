@@ -14,7 +14,7 @@
   position : relative; 
 }
 
-/*header and navigation????*/
+/*header and navigation*/
 .site_header {
   padding: 1.1em 0 0 2em;
 }
@@ -60,6 +60,17 @@
   height: 105px;
   background-position: right center;
 }
+.site_header .brand_area {
+  position: relative;
+  background-image: url("../images/MSFC_Header.svg");
+  background-size: 100%;
+  z-index: 300;
+  display: inline-block;
+  width: 300px;
+  height: 80px;
+  zoom: 1.2;
+  top: -7px;
+}
 .site_header {
   clear:both;
   z-index:5;
@@ -74,9 +85,7 @@
   -ms-user-select:none;
   user-select:none;
   padding:.8em 0 0 .5em;
-  
   display:block;
-  
 }
 .visuallyhidden {
   border: 0;
@@ -132,7 +141,6 @@ a.menu_button .menu_label {
 }
 a.menu_button .menu_icon{
   text-indent: -9999px;
-  /*display: inline-block;*/
   vertical-align: middle;
   height: 43px;
   width: 140px;
@@ -141,7 +149,6 @@ a.menu_button .menu_icon{
   position: relative;
   right: 30px;
   top: 20px;
-  /*background-position: right;*/
 }
 a.menu_button {
   position:relative;
@@ -150,10 +157,6 @@ a.menu_button {
   padding: .6em 1em 0;
   text-decoration: none;
 }
-/* missing other styles surrounding the menu button - especially for different screen sizes*/ 
-
-/* also unsure why the image isnt loading*/
-/*   "https://oh.larc.nasa.gov/oh/map/images/icons/nasa/menu_button_desktop@2x_blue.svg"  */
 .light_background .site_header a.menu_button .menu_icon, .fixed .site_header a.menu_button .menu_icon { 
   text-indent: -9999px; 
   display: inline-block; 
@@ -192,14 +195,11 @@ select {
   -moz-osx-font-smoothing:grayscale;
   text-rendering:optimizeLegibility;
 }
-/* added in to try and fix font */
 html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
 }
-/*having this in was causing the map to be overlayed with a white box > may need later as the basis for popup, but it needs event scripts
-html, body, #map-canvas,.jPanelMenu-panel {height: 100%; margin: 0px; padding: 0px; position:relative;}/*for google maps to work with jPanelMenu -- unsure why*/
 a {
   color:#0e7ee0;
   text-decoration:none
@@ -208,17 +208,15 @@ a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
-/* map area */
 
+/* map area */
 #map-wrapper {
   position:absolute;
   top: 0;
   left:0;
   height: 100%;
   width: 100%;
-  
 }
-
 .map-box-header {
   display: block;
   font-size: 2em;
@@ -235,14 +233,22 @@ a {
 .map-box-text{
   display: block;
 }
-
+.instructions-outer{
+  width: 200px;
+  height: auto;
+  padding: 2px;
+  position: absolute;
+  right: 20px;
+  z-index: 14;
+  margin-top: 57px;
+  background-color: transparent;
+}
 .container {
   width: 100%;
   height: auto;
   top:0;
   left:0;
 }
-
 .map,
 .map * {
   box-sizing: border-box;
@@ -258,7 +264,6 @@ a {
   top:0;
   left:0;
 }
-
 .maps-container {
   width: 100%;
   height: 0;
@@ -268,11 +273,9 @@ a {
   bottom:0;
   right:0;
   position: relative;
-  /*overflow: hidden !important; dont think this was needed, can put back in if find a reason*/
   background: #dcdcdc;
   z-index: 3;
 }
-
 .maps-container-inner {
   position: absolute;
   width: 100%;
@@ -280,7 +283,6 @@ a {
   height: 0;
   padding-bottom: 33.7%;
 }
-
 .map-image {
   position: absolute;
   left: 0;
@@ -289,7 +291,6 @@ a {
   bottom: 0;
   
 }
-/* may del */
 .map-img svg,
 .map-image img,
 .map-image png {
@@ -298,7 +299,6 @@ a {
   height:100%;
   max-width: 100%;
 }
-
 .maps-zoomed-container {
   position: absolute;
   width: 578%;
@@ -308,7 +308,6 @@ a {
   left: 0;
   top: 0px;
 }
-
 .map-control-zoomin {
   background-image: url("../images/zoom_in_2.jpg");
   top: 20px;
@@ -350,6 +349,7 @@ a {
   opacity: 1;
   background-color: #fff;
 }
+
 /* for now all screen types will be the same, but should be edited later*/
 @media (min-width: 600px) {
   .site_header_area .site_header .brand_area {width: 330px; height: 75px; background-size: 100%; background-color: white;}
@@ -368,24 +368,11 @@ a {
   .filter_bar {top: 105px;}
 }
 
-.site_header .brand_area {
-  position: relative;
-  background-image: url("../images/MSFC_Header.svg");
-  background-size: 100%;
-  z-index: 300;
-  display: inline-block;
-  width: 300px;
-  height: 80px;
-  zoom: 1.2;
-  top: -7px;
-}
-
 /* inline styles */
 
 svg:not(:root).svg-inline--fa {
   overflow: visible;
 }
-
 .svg-inline--fa {
   display: inline-block;
   font-size: inherit;
@@ -393,7 +380,6 @@ svg:not(:root).svg-inline--fa {
   overflow: visible;
   vertical-align: -.125em;
 }
-
 .svg-inline--fa.fa-lg {
   vertical-align:-.225em;
 }
@@ -415,18 +401,6 @@ svg:not(:root).svg-inline--fa {
 .fa-2x {
   font-size:2em;
 }
-
-.instructions-outer{
-  width: 200px;
-  height: auto;
-  padding: 2px;
-  position: absolute;
-  right: 20px;
-  z-index: 14;
-  margin-top: 57px;
-  background-color: transparent;
-  
-}
 .unselectable, 
 .zoomable-area {
   -moz-user-select: -moz-none;
@@ -435,7 +409,6 @@ svg:not(:root).svg-inline--fa {
   -ms-user-select: none;
   user-select: none;
 }
-
 article,
 aside,
 footer,
