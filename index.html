@@ -502,13 +502,13 @@
   /*this function will change the width of the sidenav from 0 to 300 on menu click*/
   function openNav() {
     document.getElementById("sidenav-menu").style.width = "300px";
-    document.getElementById("off-menu-click").style.display="block";
+    /*document.getElementById("off-menu-click").style.display="block";*/
   }
 
   /*this function will change the width of the sidenav from 300 to 0 on exit menu click*/
   function closeNav() {
     document.getElementById("sidenav-menu").style.width = "0px";
-    document.getElementById("off-menu-click").style.display="none";
+    /*document.getElementById("off-menu-click").style.display="none";*/
   }
   /*this function toggles the visibility of any items that can be included in the overlay
     there is one line for each of the image slide shows to account for any of them being open*/
@@ -697,7 +697,13 @@ function f4316() {
           slides[slideIndex-1].style.display = "block";
           dots[slideIndex-1].className += " active";
     }
+    window.addEventLitener("click, function(e){
+      if (!document.getElementById('menu-button').contains(e.target) && (!document.getElementById('sidenav-menu').contains(e.target))){
+       closeNav();
+      }
+    })
   </script>
+  
   <!--these scripts are probably not needed since everything so far is incorporated into this document-->
   <script src="scripts/main.js"></script>
   <script src="scripts/zoom.js"></script>
