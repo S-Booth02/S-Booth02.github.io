@@ -25,7 +25,7 @@ function createEle(){
         newDiv.appendChild(newA);
         newDiv.appendChild(newSpan);
         var space = document.getElementById("map-image");
-        document.body.insertAfter(newDiv,space);
+        document.body.insertBefore(newDiv,space);
       }
     console.log("New Elements Created")
 }
