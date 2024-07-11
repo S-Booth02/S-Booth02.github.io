@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
 function createEle(){
       for (let i = 0; i < 5; i++) {
         var newDiv = document.createElement("div");
-        newDiv.id = concat("group-marker-", i);
+        newDiv.id = "".concat("group-marker-", i);
         newDiv.class = "marker-all marker-group";
         newDiv.style = "display:block; transform:scale(1); left:50%; top:20%;";
         newDiv.onclick  = "";
