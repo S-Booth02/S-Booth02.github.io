@@ -697,7 +697,7 @@ function f4316() {
           slides[slideIndex-1].style.display = "block";
           dots[slideIndex-1].className += " active";
     }
-    window.addEventLitener("click, function(e){
+    window.addEventLitener("click", function(e){
       if (!document.getElementById('menu-button').contains(e.target) && (!document.getElementById('sidenav-menu').contains(e.target))){
        closeNav();
       }
