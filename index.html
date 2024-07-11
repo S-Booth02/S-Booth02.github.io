@@ -478,6 +478,9 @@
       </div>
       <hr class="solid">
     </div>
+
+    <div id="off-menu-click" style="height: 100%; width: 100%;background-color: rgba(1,1,1,0);z-index: 19; display:none;" onclick="closeNav()"></div>
+  
   </div>
   <!-- Script area - has function definitions and description below -->
   <!-- info_click - this function will toggle the visibility of the  instructions and close button if either the close button or the info button is clicked -->
@@ -499,13 +502,14 @@
   /*this function will change the width of the sidenav from 0 to 300 on menu click*/
   function openNav() {
     document.getElementById("sidenav-menu").style.width = "300px";
+    document.getElementById("off-menu-click").style.display="block";
   }
 
   /*this function will change the width of the sidenav from 300 to 0 on exit menu click*/
   function closeNav() {
     document.getElementById("sidenav-menu").style.width = "0px";
+    document.getElementById("off-menu-click").style.display="none";
   }
-
   /*this function toggles the visibility of any items that can be included in the overlay
     there is one line for each of the image slide shows to account for any of them being open*/
   function hidePopup() {
