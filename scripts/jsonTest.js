@@ -14,7 +14,7 @@ function createEle(){
       for (let i = 0; i < 5; i++) {
         var newDiv = document.createElement("div");
         newDiv.id = "".concat("group-marker-", i);
-        newDiv.classList.replace = "marker-all marker-group";
+        newDiv.classList.replace ("marker-all" "marker-group");
         newDiv.style = "display:block; transform:scale(1); left:50%; top:20%;";
         newDiv.onclick  = "";
         var newA =  document.createElement("a");
