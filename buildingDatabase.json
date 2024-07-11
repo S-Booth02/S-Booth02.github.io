@@ -1,7 +1,7 @@
 {"buildingList":[
 	{"buildingName": "Office Building", "buildingNumber": "Building 4221", "active":true, "markerLeft":7, "markerTop":66},
 	{"buildingName": "Propulsion R&D Lab", "buildingNumber": "Building 4205", "active":true,"markerLeft":9, "markerTop":47},
-	{"buildingName": "Multipurpose Facility", "buildingNumber": "Building 4316","markerLeft":45, "markerTop":45, "active":true},
+	{"buildingName": "Multipurpose Facility", "buildingNumber": "Building 4316","active":true, "markerLeft":45, "markerTop":45},
 	{"buildingName": "Historic Redstone Test", "buildingNumber": "Building 4665", "active":true, "markerLeft":76, "markerTop":15},
-	{"buildingName": "Communication Facility", "buildingNumber": "Building 4207", "active":true, "markerLeft":30, "markerTop":50}
+	{"buildingName": "Communication Facility", "buildingNumber": "Building 4207", "active":false, "markerLeft":30, "markerTop":50}
 ]}
