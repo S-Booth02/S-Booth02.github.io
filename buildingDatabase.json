@@ -1,9 +1,9 @@
 {"buildingList":[
 	{"buildingName": "Office Building", "buildingNumber": "Building 4203"},
-	{"buildingName": "Office Building", "buildingNumber": "Building 4221", "active":true, "markerLeft":7, "markerTop":66, "onClick":"f4221"},
-	{"buildingName": "Propulsion R&D Lab", "buildingNumber": "Building 4205", "active":true,"markerLeft":9, "markerTop":47,"onClick":"f4205", "imageFiles":["4205.jpg", "temp.jpg"], "iconType": 1, "label": "Propulsion R&D Lab", "description": "Placeholder: Propulsion Description"},
+	{"buildingName": "Office Building", "buildingNumber": "Building 4221", "active":true, "markerLeft":7, "markerTop":66},
+	{"buildingName": "Propulsion R&D Lab", "buildingNumber": "Building 4205", "active":true,"markerLeft":9, "markerTop":47},
 	{"buildingName": "Multipurpose Facility", "buildingNumber": "Building 4316","markerLeft":45, "markerTop":45, "active":true},
-	{"buildingName": "Historic Redstone Test", "buildingNumber": "Building 4665", "active":true, "markerLeft":76, "markerTop":15,"onClick":"fhistoric"},
+	{"buildingName": "Historic Redstone Test", "buildingNumber": "Building 4665", "active":true, "markerLeft":76, "markerTop":15},
 	{"buildingName": "Historic Redstone Test", "buildingNumber": "Building 4665A"},
 	{"buildingName": "Historic Redstone Test", "buildingNumber": "Building 4665B"},
 	{"buildingName": "Office Building", "buildingNumber": "Building 4600"},
