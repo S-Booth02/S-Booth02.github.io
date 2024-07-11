@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     .then((json) => {
       console.log(json);
 
-      document.querySelector(".testJson h1").innerHTML =json[0].buildingName;
+      document.querySelector(".testJson h1").innerHTML =json[0].buildingList.buildingName;
       document.querySelector(".testJson p").innerHTML =json[0].buildingNumber;
     })
 });
