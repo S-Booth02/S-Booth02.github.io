@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
   fetch('../buildingDatabase.json')
     .then((response)=>response.json())
-    .then((json) => appendData(json.filter(jsonItem=>jsonItem.active === true))){
+    .then((json) => appendData(json.filter(jsonItem=>jsonItem.active === true)))
+    .then((json) => {
       console.log(json);
 
       document.querySelector(".testJson h1").innerHTML =json.buildingList[0].buildingName;
