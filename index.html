@@ -714,7 +714,23 @@ function f4316() {
       }
     })
   </script>
-  
+  <script>
+    for (let i = 0; i < 5; i++) {
+      var newDiv = document.createElement("div");
+      newDiv.id = concat("group-marker-", i);
+      newDiv.class = "marker-all marker-group";
+      newDiv.style = "display:block; transform:scale(1);";
+      newDiv.onclick  = "";
+      var newA =  document.createElement("a");
+      newA.href = "javascript:void(0);";
+      newA.aria-label = "Admin Complex"
+      var newSpan = document.createElement("span");
+      newSpan.textContent = "Administration Complex";
+      newDiv.appendChild(newA);
+      newDiv.appendChild(newSpan);
+      document.body.appendChild(newDiv);
+    }
+  </script>
   <!--these scripts are probably not needed since everything so far is incorporated into this document-->
   <script src="scripts/main.js"></script>
   <script src="scripts/zoom.js"></script>
