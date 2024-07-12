@@ -253,13 +253,6 @@
               <div id="description-paragraph" ></div>
 
               
-              <!--testing json use-->
-              <section class="testJson">
-                <h1></h1>
-                <p></p>
-              </section>
-
-              
             <!-- end of text and descriptions -->
               <hr>
               <br>
@@ -269,7 +262,7 @@
             <div id="exploration-div"> 
               <div class="explore-more" >EXPLORE MORE!</div>
               <!-- start of table -->
-              <div class="explore-table">
+              <div id="explore-more-id" class="explore-table">
                 <!-- start flight hardware -->
                 <div class="explore-info" style="border-top: 1px solid #ccc;" onclick="flightClick()">
                   <div class="info-icon">
@@ -405,7 +398,7 @@
               </div>
               <div id ="map-origin" class="maps-container-inner zoomedElement zoomedElement414 zoomedElement987" style="transform: scale(1); left: 100px;right:100px; top: 60px; position: absolute;">
                 <div class="maps-zoomed-container">
-                  <div  class="map-image" style="display:block;" >
+                  <div id="map-image-id" class="map-image" style="display:block;" >
                     <img id="map-image-changable"src="images/315deg.png" alt="Map of MSFC"/>
                     </img>
                   </div>
@@ -713,26 +706,6 @@ function f4316() {
        closeNav();
       }
     })
-  </script>
-  <script>
-      for (let i = 0; i < 5; i++) {
-        var newDiv = document.createElement("div");
-        newDiv.id = concat("group-marker-", i);
-        newDiv.class = "marker-all marker-group";
-        newDiv.style = "display:block; transform:scale(1); left:50%; top:20%;";
-        newDiv.onclick  = "";
-        var newA =  document.createElement("a");
-        newA.href = "javascript:void(0);";
-        newA.aria-label = "Admin Complex"
-        var newSpan = document.createElement("span");
-        newSpan.textContent = "test";
-        newDiv.appendChild(newA);
-        newDiv.appendChild(newSpan);
-        var space = document.getElementById("map-image");
-        document.body.insertAfter(newDiv,space);
-      }
-    console.log("New Elements Created");
-
   </script>
   <!--these scripts are probably not needed since everything so far is incorporated into this document-->
   <script src="scripts/main.js"></script>

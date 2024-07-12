@@ -1,7 +1,67 @@
 {"buildingList":[
-	{"buildingName": "Office Building", "buildingNumber": "Building 4221", "active":true, "markerLeft":7, "markerTop":66},
-	{"buildingName": "Propulsion R&D Lab", "buildingNumber": "Building 4205", "active":true,"markerLeft":9, "markerTop":47},
-	{"buildingName": "Multipurpose Facility", "buildingNumber": "Building 4316","active":true, "markerLeft":45, "markerTop":45},
-	{"buildingName": "Historic Redstone Test", "buildingNumber": "Building 4665", "active":true, "markerLeft":76, "markerTop":15},
-	{"buildingName": "Communication Facility", "buildingNumber": "Building 4207", "active":false, "markerLeft":30, "markerTop":50}
+	{
+		"buildingName": "Office Building", 
+		"buildingNumber": "Building 4221", 
+		"descriptionParagraph": "Test json paragraph - 4221",
+		"images" : ["temp.jpg", "chandra.jpg"],
+		"thumbnailIcon": "temp.jpg",
+		"iconType": 1,
+		"active":true, 
+		"markerLeft":7, 
+		"markerTop":66
+	},
+	{
+		"buildingName": "Propulsion R&D Lab", 
+		"buildingNumber": "Building 4205", 
+		"descriptionParagraph": "Test json paragraph - 4205",
+		"images" : ["temp.jpg", "chandra.jpg"],
+		"thumbnailIcon": "temp.jpg",
+		"iconType": 1,
+		"active":true,
+		"markerLeft":9, 
+		"markerTop":47
+	},
+	{
+		"buildingName": "Multipurpose Facility",
+		"buildingNumber": "Building 4316",
+		"descriptionParagraph": "Test json paragraph - 4316",
+		"images" : ["temp.jpg", "chandra.jpg"],
+		"thumbnailIcon": "temp.jpg",
+		"iconType": 1,
+		"active":true, 
+		"markerLeft":45, 
+		"markerTop":45
+	},
+	{
+		"buildingName": "Historic Redstone Test", 
+		"buildingNumber": "Building 4665", 
+		"descriptionParagraph": "Test json paragraph - 4665",
+		"images" : ["temp.jpg", "chandra.jpg"],
+		"thumbnailIcon": "temp.jpg",
+		"iconType": 1,
+		"active":true, 
+		"markerLeft":76, 
+		"markerTop":15
+	},
+	{
+		"buildingName": "Communication Facility", 
+		"buildingNumber": "Building 4207", 
+		"descriptionParagraph": "Test json paragraph - 4207",
+		"images" : ["temp.jpg", "chandra.jpg"],
+		"thumbnailIcon": "temp.jpg",
+		"iconType": 1,
+		"active":true, 
+		"markerLeft":30, 
+		"markerTop":50},
+	{
+		"buildingName": "Test Dot", 
+		"buildingNumber": "Building 22", 
+		"descriptionParagraph": "Test json paragraph - 22",
+		"images" : ["temp.jpg", "chandra.jpg"],
+		"thumbnailIcon": "temp.jpg",
+		"iconType": 1,
+		"active":true, 
+		"markerLeft":20, 
+		"markerTop":20
+	}
 ]}

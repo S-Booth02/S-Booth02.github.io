@@ -3,29 +3,101 @@ document.addEventListener("DOMContentLoaded", function() {
     .then((response)=>response.json())
     .then((json) => {
       console.log(json);
+      var filtered = json.buildingList.filter(a => a.active == true);
 
-
-      document.querySelector(".testJson h1").innerHTML =json.buildingList[0].buildingName;
-      document.querySelector(".testJson p").innerHTML =json.buildingList[0].buildingNumber;
+      createEle(filtered)
     })
-  .then(createEle())
 });
-function createEle(){
-      for (let i = 0; i < 5; i++) {
+function createEle(jsonEle){
+      for (let i = 0; i < jsonEle.length; i++) {
         var newDiv = document.createElement("div");
         newDiv.id = "".concat("group-marker-", i);
-        newDiv.classList.replace("marker-all", "marker-group");
+        newDiv.classList.add("marker-all", "marker-group");
         newDiv.style = "display:block; transform:scale(1); left:50%; top:20%;";
-        /*newDiv.onclick  = "";*/
+        newDiv.style.top = jsonEle[i].markerTop + '%';
+        newDiv.style.left = jsonEle[i].markerLeft + '%';
+        newDiv.onclick = function(){
+          fetch('../buildingDatabase.json')
+          .then((response)=>response.json())
+          .then((json) => {
+            var filtered = json.buildingList.filter(a => a.active == true);
+            var idWhole = this.id;
+            var idNum = idWhole.replace(/[^0-9]/g, ''); 
+            var title = document.getElementById("description-title");
+            var description = document.getElementById("description-paragraph");
+            title.textContent = filtered[idNum].buildingName;
+            description.textContent =filtered[idNum].descriptionParagraph;
+            document.getElementById("overlay").style.display = "block";
+            document.getElementById("map-origin").style.display = "none";
+            console.log("content loaded (theoretically)");
+          })
+        };
         var newA =  document.createElement("a");
         newA.href = "javascript:void(0);";
         /*newA.aria-label = "Admin Complex";*/
         var newSpan = document.createElement("span");
-        newSpan.textContent = "test";
+        newSpan.textContent = jsonEle[i].buildingName;
         newDiv.appendChild(newA);
         newDiv.appendChild(newSpan);
-        var space = document.getElementById("map-image");
-        space.inertAdjacentElement("afterend", newDiv);
+        var space = document.getElementById("map-image-id");
+        space.insertAdjacentElement("afterend", newDiv);
+
+
+        /*create elements for the explore more section */
+        /**get the div that will be used to insert items */
+        var explore = document.getElementById("explore-more-id");
+        var exploreInfoDiv = document.createElement("div");
+        exploreInfoDiv.className = "explore-info";
+        exploreInfoDiv.id = "explore-" + [i];
+        exploreInfoDiv.style = "border-top: 1px solid #ccc;";
+        exploreInfoDiv.onclick = function(){
+          fetch('../buildingDatabase.json')
+          .then((response)=>response.json())
+          .then((json) => {
+            var filtered = json.buildingList.filter(a => a.active == true);
+            var idWhole = this.id;
+            var idNum = idWhole.replace(/[^0-9]/g, ''); 
+            var title = document.getElementById("description-title");
+            var description = document.getElementById("description-paragraph");
+            title.textContent = filtered[idNum].buildingName;
+            description.textContent =filtered[idNum].descriptionParagraph;
+            document.getElementById("overlay").style.display = "block";
+            document.getElementById("map-origin").style.display = "none";
+            console.log("content loaded (theoretically)");
+          })
+        };
+        var infoIconDiv = document.createElement("div");
+        infoIconDiv.className = "info-icon";
+        var infoIcon = document.createElement("img");
+        switch (jsonEle[i]){
+          case 1:
+            infoIcon.src = "../images/aero_icon@2x.png";
+          break;
+          case 2:
+            infoIcon.src = "../images/lab_icon@2x.png";
+          break;
+          case 3:
+            infoIcon.src = "../images/satellite_icon@2x.png";
+          break;
+          case 4:
+            infoIcon.src = "../images/transformation_icon@2x.png";
+          break;
+        }
+        infoIconDiv.appendChild(infoIcon);
+        exploreInfoDiv.appendChild(infoIconDiv);
+        
+        var exploreImage = document.createElement("img");
+        exploreImage.src = "../images/" + jsonEle[i].thumbnailIcon;
+        exploreImage.style = "object-fit: fill; height: 100px; width: 150px; float: left; padding-left: 14px;";
+        var imageOuterDiv = document.createElement("div");
+        imageOuterDiv.appendChild(exploreImage);
+        var innerExploreDiv = document.createElement("div");
+        innerExploreDiv.className = "info";
+        var textDiv = document.createElement("div");
+        textDiv.className = "info-title";
+        textDiv.textContent = jsonEle[i].buildingName;
+        imageOuterDiv.textContent = jsonEle[i].buildingNumber;
+        explore.insertAdjacentElement("beforeend",exploreInfoDiv); /*this may need a different text value*/ 
       }
     console.log("New Elements Created")
 }
