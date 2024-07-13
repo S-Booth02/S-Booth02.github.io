@@ -63,13 +63,14 @@ function createEle(jsonEle){
             description.textContent =filtered[idNum].descriptionParagraph;
             document.getElementById("overlay").style.display = "block";
             document.getElementById("map-origin").style.display = "none";
+            window.scrollTo(0,0);
             console.log("content loaded (theoretically)");
           })
         };
         var infoIconDiv = document.createElement("div");
         infoIconDiv.className = "info-icon";
         var infoIcon = document.createElement("img");
-        switch (jsonEle[i]){
+        switch (jsonEle[i].iconType){
           case 1:
             infoIcon.src = "../images/aero_icon@2x.png";
           break;
@@ -82,21 +83,29 @@ function createEle(jsonEle){
           case 4:
             infoIcon.src = "../images/transformation_icon@2x.png";
           break;
+          default:
+            infoIcon.src = "../images/temp.jpg";
         }
         infoIconDiv.appendChild(infoIcon);
         exploreInfoDiv.appendChild(infoIconDiv);
         
         var exploreImage = document.createElement("img");
-        exploreImage.src = "../images/" + jsonEle[i].thumbnailIcon;
-        exploreImage.style = "object-fit: fill; height: 100px; width: 150px; float: left; padding-left: 14px;";
         var imageOuterDiv = document.createElement("div");
-        imageOuterDiv.appendChild(exploreImage);
+        exploreImage.style = "object-fit: fill; height: 100px; width: 150px; float: left; padding-left: 14px;";
+        exploreImage.src = "../images/" + jsonEle[i].thumbnailIcon;
+        
+        
+        
         var innerExploreDiv = document.createElement("div");
         innerExploreDiv.className = "info";
         var textDiv = document.createElement("div");
         textDiv.className = "info-title";
         textDiv.textContent = jsonEle[i].buildingName;
-        imageOuterDiv.textContent = jsonEle[i].buildingNumber;
+        innerExploreDiv.textContent = jsonEle[i].buildingNumber;
+        imageOuterDiv.appendChild(exploreImage);
+        imageOuterDiv.appendChild(textDiv);
+        imageOuterDiv.appendChild(innerExploreDiv);
+        exploreInfoDiv.appendChild(imageOuterDiv);
         explore.insertAdjacentElement("beforeend",exploreInfoDiv); /*this may need a different text value*/ 
       }
     console.log("New Elements Created")
