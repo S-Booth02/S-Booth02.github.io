@@ -68,7 +68,8 @@
   display: inline-block;
   width: 300px;
   height: 80px;
-  translate:scale(1.2);
+  transform:scale(1.2);
+  transform-origin: 0 0;
   top: -7px;
 }
 .site_header {
