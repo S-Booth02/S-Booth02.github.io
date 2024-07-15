@@ -350,6 +350,7 @@
     **/
     function createEle(jsonEle){
   		console.log("start of createEle function");
+      console.log(jsonEle.length);
           for (let i = 0; i < jsonEle.length; i++) {
   			console.log("start of element"+ i);
               var newDiv = document.createElement("div");
@@ -503,7 +504,7 @@
   					appendSlides.insertAdjacentElement("afterbegin", buildingDiv);
   					console.log("created slideshow" + idNum);
   				}
-            console.log('line 506");
+            console.log("line 506");
   			}
   			console.log("New Elements Created")
   		}
