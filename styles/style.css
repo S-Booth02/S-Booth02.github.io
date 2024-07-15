@@ -69,6 +69,8 @@
   width: 300px;
   height: 80px;
   top: -7px;
+  tranform-origin: 0 0;
+  transform: scale(1.09);
 }
 .site_header {
   clear:both;
