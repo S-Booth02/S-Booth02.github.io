@@ -3141,9 +3141,9 @@
 		"images" : ["temp.jpg"],
 		"thumbnailIcon": "temp.jpg",
 		"iconType": 5,
-		"active": false, 
-		"markerLeft":0, 
-		"markerTop":0
+		"active": true, 
+		"markerLeft":60, 
+		"markerTop":45
 	},
 	{
 		"buildingName": "Fire Protection Pumping", 
