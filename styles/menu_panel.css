@@ -79,8 +79,8 @@ hr.solid {
   margin-left: 23px;
   transform: scale(4);
   background-image: url("../images/explore_svg.svg");
-  background-size: 130%;
-  width: 10px;
+  background-size: 100%;
+  width: 8px;
   height: 10px;
   background-color: transparent;
   background-repeat: no-repeat;
