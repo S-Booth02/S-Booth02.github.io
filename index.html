@@ -456,7 +456,7 @@
   						image.src = "images/" + jsonEle[i].images[j];  						  
   						var dotSpan = document.createElement("span");
   						dotSpan.className = "dot dot-" + i;
-  						dotSpan.onclick = function () { currentSlide(i+1) };
+  						dotSpan.onclick = function () { currentSlide(j+1) };
   						dots.insertAdjacentElement("beforeend",dotSpan);
   						slides.appendChild(image);
   						slideshowContainer.appendChild(slides);
