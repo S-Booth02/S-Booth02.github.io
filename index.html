@@ -484,11 +484,11 @@
   					/*next and prev buttons*/
   					var nextButton = document.createElement("a");
   					nextButton.className = "next";
-  					nextButton.onclick = "pushSlides(1)"; /* unsure if this needs to be in quotes or not */
+  					nextButton.onclick = pushSlides(1); /* unsure if this needs to be in quotes or not */
   					nextButton.textContent = '\u2B9E';
   					var prevButton = document.createElement("a");
   					prevButton.className = "prev";
-  					prevButton.onclick = "pushSlides(-1)";
+  					prevButton.onclick = pushSlides(-1);
   					prevButton.textContent = '\u2B9C';
   					/*dot container*/
   					var dots = document.createElement("div");
