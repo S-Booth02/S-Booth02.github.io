@@ -418,9 +418,13 @@
   						document.getElementById("map-origin").style.display = "none";
               var allSlideshows = document.getElementsByClassName("image-center");
               for (l=0;l< allSlideshows.length; l++ ) {
-                document.getElementById("building-images-" + l).style.display = "none";
+                if (l == idNum) {
+                  document.getElementById("building-images-" + idNum).style.display = "block";
+                }
+                else {
+                  document.getElementById("building-images-" + l).style.display = "none";
+                }
               }
-              document.getElementById("building-images-" + idNum).style.display = "block";
   						window.scrollTo(0,0);
   						slideSet = "slides-" + i;
   						dotSet = "dot-" + i;
