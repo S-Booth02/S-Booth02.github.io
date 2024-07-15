@@ -68,7 +68,7 @@
   display: inline-block;
   width: 300px;
   height: 80px;
-  zoom: 1.2;
+  translate:scale(1.2);
   top: -7px;
 }
 .site_header {
