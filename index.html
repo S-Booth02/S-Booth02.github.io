@@ -412,7 +412,7 @@ function f4316() {
           dots[slideIndex-1].className += " active";
           console.log("slide script ran");
     }
-    window.addEventLitener("click", function(e){
+    window.addEventListener("click", function(e){
       if (!document.getElementById('menu-button').contains(e.target) && (!document.getElementById('sidenav-menu').contains(e.target))){
        closeNav();
       }
