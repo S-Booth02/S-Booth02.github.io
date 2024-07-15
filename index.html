@@ -349,6 +349,7 @@
      * this function will create a clickable dot using the information within the file
     **/
     function createEle(jsonEle){
+console.log("start of createEle function");
           for (let i = 0; i < jsonEle.length; i++) {
             var newDiv = document.createElement("div");
             newDiv.id = "".concat("group-marker-", i);
@@ -382,7 +383,7 @@
             newDiv.appendChild(newSpan);
             var space = document.getElementById("map-image-id");
             space.insertAdjacentElement("afterend", newDiv);
-    
+console.log("line 386");
     
             /**create elements for the explore more section
              * get the div that will be used to insert items 
@@ -411,6 +412,7 @@
                 showSlides(slideIndex);
                 console.log("content loaded - line 70");
             });
+console.log("start explore more");
             var infoIconDiv = document.createElement("div");
             infoIconDiv.className = "info-icon";
             var infoIcon = document.createElement("img");
@@ -430,6 +432,7 @@
               default:
                 infoIcon.src = "../images/temp.jpg";
             }
+console.log("end explore more");
             infoIconDiv.appendChild(infoIcon);
             exploreInfoDiv.appendChild(infoIconDiv);
             var exploreImage = document.createElement("img");
@@ -447,7 +450,7 @@
             imageOuterDiv.appendChild(innerExploreDiv);
             exploreInfoDiv.appendChild(imageOuterDiv);
             explore.insertAdjacentElement("beforeend",exploreInfoDiv);
-
+console.log("start slideshow creation");
 
               /*create elements for the slideshow based on the JSON file*/
                 var buildingDiv = document.createElement("div");
@@ -498,10 +501,10 @@
                 buildingDiv.appendChild(nextButton);
                 buildingDiv.appendChild(dots);
                 appendSlides.insertAdjacentElement("afterbegin", buildingDiv);
-                console.log("created slideshow" + idNum);
+console.log("created slideshow" + idNum);
               }
           }
-        console.log("New Elements Created")
+console.log("New Elements Created")
     }
     }
   </script>
