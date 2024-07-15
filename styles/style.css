@@ -18,6 +18,7 @@
 .site_header {
   padding: 1.1em 0 0 2em;
   transform:scale(1.5);
+  transform-origin: 0 0;
 }
 @media (min-width:600px) {
   .site_header_area .site_header .brand_area {width: 330px; height: 75px; background-size: 100%}
