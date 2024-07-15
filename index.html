@@ -107,7 +107,7 @@
             <!-- start of exploration section as a whole -->
             <div id="exploration-div"> 
               <div class="explore-more" >EXPLORE MORE!</div>
-              <!-- start of table -->
+              <!-- start of table - the div is designed to be empty, it will be filled in dynamically using the json table -->
               <div id="explore-more-id" class="explore-table">
                 
               </div> <!-- end of table -->
@@ -124,11 +124,8 @@
               <button class="instructions_button" alt="Information Button" onclick="info_click()" type="button"></button>
               <button id="close_button" class="close_button" alt="Close Button" onclick="info_click()" z-index="1000" type="button"></button>
               <div id = "map-instructions" class="map-instructions" style="display: block">
-                <span class="map-box-header">
-                </span>
-                <span class="map-box-text">
-                  Click on the dots to show more information. Use the scroll wheel or pinch the touch screen to zoom. *Update Later*
-                </span>
+                <span class="map-box-header"></span>
+                <span class="map-box-text">Click on the dots to show more information.</span>
               </div>
               <div id ="map-origin" class="maps-container-inner zoomedElement zoomedElement414 zoomedElement987" style="transform: scale(1); left: 100px;right:100px; top: 60px; position: absolute;">
                 <div class="maps-zoomed-container">
@@ -169,6 +166,7 @@
         </div>
       </footer>
     </div>
+  
     <!--side navigation menu -->
     <div id="sidenav-menu" class="sidenav">
       <div class="menu-title-text"> Explore NASA Marshall Guide</div>
@@ -195,8 +193,6 @@
       </div>
       <hr class="solid">
     </div>
-
-    <div id="off-menu-click" style="height: 100%; width: 100%;background-color: rgba(1,1,1,0);z-index: 2;position:fixed; display:none;" onclick="closeNav()"></div>
   
   </div>
   <!-- Script area - has function definitions and description below -->
@@ -233,14 +229,7 @@
     document.getElementById("overlay").style.display = "none";
     document.getElementById("map-origin").style.display = "block"; 
     document.getElementById("location-specific-description").style.display = "block";
-    /*
-    document.getElementById("hosc_images").style.display ="none"; 
-    document.getElementById("admin_images").style.display ="none"; 
-    document.getElementById("propulsion_images").style.display ="none"; 
-    document.getElementById("eng_images").style.display ="none"; 
-    document.getElementById("historic_images").style.display ="none"; 
-    document.getElementById("activities_images").style.display ="none"; 
-    */
+    /*unsure if this is how the slideshow should be done, may remove later*/
     var dotRemove = document.getElementById("slideshow-dots").remove();
     document.getElementById("building-images").remove();
     window.scrollTo(0,0);
@@ -257,55 +246,6 @@
 /*    dotSet = "4221Dot"*/
     showSlides(slideIndex);
   }
-
-  function feng() {
-    document.getElementById("overlay").style.display = "block";
-    document.getElementById("map-origin").style.display = "none";
-    document.getElementById("description-title").textContent = "Eng Section";
-    document.getElementById("description-paragraph").textContent = "Engineeering description.";
-    document.getElementById("eng_images").style.display= "block";
-    slideSet = "engSlides";
-    showSlides(slideIndex);
-  }
-
-  function f4205() {
-    document.getElementById("overlay").style.display = "block";
-    document.getElementById("map-origin").style.display = "none";
-    document.getElementById("description-title").textContent = "Propulsion Section";
-    document.getElementById("description-paragraph").textContent = "Propulsion description.";
-    document.getElementById("propulsion_images").style.display= "block";
-    slideSet = "4205Slides";
-    showSlides(slideIndex);
-  }
-
-function fhosc() {
-    document.getElementById("overlay").style.display = "block";
-    document.getElementById("map-origin").style.display = "none";
-    document.getElementById("description-title").textContent = "Payload Operations Intergation Center";
-    document.getElementById("description-paragraph").textContent = "hosc";
-    document.getElementById("hosc_images").style.display= "block";
-    slideSet = "hoscSlides";
-    showSlides(slideIndex);
-  }
-
-function fhistoric() {
-    document.getElementById("overlay").style.display = "block";
-    document.getElementById("map-origin").style.display = "none";
-    document.getElementById("description-title").textContent = "Historic Redstone Test Site";
-    document.getElementById("description-paragraph").textContent = "historic description.";
-    document.getElementById("historic_images").style.display= "block";
-  slideSet = "historicSlides";
-  showSlides(slideIndex);
-  }
-function f4316() {
-  document.getElementById("overlay").style.display = "block";
-  document.getElementById("map-origin").style.display = "none";
-  document.getElementById("description-title").textContent = "Activities Building";
-  document.getElementById("description-paragraph").textContent = "Building 4316";
-  document.getElementById("activities_images").style.display= "block";
-  slideSet = "activitiesSlides";
-  showSlides(slideIndex);
-}
     /*this function shows the explore more section when clicked in the menu*/
   function exploreMore() {
     document.getElementById("overlay").style.display = "block";
@@ -417,11 +357,6 @@ function f4316() {
        closeNav();
       }
     })
-    
   </script>
-  <!--these scripts are probably not needed since everything so far is incorporated into this document-->
-  <script src="scripts/main.js"></script>
-  <script src="scripts/zoom.js"></script>
-  <script src="scripts/click_listener.js"></script>
 </body>
 </html>
