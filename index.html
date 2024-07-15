@@ -229,7 +229,7 @@
     document.getElementById("overlay").style.display = "none";
     document.getElementById("map-origin").style.display = "block"; 
     document.getElementById("location-specific-description").style.display = "block";
-    document.getElementById("image-center").style.display = "none";
+    document.getElementsByClassName("image-center").style.display = "none";
     window.scrollTo(0,0);
   }
 
@@ -462,7 +462,7 @@
   				  /*create elements for the slideshow based on the JSON file*/
   					var buildingDiv = document.createElement("div");
   					buildingDiv.id = "building-images-" + i;
-            buildingDiv.style.display = none;
+            buildingDiv.style.display = "none";
   					buildingDiv.className = "image-center";
   		
   					var slideshowContainer = document.createElement("div");
