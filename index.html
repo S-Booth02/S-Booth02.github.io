@@ -230,7 +230,10 @@
     document.getElementById("overlay").style.display = "none";
     document.getElementById("map-origin").style.display = "block"; 
     document.getElementById("location-specific-description").style.display = "block";
-    document.getElementsByClassName("image-center").style.display = "none";
+    var allSlideshows = document.getElementsByClassName("image-center");
+    for (k = 0; k < allSlideshows.length; k++) {
+      allSlideshows[k].style.display = "none";
+    }
     window.scrollTo(0,0);
     console.log("pop-up hidden");
   }
