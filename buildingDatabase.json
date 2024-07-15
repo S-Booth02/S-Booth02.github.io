@@ -3143,7 +3143,7 @@
 		"iconType": 5,
 		"active": true, 
 		"markerLeft":60, 
-		"markerTop":45
+		"markerTop":60
 	},
 	{
 		"buildingName": "Fire Protection Pumping", 
