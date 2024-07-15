@@ -68,8 +68,6 @@
   display: inline-block;
   width: 300px;
   height: 80px;
-  transform:scale(1.2);
-  transform-origin: 0 0;
   top: -7px;
 }
 .site_header {
@@ -87,8 +85,6 @@
   user-select:none;
   padding:.8em 0 0 .5em;
   display:block;
-  transform:scale(1.5);
-  transform-origin: 0 0;
 }
 .visuallyhidden {
   border: 0;
