@@ -29,19 +29,6 @@
             <div class="brand_area"></div>
         </a>
         <a class="visuallyhidden focusable" href="#main">Skip Navigation</a>
-
-        <!-- this is a temporary dropdown selection to gain feedback on the image orientation -->
-        <label for="view-select">Select View:</label>
-        <select name="views" id="view-select" onchange="changeImage()">
-          <option value="315">315 Degrees</option>
-          <option value=0>0 Degrees</option>
-          <option value="45">45 Degrees</option>
-          <option value="90">90 Degrees</option>
-          <option value="135">135 Degrees</option>
-          <option value="180">180 Degrees</option>
-          <option value="225">225 Degrees</option>
-          <option value="270">270 Degrees</option>
-        </select>
         
         <div class="nav_area">
           <button id="menu-button" class="menu-button" alt="Menu Button" onclick="openNav()" type="button"></button>
@@ -82,7 +69,7 @@
       <div id="map-wrapper">
         <div class="container">
           <div class="map">
-            <div class ="maps-container unselectable sites_shows_content" style="top: 90px; height: 400px;">
+            <div class ="maps-container unselectable sites_shows_content" style="top: 90px; height: 1200px;">
               <!-- created button with attributes to make the info icon be the backgrond -->
               <button class="instructions_button" alt="Information Button" onclick="info_click()" type="button"></button>
               <button id="close_button" class="close_button" alt="Close Button" onclick="info_click()" z-index="1000" type="button"></button>
@@ -90,10 +77,10 @@
                 <span class="map-box-header"></span>
                 <span class="map-box-text">Click on the dots to show more information.</span>
               </div>
-              <div id ="map-origin" class="maps-container-inner zoomedElement zoomedElement414 zoomedElement987" style="transform: scale(1); left: 100px;right:100px; top: 60px; position: absolute;">
+              <div id ="map-origin" class="maps-container-inner zoomedElement zoomedElement414 zoomedElement987" style="transform: scale(1); position: absolute;">
                 <div class="maps-zoomed-container">
                   <div id="map-image-id" class="map-image" style="display:block;" >
-                    <img id="map-image-changable"src="images/315deg.png" alt="Map of MSFC">
+                    <img id="map-image-changable"src="images/fullGreenImage.png" alt="Map of MSFC">
                   </div>
                 </div>  
               </div>
