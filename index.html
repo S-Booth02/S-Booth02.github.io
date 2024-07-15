@@ -60,57 +60,20 @@
           </div>          
           <div class="sites_info_data" style="padding-top:87px;">
             <div id= "location-specific-description"><!--this is the start of location-->
-            
-              <div id="admin_images" class="image-center">
-                <!-- testing slideshow container from w3 schools-->
-                <div class="slideshow-containter-4221"style="background-color: #0b3d91;">
-                  <!--full-width images with number and caption text -->
-                  <div class="mySlides fade">
-                    <img class="all_slideshows" title="Slideshow Image One" alt="Image of MSFC Building 4221" src="images/4221.jpg">
-                    <div class="text">Arial view of Building 4221 and surrounding area</div>
-                 </div> 
-                <div class="mySlides fade">
-                  <img class="all_slideshows" title="Slideshow Image Two" alt="Image of space" src="images/MSFC_4221.jpg">
-                  <div class="text">Caption Text #2</div>
-                </div>  
-                <div class="mySlides fade">
-                  <img class="all_slideshows" title="Slideshow Image Three" alt="image of rocket" src="images/MSFC_4221_sunset.jpg">
-                  <div class="text">Image of building near 4221</div>
-                </div>
-                
-                <!-- next and prev buttons -->
-                <a class="prev" onclick="pushSlides(-1)">&#10094;</a>
-                <a class="next" onclick="pushSlides(1)">&#10095;</a>
-                
-                </div> <!-- end of the slideshow container -->
-                <br>
-              
-                <!-- the dots -->
-                <div style="text-align:center">
-                  <span class="4221Dot dot" onclick="currentSlide(1)"></span>
-                  <span class="4221Dot dot" onclick="currentSlide(2)"></span>
-                  <span class="4221Dot dot" onclick="currentSlide(3)"></span>
-                </div>
-            
-              </div> <!--this is the break for 4221 slideshow-->
-
+              <!-- this is designed to be empty so the json functions can be propogated here -->
               <!-- Text and Descriptions -->
               <div id="description-title"></div>
               <div id="description-paragraph" ></div>
-
-              
-            <!-- end of text and descriptions -->
+              <!-- end of text and descriptions -->
               <hr>
               <br>
-              </div><!--end of location_specific_description-->
+            </div><!--end of location_specific_description-->
             
             <!-- start of exploration section as a whole -->
             <div id="exploration-div"> 
               <div class="explore-more" >EXPLORE MORE!</div>
               <!-- start of table - the div is designed to be empty, it will be filled in dynamically using the json table -->
-              <div id="explore-more-id" class="explore-table">
-                
-              </div> <!-- end of table -->
+              <div id="explore-more-id" class="explore-table"></div>
             </div> <!-- end of exploration section as a whole -->
           </div> <!-- end of sites_info_data -->
       </div> <!-- end of overlay -->
@@ -131,11 +94,6 @@
                 <div class="maps-zoomed-container">
                   <div id="map-image-id" class="map-image" style="display:block;" >
                     <img id="map-image-changable"src="images/315deg.png" alt="Map of MSFC">
-                  </div>
-                  <!--this is temporary to analyze the differences between the original markers and the JSON dynamic markers-->
-                  <div id ="group-marker-4221" class="marker-all marker-group" style="display:block; transform: scale(1);" onclick="f4221()">
-                    <a href="javascript:void(0);" aria-label= "Admin Complex"></a>
-                    <span>Administration Complex</span>
                   </div>
                 </div>  
               </div>
@@ -237,18 +195,6 @@
     window.scrollTo(0,0);
     console.log("pop-up hidden");
   }
-
-  /*the following functions are building specific, attached to the map dots*/
-  function f4221() {
-    document.getElementById("overlay").style.display = "block";
-    document.getElementById("map-origin").style.display = "none";
-    document.getElementById("description-title").textContent = "Admin Section";
-    document.getElementById("description-paragraph").textContent = "Admin description.";
-    document.getElementById("admin_images").style.display ="block"; 
-    slideSet = "mySlides";
-/*    dotSet = "4221Dot"*/
-    showSlides(slideIndex);
-  }
     /*this function shows the explore more section when clicked in the menu*/
   function exploreMore() {
     document.getElementById("overlay").style.display = "block";
@@ -256,7 +202,6 @@
     document.getElementById("location-specific-description").style.display = "none";
     closeNav();
   }
-
   function map() {
      document.getElementById("overlay").style.display = "none";
     document.getElementById("map-origin").style.display = "block";
