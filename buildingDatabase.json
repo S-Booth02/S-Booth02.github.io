@@ -36,7 +36,7 @@
 		"buildingName": "Historic Redstone Test", 
 		"buildingNumber": "Building 4665", 
 		"descriptionParagraph": "Test json paragraph - 4665",
-		"images" : ["4665_historic_1.jpg", "4665_historic_2.jpg", , "4665_historic_3.jpg"],
+		"images" : ["4665_historic_1.jpg", "4665_historic_2.jpg", "4665_historic_3.jpg"],
 		"thumbnailIcon": "4665_historic_2.jpg",
 		"iconType": 1,
 		"active":true, 
