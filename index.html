@@ -226,11 +226,13 @@
   /*this function toggles the visibility of any items that can be included in the overlay
     there is one line for each of the image slide shows to account for any of them being open*/
   function hidePopup() {
+    console.log("start hide pop-up");
     document.getElementById("overlay").style.display = "none";
     document.getElementById("map-origin").style.display = "block"; 
     document.getElementById("location-specific-description").style.display = "block";
     document.getElementsByClassName("image-center").style.display = "none";
     window.scrollTo(0,0);
+    console.log("pop-up hidden");
   }
 
   /*the following functions are building specific, attached to the map dots*/
