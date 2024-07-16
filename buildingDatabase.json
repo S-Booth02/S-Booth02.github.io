@@ -7,8 +7,8 @@
 		"thumbnailIcon": "4221.jpg",
 		"iconType": 1,
 		"active":true, 
-		"markerLeft":7, 
-		"markerTop":66
+		"markerLeft":13, 
+		"markerTop":16
 	},
 	{
 		"buildingName": "Propulsion R&D Lab", 
@@ -18,8 +18,8 @@
 		"thumbnailIcon": "4205.jpg",
 		"iconType": 2,
 		"active":true,
-		"markerLeft":9, 
-		"markerTop":47
+		"markerLeft":22, 
+		"markerTop":12
 	},
 	{
 		"buildingName": "Multipurpose Facility",
@@ -29,8 +29,8 @@
 		"thumbnailIcon": "activities.jpg",
 		"iconType": 1,
 		"active":true, 
-		"markerLeft":45, 
-		"markerTop":45
+		"markerLeft":29, 
+		"markerTop":31
 	},
 	{
 		"buildingName": "Historic Redstone Test", 
@@ -40,8 +40,8 @@
 		"thumbnailIcon": "4665_historic_2.jpg",
 		"iconType": 1,
 		"active":true, 
-		"markerLeft":76, 
-		"markerTop":15
+		"markerLeft":62, 
+		"markerTop":52
 	},
 	{
 		"buildingName": "Communication Facility", 
@@ -53,17 +53,6 @@
 		"active":false, 
 		"markerLeft":30, 
 		"markerTop":50
-	},
-	{
-		"buildingName": "Test Dot", 
-		"buildingNumber": "Building 22", 
-		"descriptionParagraph": "Test json paragraph - 22",
-		"images" : ["temp.jpg", "chandra.jpg"],
-		"thumbnailIcon": "temp.jpg",
-		"iconType": 3,
-		"active":true, 
-		"markerLeft":20, 
-		"markerTop":20
 	},
 	{
 		"buildingName": "Satellite Live Building", 
@@ -171,7 +160,7 @@
 		"images" : ["temp.jpg"],
 		"thumbnailIcon": "temp.jpg",
 		"iconType": 5,
-		"active": true, 
+		"active": false, 
 		"markerLeft":50, 
 		"markerTop":90
 	},
@@ -3142,8 +3131,8 @@
 		"thumbnailIcon": "temp.jpg",
 		"iconType": 5,
 		"active": true, 
-		"markerLeft":60, 
-		"markerTop":60
+		"markerLeft":4, 
+		"markerTop":66
 	},
 	{
 		"buildingName": "Fire Protection Pumping", 
