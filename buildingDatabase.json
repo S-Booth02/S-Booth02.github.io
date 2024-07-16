@@ -8,7 +8,8 @@
 		"iconType": 1,
 		"active":true, 
 		"markerLeft":13, 
-		"markerTop":16
+		"markerTop":16,
+		"numberOfStories": 6
 	},
 	{
 		"buildingName": "Propulsion R&D Lab", 
@@ -19,7 +20,8 @@
 		"iconType": 2,
 		"active":true,
 		"markerLeft":22, 
-		"markerTop":12
+		"markerTop":12,
+		"numberOfStories": 2
 	},
 	{
 		"buildingName": "Multipurpose Facility",
@@ -42,6 +44,18 @@
 		"active":true, 
 		"markerLeft":62, 
 		"markerTop":52
+	},
+	{
+		"buildingName": "Office Building", 
+		"buildingNumber": "Building 4203", 
+		"descriptionParagraph": "Test json paragraph - 4203",
+		"images" : ["temp.jpg"],
+		"thumbnailIcon": "temp.jpg",
+		"iconType": 1,
+		"active":false, 
+		"markerLeft":0, 
+		"markerTop":0,
+		"numberOfStories": 8
 	},
 	{
 		"buildingName": "Communication Facility", 
@@ -96,7 +110,8 @@
 		"iconType": 5,
 		"active": false, 
 		"markerLeft":0, 
-		"markerTop":0
+		"markerTop":0,
+		"numberOfStories": 1
 	},
 	{
 		"buildingName": "Antenna Support Facility", 
@@ -151,7 +166,8 @@
 		"iconType": 5,
 		"active": false, 
 		"markerLeft":0, 
-		"markerTop":0
+		"markerTop":0,
+		"numberOfStories": 3
 	},
 	{
 		"buildingName": "Office Building", 
@@ -173,7 +189,8 @@
 		"iconType": 5,
 		"active": false, 
 		"markerLeft":0, 
-		"markerTop":0
+		"markerTop":0,
+		"numberOfStories": 1
 	},
 	{
 		"buildingName": "Shed", 
@@ -195,7 +212,8 @@
 		"iconType": 5,
 		"active": false, 
 		"markerLeft":0, 
-		"markerTop":0
+		"markerTop":0,
+		"numberOfStories": 1
 	},
 	{
 		"buildingName": "Office & Storage", 
@@ -206,7 +224,8 @@
 		"iconType": 5,
 		"active": false, 
 		"markerLeft":0, 
-		"markerTop":0
+		"markerTop":0,
+		"numberOfStories": 1
 	},
 	{
 		"buildingName": "Steam Cleaning Facility", 
@@ -217,7 +236,8 @@
 		"iconType": 5,
 		"active": false, 
 		"markerLeft":0, 
-		"markerTop":0
+		"markerTop":0,
+		"numberOfStories": 1
 	},
 	{
 		"buildingName": "Office Building", 
@@ -228,7 +248,8 @@
 		"iconType": 5,
 		"active": false, 
 		"markerLeft":0, 
-		"markerTop":0
+		"markerTop":0,
+		"numberOfStories": 2
 	},
 	{
 		"buildingName": "Office Building", 
@@ -316,7 +337,8 @@
 		"iconType": 5,
 		"active": false, 
 		"markerLeft":0, 
-		"markerTop":0
+		"markerTop":0,
+		"numberOfStories": 1
 	},
 	{
 		"buildingName": "Automated Lunar and", 
