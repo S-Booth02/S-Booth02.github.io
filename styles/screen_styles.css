@@ -9,7 +9,7 @@
     padding: 1.1em 0 0  1.5em;
   }
     .site_header_area {
-    height: 180px;
+    height: 105px;
   }
   .brand_area {
     top:-43px;
@@ -22,6 +22,18 @@
 @media (min-width:  1024px) {
   .site_header {
     padding: 1.1em 0 0 2em;
+  }
+}
+@media (min-width:1024px) and (max-width: 1500px){
+  .site_header_area {
+    height: 120px;
+  }
+  .brand_area {
+    top:-43px;
+    left:-21px;
+    background-color:transparent;
+    background-repeat: no-repeat;
+    transform:scale(2);
   }
 }
 /*body*/
