@@ -345,6 +345,7 @@
   						var idNum = idWhole.replace(/[^0-9]/g, ''); 
   						var title = document.getElementById("description-title");
   						var description = document.getElementById("description-paragraph");
+              document.getElementById("location-specific-description").style.display  = "block";
   						title.textContent = filtered[idNum].buildingName;
   						description.textContent =filtered[idNum].descriptionParagraph;
   						document.getElementById("overlay").style.display = "block";
