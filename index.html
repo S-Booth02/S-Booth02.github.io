@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html class="js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video autio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths jPanelMenu fontawesome-i2svg-active fontawesome-i2svg-complete." lang="en">
@@ -188,7 +189,10 @@
     document.getElementById("overlay").style.display = "block";
     document.getElementById("map-origin").style.display = "none";
     document.getElementById("location-specific-description").style.display = "none";
-    document.getElementsByClassName("maps-container").style.backgroundColor = "#ffffff";
+    var color = document.getElementsByClassName("maps-container");
+    for (c = 0; c < color.length; c++){
+        color[c].style.backgroundColor = "#ffffff";
+    }
     closeNav();
   }
   function map() {
@@ -347,7 +351,10 @@
   						var title = document.getElementById("description-title");
   						var description = document.getElementById("description-paragraph");
               document.getElementById("location-specific-description").style.display  = "block";
-              document.getElementsByClassName("maps-container").style.style.backgroundColor = "#dcdcdc"
+              var color = document.getElementsByClassName("maps-container");
+              for (c = 0; c < color.length; c++){
+                color[c].style.backgroundColor = "#dcdcdc";
+              }
   						title.textContent = filtered[idNum].buildingName;
   						description.textContent =filtered[idNum].descriptionParagraph;
   						document.getElementById("overlay").style.display = "block";
