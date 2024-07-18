@@ -8,9 +8,7 @@
   .site_header {
     padding: 1.1em 0 0  1.5em;
   }
-}
-@media(max-height: 769px) {
-  .site_header_area {
+    .site_header_area {
     height: 127px;
   }
   .brand_area {
@@ -24,6 +22,16 @@
 @media (min-width:  1024px) {
   .site_header {
     padding: 1.1em 0 0 2em;
+  }
+    .site_header_area {
+    height: 80px;
+  }
+  .brand_area {
+    top:-43px;
+    left:-30px;
+    background-color:transparent;
+    background-repeat: no-repeat;
+    transform:scale(1.15);
   }
 }
 /*body*/
