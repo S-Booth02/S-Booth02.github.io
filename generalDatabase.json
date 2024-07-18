@@ -1,0 +1,7 @@
+"headerImage": "MSFC_Header.svg",
+"footerText": {"nasaOfficial": "", "pageEditor": "Simone Booth"},
+"exploreHeader": "explore.svg",
+"exploreText": "Click on the dots to show more information.",
+"menuImage": "menu_icon.png",
+"menuIcons": { "mapIcon": "pin.png", "mapExplore": "explore_svg.svg", "mapInfo": "info.svg", "menuFeedback":"feedback_02.svg" },
+"feedbackEmail": "simone.booth1002@gmail.com"
