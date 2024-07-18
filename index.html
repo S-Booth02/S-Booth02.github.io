@@ -347,7 +347,7 @@
   						var title = document.getElementById("description-title");
   						var description = document.getElementById("description-paragraph");
               document.getElementById("location-specific-description").style.display  = "block";
-              document.getElementById("maps-container").style = "background-color: #dcdcdc";
+              document.getElementsByClassName("maps-container").style = "background-color: #dcdcdc";
   						title.textContent = filtered[idNum].buildingName;
   						description.textContent =filtered[idNum].descriptionParagraph;
   						document.getElementById("overlay").style.display = "block";
