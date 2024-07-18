@@ -188,7 +188,7 @@
     document.getElementById("overlay").style.display = "block";
     document.getElementById("map-origin").style.display = "none";
     document.getElementById("location-specific-description").style.display = "none";
-    document.getElementsByClassName("maps-container").style = "background-color: white";
+    document.getElementsByClassName("maps-container").style.backgroud = "#ffffff";
     closeNav();
   }
   function map() {
@@ -347,7 +347,7 @@
   						var title = document.getElementById("description-title");
   						var description = document.getElementById("description-paragraph");
               document.getElementById("location-specific-description").style.display  = "block";
-              document.getElementsByClassName("maps-container").style = "background-color: #dcdcdc";
+              document.getElementsByClassName("maps-container").style.style.backgroud = "#dcdcdc"
   						title.textContent = filtered[idNum].buildingName;
   						description.textContent =filtered[idNum].descriptionParagraph;
   						document.getElementById("overlay").style.display = "block";
