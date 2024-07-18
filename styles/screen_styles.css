@@ -9,14 +9,14 @@
     padding: 1.1em 0 0  1.5em;
   }
     .site_header_area {
-    height: 127px;
+    height: 180px;
   }
   .brand_area {
     top:-43px;
     left:-21px;
     background-color:transparent;
     background-repeat: no-repeat;
-    transform:scale(1.6);
+    transform:scale(2);
   }
 }
 @media (min-width:  1024px) {
