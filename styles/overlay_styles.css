@@ -1,7 +1,6 @@
 /* INFO OVERLAY*/
-/* for now just copying from the ref site*/
 .sites-info-overlay {
-  display: none; /* this is the thing that needs to be changed back when map is copied back in*/
+  display: none; 
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
@@ -11,7 +10,8 @@
   min-height: 100%;
   width: 100%;
   z-index: 2100;
-  height: 3000px;
+  height: auto;
+  padding-bottom: 100px;
   background-color: #fff;
 }
 .sites-info-content {
@@ -28,7 +28,6 @@
 }
 .close-sites-info-overlay,
 .notification-screen-close {
-  /* for now commenting out potential issues*/
   display: block;
   margin-left:10px;
   width:80px;
@@ -44,7 +43,6 @@
   -webkit-box-shadow: 0 4px 4px -1px rgba(0,0,0,0.15);
   -moz-box-shadow: 0 4px 4px -2px rgba(0,0,0,0.15);
   box-shadow: 0 4px 4px -2px rgba(0,0,0,0.15);
-  /*temp line below*/
   top:107px;
   left: 0;
 }
@@ -149,8 +147,8 @@
 /*dot indicators*/
 .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
+  height: 12px;
+  width: 12px;
   margin: 0 2px;
   background-color: #bbb;
   border-radius: 50%;
