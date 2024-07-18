@@ -24,7 +24,7 @@
     padding: 1.1em 0 0 2em;
   }
 }
-@media (min-width:1024px) and (max-width: 1500px){
+@media (min-width:770px) and (max-width: 1023px){
   .site_header_area {
     height: 120px;
   }
