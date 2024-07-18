@@ -8,6 +8,8 @@
   .site_header {
     padding: 1.1em 0 0  1.5em;
   }
+}
+@media(max-height: 769px) {
   .site_header_area {
     height: 127px;
   }
