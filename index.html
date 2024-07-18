@@ -181,6 +181,10 @@
     for (k = 0; k < allSlideshows.length; k++) {
       document.getElementById("building-images-" + k).style.display = "none";
     }
+    var color = document.getElementsByClassName("maps-container");
+    for (c = 0; c < color.length; c++){
+      color[c].style.backgroundColor = "#dcdcdc";
+    }
     window.scrollTo(0,0);
     console.log("pop-up hidden");
   }
