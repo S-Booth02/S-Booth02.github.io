@@ -23,16 +23,6 @@
   .site_header {
     padding: 1.1em 0 0 2em;
   }
-    .site_header_area {
-    height: 80px;
-  }
-  .brand_area {
-    top:-43px;
-    left:-30px;
-    background-color:transparent;
-    background-repeat: no-repeat;
-    transform:scale(1.15);
-  }
 }
 /*body*/
 @media (min-width: 600px) {
