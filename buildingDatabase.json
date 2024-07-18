@@ -29,7 +29,7 @@
 		"descriptionParagraph": "Test json paragraph - 4316",
 		"images" : ["activities.jpg"],
 		"thumbnailIcon": "activities.jpg",
-		"iconType": 1,
+		"iconType": 3,
 		"active":true, 
 		"markerLeft":29, 
 		"markerTop":31
@@ -40,7 +40,7 @@
 		"descriptionParagraph": "Test json paragraph - 4665",
 		"images" : ["4665_historic_1.jpg", "4665_historic_2.jpg", "4665_historic_3.jpg"],
 		"thumbnailIcon": "4665_historic_2.jpg",
-		"iconType": 1,
+		"iconType": 4,
 		"active":true, 
 		"markerLeft":62, 
 		"markerTop":52
