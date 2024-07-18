@@ -1,4 +1,4 @@
-/*header*/
+/*header
 @media (min-width: 600px) {
   .site_header {
     padding:1em 0 0 1.2em;
@@ -36,7 +36,7 @@
     transform:scale(2);
   }
 }
-/*body*/
+body
 @media (min-width: 600px) {
   .body {
     font-size: 98%;
@@ -69,3 +69,4 @@
   padding: 0px;
   position: relative;
 }
+*/
