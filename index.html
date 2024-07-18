@@ -41,7 +41,7 @@
       <!-- this contains the go back button & overlay-->
       <div id="overlay" class="sites-info-overlay" >
         <!--<div class="sites-info-content" style="top: 105px ;height: 3000px;">  this element will have scrollable overflow -->
-          <div id="close_overlay"class="close-sites-info-overlay" onclick = "hidePopup()" style="top: 93px;">
+          <div id="close_overlay"class="close-sites-info-overlay" onclick = "hidePopup()" style="top: 89px;">
             <span id="stop-player" style="font-size:0.7em;padding: 4px; padding-right: 7px; padding-left: 7px;  background-color: #0b3d91; border-radius:20px; color:#fff!important">
               GO BACK
               <!-- this is where there should be an svg with the arrow symbol, since the others didnt work am leaving this blank till i get another one-->
@@ -51,8 +51,8 @@
             <div id= "location-specific-description"><!--this is the start of location-->
               <!-- this is designed to be empty so the json functions can be propogated here -->
               <!-- Text and Descriptions -->
-              <div id="description-title"></div>
-              <div id="description-paragraph" ></div>
+              <div id="description-title" style="padding-left:15px"></div>
+              <div id="description-paragraph" style="padding-left:15px"></div>
               <!-- end of text and descriptions -->
               <hr>
               <br>
@@ -60,7 +60,7 @@
             
             <!-- start of exploration section as a whole -->
             <div id="exploration-div"> 
-              <div class="explore-more" >EXPLORE MORE!</div>
+              <div class="explore-more" style="padding-left:15px">EXPLORE MORE!</div>
               <!-- start of table - the div is designed to be empty, it will be filled in dynamically using the json table -->
               <div id="explore-more-id" class="explore-table"></div>
             </div> <!-- end of exploration section as a whole -->
