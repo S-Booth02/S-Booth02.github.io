@@ -57,7 +57,7 @@
   .menu-button { margin-top: -119px; margin-right: 64px; transform-origin: 0 0; transform: scale(1.5);}
 }
 @media (min-width:1024px) {
-  .menu-button { margin-top: -84px; margin-right: 40px; }
+  .menu-button { margin-top: -84px; margin-right: 40px;  transform-origin: 0 0; transform: scale(1);}
 }
 
 /*info button to toggle the info text */ 
@@ -82,8 +82,11 @@
 }
 /* will put the styling for the go back button when that gets added */
 @media (min-width:600px) {
-  .instructions_button { transform:scale(1.5)  }
+  .instructions_button { transform-origin: 0 0;transform:scale(1.5)  }
 }
 @media (min-width:769px) {
-  .instructions_button {transform:scale(1.5) }
+  .instructions_button {transform-origin: 0 0;transform:scale(1.5) }
+}
+@media (min-width:1024px) {
+  .instructions_button {transform-origin: 0 0;transform:scale(1) }
 }
