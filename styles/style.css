@@ -26,14 +26,33 @@
 
 @media (min-width: 769px) {
   .nav_area { top: 2em;}
-  .site_header_area .site_header .brand_area {width: 1920px; height: 105px;}
+  .site_header_area .site_header .brand_area {width: 326px; height: 75px;}
 }
 
 @media (min-width: 1024px) {
   .nav_area {top: 2.2em}
-  .site_header_area .site_header .brand_area {width: 1920px; height: 105px;}
+  .site_header_area .site_header .brand_area {width: 326px; height: 99px;}
   .filter_bar {top: 105px;}
+  .brand_area {transform-origin: 0 0; transform: scale(1.2);}
+
 }
+/* for now all screen types will be the same, but should be edited later
+@media (min-width: 600px) {
+  .site_header_area .site_header .brand_area {width: 330px; height: 90px; background-size: 100%; background-color: white;}
+  .nav_area {top: 2em;}
+  .filter_bar {top: 90px;}
+}
+
+@media (min-width: 769px) {
+  .nav_area {top: 2em;}
+  .site_header_area .site_header .brand_area {width: 326px; height:75px; background-color: white;}
+}
+
+@media (min-width: 1024px) {
+  .nav_area {top: 2.2em;}
+  .site_header_area .site_header .brand_area {width: 326px; height:75px; background-color: white;}
+  .filter_bar {top: 105px;}
+}*/
 
 .site_header_area.drop_show {
   background-color: white; 
@@ -63,14 +82,13 @@
 .site_header .brand_area {
   position: relative;
   background-image: url("../images/MSFC_Header.svg");
+  background-repeat: no-repeat;
   background-size: 100%;
   z-index: 300;
   display: inline-block;
   width: 300px;
   height: 80px;
-  top: -7px;
-  transform-origin: 0 0;
-  transform: scale(1.09);
+  top: -15px;
 }
 .site_header {
   clear:both;
@@ -350,23 +368,7 @@ a {
   background-color: #fff;
 }
 
-/* for now all screen types will be the same, but should be edited later*/
-@media (min-width: 600px) {
-  .site_header_area .site_header .brand_area {width: 330px; height: 75px; background-size: 100%; background-color: white;}
-  .nav_area {top: 2em;}
-  .filter_bar {top: 90px;}
-}
 
-@media (min-width: 769px) {
-  .nav_area {top: 2em;}
-  .site_header_area .site_header .brand_area {width: 326px; height:75px; background-color: white;}
-}
-
-@media (min-width: 1024px) {
-  .nav_area {top: 2.2em;}
-  .site_header_area .site_header .brand_area {width: 326px; height:75px; background-color: white;}
-  .filter_bar {top: 105px;}
-}
 
 /* inline styles */
 

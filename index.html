@@ -41,13 +41,13 @@
       <!-- this contains the go back button & overlay-->
       <div id="overlay" class="sites-info-overlay" >
         <!--<div class="sites-info-content" style="top: 105px ;height: 3000px;">  this element will have scrollable overflow -->
-          <div id="close_overlay"class="close-sites-info-overlay" onclick = "hidePopup()" style="top: 89px;">
+          <div id="close_overlay"class="close-sites-info-overlay" onclick = "hidePopup()" style="top: 111px; padding-top:3px;">
             <span id="stop-player" style="font-size:0.7em;padding: 4px; padding-right: 7px; padding-left: 7px;  background-color: #0b3d91; border-radius:20px; color:#fff!important">
               GO BACK
               <!-- this is where there should be an svg with the arrow symbol, since the others didnt work am leaving this blank till i get another one-->
             </span>
           </div>          
-          <div class="sites_info_data" style="padding-top:87px;">
+          <div class="sites_info_data" style="padding-top:100px;">
             <div id= "location-specific-description"><!--this is the start of location-->
               <!-- this is designed to be empty so the json functions can be propogated here -->
               <!-- Text and Descriptions -->
@@ -71,7 +71,7 @@
       <div id="map-wrapper">
         <div class="container">
           <div class="map">
-            <div class ="maps-container unselectable sites_shows_content" style="top: 90px; height: 1200px;">
+            <div class ="maps-container unselectable sites_shows_content" style="top: 107px; height: 1200px;">
               <!-- created button with attributes to make the info icon be the backgrond -->
               <button class="instructions_button" alt="Information Button" onclick="info_click()" type="button"></button>
               <button id="close_button" class="close_button" alt="Close Button" onclick="info_click()" z-index="1000" type="button"></button>
