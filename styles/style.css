@@ -84,7 +84,6 @@
 }
 .site_header .brand_area {
   position: relative;
-  background-image: url("../images/MSFC_Header.svg");
   background-repeat: no-repeat;
   background-size: 100%;
   z-index: 300;

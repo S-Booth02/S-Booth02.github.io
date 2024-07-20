@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="styles/map_styles.css"/>
   <link rel="icon" href="images/MSFC_Site_Icon.svg"/>
   <script src="buildingDatabase.json" type="application.json"></script>
-  <!-- <script src="./scripts/jsonTest.js"></script> -->
+  <script src="generalDatabase.json" type="application.json"></script>
   <title>MSFC Virtual Tour</title>
 </head>
 <body class="light_background logged_out mobile_menu" data-menu-position="closed">
@@ -28,8 +28,8 @@
   <div class="jPanelMenu-panel" style="position: relative; transform: translated3d(0px, 0px, 0px);">
     <div class="site_header_area drop_show">
       <header class="site_header">
-        <a href="javascript:void(0);" aria-label="home">
-            <div class="brand_area"></div>
+        <a href="https://s-booth02.github.io/" aria-label="home">
+            <div id="brand_area" class="brand_area"></div>
         </a>
         <a class="visuallyhidden focusable" href="#main">Skip Navigation</a>
         
@@ -83,7 +83,7 @@
               <div id ="map-origin" class="maps-container-inner zoomedElement zoomedElement414 zoomedElement987" style="transform: scale(1); position: absolute;">
                 <div class="maps-zoomed-container">
                   <div id="map-image-id" class="map-image" style="display:block;" >
-                    <img id="map-image-changable"src="images/render3.jpg" alt="Map of MSFC">
+                    <img id="map-image-changable" alt="Map of MSFC">
                   </div>
                 </div>  
               </div>
@@ -118,28 +118,22 @@
     <!--side navigation menu -->
     <div id="sidenav-menu" class="sidenav">
       <div class="menu-title-text"> Explore NASA Marshall Guide</div>
-      <hr class="solid">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <div>
+      <div  style="border-top: 1px solid #f1f1f1; border-bottom: 1px solid #f1f1f1;">
         <div class="pin" onclick="map()">&nbsp;</div>
         <a href="#" style="display: inline-block; width: 100%"onclick="map()">&nbsp;&nbsp;&nbsp;Map</a>  
       </div>
-      <hr class="solid">
-      <div>
+      <div style="border-bottom: 1px solid #f1f1f1;">
         <div class="explore"onclick ="exploreMore()">&nbsp;</div>
         <a href="#" style="display: inline-block; width: 100%"onclick ="exploreMore()">&nbsp;&nbsp;&nbsp;Explore</a>
       </div>
-      <hr class="solid">
-      <div>
+      <div style="border-bottom: 1px solid #f1f1f1;">
         <div class="info_menu">&nbsp;</div>
         <a href="#" style="display: inline-block; width: 100%">&nbsp;&nbsp;&nbsp;Info</a>
       </div>
-      <hr class="solid">
-      <div>
+      <div style="border-bottom: 1px solid #f1f1f1;">
         <div class="feedback">&nbsp;</div>
         <a href="mailto:simone.booth1002@gmail.com?subject=Virtual Tour Feedback" style="display: inline-block; width: 100%">&nbsp;&nbsp;&nbsp;Feedback</a>
       </div>
-      <hr class="solid">
     </div>
   
   </div>
@@ -206,38 +200,6 @@
     closeNav();
   }
 
-    /*this is a relative temporary function that will change the map image being displayed based on what the user selects in the drop down*/
-  function changeImage() {
-    switch(document.getElementById("view-select").value){
-      case "0":
-        document.getElementById("map-image-changable").src = "images/0deg.png";
-      break;
-      case "45":
-        document.getElementById("map-image-changable").src = "images/45deg.png";
-      break;
-      case "90":
-        document.getElementById("map-image-changable").src = "images/90deg.png";
-      break;
-      case "135":
-        document.getElementById("map-image-changable").src = "images/135deg.png";
-      break;
-      case "180":
-        document.getElementById("map-image-changable").src = "images/180deg.png";
-      break;
-      case "225":
-        document.getElementById("map-image-changable").src = "images/225deg.png";
-      break;
-      case "270":
-        document.getElementById("map-image-changable").src = "images/270deg.png";
-      break;
-      case "315":
-        document.getElementById("map-image-changable").src = "images/315deg.png";
-      break;
-      default:
-      document.getElementById("map-image-changable").src = "images/315deg.png";
-    }
-  }
-
   </script>
   <!-- slideshow script-->
   <script>
@@ -276,6 +238,10 @@
        closeNav();
       }
     })
+
+    function iconHover() {
+
+    }
   </script>
 
 
@@ -290,7 +256,15 @@
         .then((json) => {
           console.log(json);
           var filtered = json.buildingList.filter(a => a.active == true);
-          createEle(filtered)
+          
+          createEle(filtered);
+        })
+      fetch('../generalDatabase.json')
+        .then((response=>response.json()))
+        .then((json) => {
+          document.getElementById("map-image-changable").src = "images/" + json.mapImage;
+          document.getElementById("brand_area").style = "background-image: url(../images/" + json.headerImage;
+          
         })
     });
     /**

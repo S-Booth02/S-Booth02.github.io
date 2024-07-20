@@ -14,10 +14,10 @@
 
 /* links within the menu */
 .sidenav a {
-  padding: 8px 8px 8px 32px;
+  padding: 10px 10px 10px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: #f1f1f1;
   display: block;
   transition: 0.3s;
 }
@@ -25,6 +25,7 @@
 /* change color of links on mouse hover */
 .sidenav a:hover {
   color: #f1f1f1;
+  background-color: #1264ee;
 }
 
 /* close button for nav */
@@ -70,6 +71,7 @@ hr.solid {
   background-repeat: no-repeat;
   position: absolute;
   left: 3px;
+  cursor: pointer;
 }
 .explore {
   display: inline-block;
@@ -86,36 +88,37 @@ hr.solid {
   background-repeat: no-repeat;
   position: absolute;
   left: 3px;
+  cursor: pointer;
 }
 .info_menu {
   display: inline-block;
   padding: 0;
-  margin-top: 1px;
-  margin-top: 30px;
-  margin-left: 24px;
-  transform: scale(5);
+  margin-top: 10px;
+  margin-left: 11px;
+  transform: scale(1);
   background-image: url("../images/info.svg");
   background-size: 100%;
-  width: 5px;
-  height: 10px;
+  width: 30px;
+  height: 30px;
   background-color: transparent;
   background-repeat: no-repeat;
   position: absolute;
   left: 3px;
+  cursor: pointer;
 }
 .feedback {
   display: inline-block;
   padding: 0;
-  margin-top: 1px;
-  margin-top: 30px;
-  margin-left: 24px;
-  transform: scale(5);
-  background-image: url("../images/feedback_02.svg");
+  margin-top: 10px;
+  margin-left: 12px;
+  transform: scale(1);
+  background-image: url("../images/feedback_04.svg");
   background-size: 100%;
-  width: 5px;
-  height: 10px;
+  width: 30px;
+  height: 30px;
   background-color: transparent;
   background-repeat: no-repeat;
   position: absolute;
   left: 3px;
+  cursor: pointer;
 }
