@@ -106,7 +106,7 @@
   cursor: pointer;
   position: absolute;
   width: auto;
-  top:340px;
+  top:440px;
   padding: 16px;
   color: white;
   font-weight: bold;
@@ -216,7 +216,7 @@
 }
 .all_slideshows {
   margin: 0 auto;
-  height: 500px; 
+  height: 680px; 
   width: auto; 
   display:block;
 }
