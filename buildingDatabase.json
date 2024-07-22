@@ -2478,7 +2478,7 @@
 		"buildingName": "HOSC/NDC", 
 		"buildingNumber": "Building 4663",
 		"descriptionParagraph": "HOSC  - description",
-		"images" : ["temp.jpg"], 		
+		"images" : ["hosc.jpg"], 		
 		"videos": ["https://www.youtube.com/embed/b1u-57zKmC0?si=Ypfw69QTU_GB_cJy"],
 		"thumbnailIcon": "temp.jpg",
 		"iconType": 5,
