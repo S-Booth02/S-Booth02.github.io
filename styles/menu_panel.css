@@ -61,23 +61,20 @@
 hr.solid {
   border-top:1px solid white;
 }
-.pin {
+#pin {
   display: inline-block;
   padding: 0;
-  margin-top: 24px;
-  margin-left: 24px;
-  transform: scale(4);
-  background-image: url("../images/pin.png");
+  margin-top: 9px;
   background-size: 100%;
-  width: 5px;
-  height: 10px;
+  width: 24px;
+  height: 34px;
   background-color: transparent;
   background-repeat: no-repeat;
   position: absolute;
-  left: 3px;
+  left: 19px;
   cursor: pointer;
 }
-.explore {
+#explore {
   display: inline-block;
   padding: 0;
   margin-top: 1px;
@@ -94,7 +91,7 @@ hr.solid {
   left: 3px;
   cursor: pointer;
 }
-.info_menu {
+#info_menu {
   display: inline-block;
   padding: 0;
   margin-top: 10px;
@@ -110,7 +107,7 @@ hr.solid {
   left: 3px;
   cursor: pointer;
 }
-.feedback {
+#feedback {
   display: inline-block;
   padding: 0;
   margin-top: 10px;

@@ -4,7 +4,7 @@
     "exploreHeader": "explore.svg",
     "exploreText": "Click on the dots to show more information.",
     "menuImage": "menu_icon.png",
-    "menuIcons": { "mapIcon": "pin.png", "exploreIcon": "explore_svg.svg", "infoIcon": "info.svg", "feedbackIcon":"feedback_02.svg" },
+    "menuIcons": { "mapIcon": "pin_2.svg", "exploreIcon": "explore_svg.svg", "infoIcon": "info.svg", "feedbackIcon":"feedback_02.svg" },
     "feedbackEmail": "simone.booth1002@gmail.com",
     "mapImage": "render4.jpg"
 }

@@ -15,7 +15,7 @@
   .map-instructions {top: 64px; }
 }
 @media (min-width:1024px) {
-  .map-instructions  {top: 55px; }
+  .map-instructions  {top: 55px; right: 15px;}
 }
 
 @media (min-width:600px) {

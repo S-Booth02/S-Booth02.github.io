@@ -75,8 +75,9 @@
             <div class ="maps-container unselectable sites_shows_content" style="height: 1200px;">
               <!-- created button with attributes to make the info icon be the backgrond -->
               <button class="instructions_button" alt="Information Button" onclick="info_click()" type="button"></button>
-              <button id="close_button" class="close_button" alt="Close Button" onclick="info_click()" z-index="1000" type="button"></button>
+              
               <div id = "map-instructions" class="map-instructions" style="display: block">
+                <button id="close_button" class="close_button" alt="Close Button" onclick="info_click()" z-index="1000" type="button"></button>
                 <span class="map-box-header"></span>
                 <span class="map-box-text">Click on the dots to show more information.</span>
               </div>
@@ -119,19 +120,19 @@
     <div id="sidenav-menu" class="sidenav">
       <h1 class="menu-title-text"> Explore NASA Marshall Guide</h1>
       <div  style="border-top: 1px solid #f1f1f1; border-bottom: 1px solid #f1f1f1;">
-        <div class="pin" onclick="map()">&nbsp;</div>
+        <div id="pin" onclick="map()">&nbsp;</div>
         <a href="#" style="display: inline-block; width: 100%"onclick="map()">&nbsp;&nbsp;&nbsp;Map</a>  
       </div>
       <div style="border-bottom: 1px solid #f1f1f1;">
-        <div class="explore"onclick ="exploreMore()">&nbsp;</div>
+        <div id="explore"onclick ="exploreMore()">&nbsp;</div>
         <a href="#" style="display: inline-block; width: 100%"onclick ="exploreMore()">&nbsp;&nbsp;&nbsp;Explore</a>
       </div>
       <div style="border-bottom: 1px solid #f1f1f1;">
-        <div class="info_menu">&nbsp;</div>
+        <div id="info_menu">&nbsp;</div>
         <a href="#" style="display: inline-block; width: 100%">&nbsp;&nbsp;&nbsp;Info</a>
       </div>
       <div style="border-bottom: 1px solid #f1f1f1;">
-        <div class="feedback">&nbsp;</div>
+        <div id="feedback">&nbsp;</div>
         <a href="mailto:simone.booth1002@gmail.com?subject=Virtual Tour Feedback" style="display: inline-block; width: 100%">&nbsp;&nbsp;&nbsp;Feedback</a>
       </div>
     </div>
@@ -239,9 +240,6 @@
       }
     })
 
-    function iconHover() {
-
-    }
   </script>
 
 
@@ -264,6 +262,7 @@
         .then((json) => {
           document.getElementById("map-image-changable").src = "images/" + json.mapImage;
           document.getElementById("brand_area").style = "background-image: url(../images/" + json.headerImage;
+          document.getElementById("pin").style = "background-image: ../images/" + json.menuIcons.MapIcon;
           
         })
     });

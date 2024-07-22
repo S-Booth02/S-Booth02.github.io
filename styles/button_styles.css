@@ -28,7 +28,7 @@
   .close_button {transform:scale(1.5); transform-origin: 0 0; right: 4px; margin-top: 70px; margin-right: 24px; }
 }
 @media (min-width:1024px) {
-  .close_button {transform:scale(1); transform-origin: 0 0; right: -5px; margin-top: 60px; margin-right: 24px;}
+  .close_button {transform:scale(1); transform-origin: 0 0; right: -38px; top:-84px;}
 }
 
 /* open the menu screen */
