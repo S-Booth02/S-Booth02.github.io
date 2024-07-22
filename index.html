@@ -419,7 +419,6 @@
   					var appendSlides = document.getElementById("location-specific-description");
   					/*loops through the image array*/
   					for (let j = 0; j < jsonEle[i].images.length; j++) {
-  		
   						var slides = document.createElement("div");
   						slides.className = "fade slides-" + i;
               if (j==0)  {
@@ -431,13 +430,30 @@
   						var image = document.createElement("img");
   						image.className = "all_slideshows";
   						image.src = "images/" + jsonEle[i].images[j];  						  
-  						var dotSpan = document.createElement("span");
-  						dotSpan.className = "dot dot-" + i;
-  						dotSpan.onclick = function () { currentSlide(j+1) };
-  						dots.insertAdjacentElement("beforeend",dotSpan);
   						slides.appendChild(image);
   						slideshowContainer.appendChild(slides);
   					}
+            for (let j = 0; j < jsonEle[i].videos.length; j++) {
+              var slides = document.createElement("div");
+              slides.className = "fade slides=" + i;
+              if (j==0) {
+                slides.style = "display:block";
+              }
+              else {
+                slides.style = "display:none";
+              }
+              var video = document.createElement("iframe")
+              video.className = "all_slideshows";
+              video.src = jsonEle[i].videos[j];
+              slides.appedChild(video);
+              slideshowContainer.appendChild(slides);
+            }
+            for (let j = 0; j < (jsonEle[i].images.length + jsonEle[i].videos.length); j++) {
+              var dotSpan = document.createElement("span");
+  						dotSpan.className = "dot dot-" + i;
+  						dotSpan.onclick = function () { currentSlide(j+1) };
+  						dots.insertAdjacentElement("beforeend",dotSpan);
+            }
             buildingDiv.appendChild(slideshowContainer);
   					buildingDiv.appendChild(prevButton);
   					buildingDiv.appendChild(nextButton);
