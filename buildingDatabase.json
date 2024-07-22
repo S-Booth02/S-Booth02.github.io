@@ -2,7 +2,7 @@
 	{
 		"buildingName": "Office Building", 
 		"buildingNumber": "Building 4221", 
-		"descriptionParagraph": "Test json paragraph - 4221",
+		"descriptionParagraph": "Building 4221 - description",
 		"images" : ["4221.jpg", "MSFC_4221.jpg", "MSFC_4221_sunset.jpg"],
 		"videos": [],
 		"thumbnailIcon": "4221.jpg",
@@ -15,7 +15,7 @@
 	{
 		"buildingName": "Propulsion R&D Lab", 
 		"buildingNumber": "Building 4205", 
-		"descriptionParagraph": "Test json paragraph - 4205",
+		"descriptionParagraph": "Propulsion R&D Lab - description",
 		"images" : ["4205.jpg"],
 		"videos": ["https://www.youtube.com/embed/wzGDtNROZI8?si=C9MaeKe6TEAz0kP8"],
 		"thumbnailIcon": "4205.jpg",
@@ -28,7 +28,7 @@
 	{
 		"buildingName": "Multipurpose Facility",
 		"buildingNumber": "Building 4316",
-		"descriptionParagraph": "Test json paragraph - 4316",
+		"descriptionParagraph": "Multipurpose Facility - description",
 		"images" : ["activities.jpg"],
 		"videos": [],
 		"thumbnailIcon": "activities.jpg",
@@ -40,7 +40,7 @@
 	{
 		"buildingName": "Historic Redstone Test", 
 		"buildingNumber": "Building 4665", 
-		"descriptionParagraph": "Test json paragraph - 4665",
+		"descriptionParagraph": "Historic Redstone Test Site - description",
 		"images" : ["4665_historic_1.jpg", "4665_historic_2.jpg", "4665_historic_3.jpg"],
 		"videos": [],
 		"thumbnailIcon": "4665_historic_2.jpg",
@@ -2477,7 +2477,7 @@
 	{
 		"buildingName": "HOSC/NDC", 
 		"buildingNumber": "Building 4663",
-		"descriptionParagraph": "Test json paragraph ~",
+		"descriptionParagraph": "HOSC  - description",
 		"images" : ["temp.jpg"], 		
 		"videos": ["https://www.youtube.com/embed/b1u-57zKmC0?si=Ypfw69QTU_GB_cJy"],
 		"thumbnailIcon": "temp.jpg",
@@ -3377,10 +3377,10 @@
 	{
 		"buildingName": "Flight Hardware", 
 		"buildingNumber": "Building 4755",
-		"descriptionParagraph": "Test json paragraph ~",
-		"images" : ["temp.jpg"],
+		"descriptionParagraph": "Flight Hardware - description",
+		"images" : ["4755.jpg"],
 		"videos": ["https://www.youtube.com/embed/Qzqf7WsQuwk?si=eTHZpKAZcdlHAbgu"],
-		"thumbnailIcon": "temp.jpg",
+		"thumbnailIcon": "4755.jpg",
 		"iconType": 5,
 		"active": true, 
 		"markerLeft":4, 
