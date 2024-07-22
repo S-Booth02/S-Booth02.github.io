@@ -445,6 +445,10 @@
               var video = document.createElement("iframe")
               video.className = "all_slideshows";
               video.src = jsonEle[i].videos[j];
+              video.title = "YouTube video player";
+              video.frameborder="0";
+              video.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;fullscreen;";
+              video.referrerpolicy="strict-origin-when-cross-origin";
               slides.appendChild(video);
               slideshowContainer.appendChild(slides);
             }
