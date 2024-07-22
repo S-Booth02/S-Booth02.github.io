@@ -445,7 +445,7 @@
               var video = document.createElement("iframe")
               video.className = "all_slideshows";
               video.src = jsonEle[i].videos[j];
-              slides.appedChild(video);
+              slides.appendChild(video);
               slideshowContainer.appendChild(slides);
             }
             for (let j = 0; j < (jsonEle[i].images.length + jsonEle[i].videos.length); j++) {
