@@ -2480,7 +2480,7 @@
 		"descriptionParagraph": "HOSC  - description",
 		"images" : ["hosc.jpg"], 		
 		"videos": ["https://www.youtube.com/embed/b1u-57zKmC0?si=Ypfw69QTU_GB_cJy"],
-		"thumbnailIcon": "temp.jpg",
+		"thumbnailIcon": "hosc.jpg",
 		"iconType": 5,
 		"active": true, 
 		"markerLeft": 43.5, 
