@@ -1,4 +1,7 @@
 /* INFO OVERLAY*/
+.iframe {
+  border-width:0px;
+}
 .sites-info-overlay {
   display: none; 
   overflow-y: auto;
