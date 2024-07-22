@@ -174,12 +174,12 @@
 }
 #description-title {
   color: #444;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: bold;
 }
 #description-paragraph {
   color: #444;
-  font-size: 12px;
+  font-size: 18px;
   font-weight: normal;
 }
 .admin::after {
@@ -196,24 +196,7 @@
 .test-desc::after {
   content: "Description of Test";
 }
-#hosc_images {
-  display: none;
-}
-#admin_images {
-  display: none;
-}
-#eng_images {
-  display: none;
-}
-#activities_images {
-  display: none;
-}
-#historic_images {
-  display: none;
-}
-#propulsion_images {
-  display: none;
-}
+
 .all_slideshows {
   margin: 0 auto;
   height: 680px; 
