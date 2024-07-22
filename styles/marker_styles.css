@@ -60,7 +60,7 @@
     margin-top: -100%;
     border-radius: 50%;
     border: 10px solid #fff;
-    background-color: #01a4e9;
+    background-color: #ef0000;
    -webkit-animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
     animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
   }
@@ -113,7 +113,7 @@
     margin-top: -100%;
     border-radius: 50%;
     border: 2px solid #fff;
-    background-color: #01a4e9;
+    background-color: #ef0000;
     -webkit-animation: pulse-ring 1.25s cubic-bezier(0.125, 0.61, 0.355, 1) infinite;
     animation: pulse-ring 1.25s cubic-bezier(0.125, 0.61, 0.355, 1) infinite;
   }
