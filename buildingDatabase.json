@@ -2483,8 +2483,8 @@
 		"thumbnailIcon": "temp.jpg",
 		"iconType": 5,
 		"active": true, 
-		"markerLeft"45, 
-		"markerTop":31
+		"markerLeft": 45, 
+		"markerTop": 31
 	},
 	{
 		"buildingName": "Office Building", 
