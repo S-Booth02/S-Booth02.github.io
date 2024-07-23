@@ -47,7 +47,7 @@
     left: 0px;
     border-radius: 50%;
     border: 10px solid #fff;
-    background-color: #ef6262;
+    background-color: #bf7ffc;
   }
   .marker-all a:before {
     content: "";
@@ -60,7 +60,7 @@
     margin-top: -100%;
     border-radius: 50%;
     border: 10px solid #fff;
-    background-color: #ef0000;
+    background-color: #7d06ef;
    -webkit-animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
     animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
   }
@@ -113,7 +113,7 @@
     margin-top: -100%;
     border-radius: 50%;
     border: 2px solid #fff;
-    background-color: #ef0000;
+    background-color: #7d06ef;
     -webkit-animation: pulse-ring 1.25s cubic-bezier(0.125, 0.61, 0.355, 1) infinite;
     animation: pulse-ring 1.25s cubic-bezier(0.125, 0.61, 0.355, 1) infinite;
   }
@@ -126,7 +126,7 @@
     display: block;
     width: 100%;
     height: 100%;
-    background-color: #ef6262;
+    background-color: #bf7ffc;
     border-radius: 50%;
     border: 10px solid #fff;
     box-shadow: 0 0 8px rgba(0 0 0 0.3);
@@ -183,7 +183,7 @@
     right: 0;
     left: 2px;
     top: 25px;
-    border: 3px solid #ef6262;
+    border: 3px solid #bf7ffc;
     -webkit-border-radius: 30px;
     -webkit-animation: pulsate 2s ease-out;
     -webkit-animation-iteration-count: infinite;
