@@ -30,10 +30,10 @@
   
   <!-- header info -->
   <div class="jPanelMenu-panel" style="position: relative; transform: translated3d(0px, 0px, 0px);">
-    <div class="site_header_area drop_show">
+    <div class="site_header_area drop_show navbar-nav">
       <header class="site_header">
         <a href="https://s-booth02.github.io/" aria-label="home">
-            <div id="brand_area" class="brand_area"></div>
+            <div id="brand_area" class="brand_area navbar-brand"></div>
         </a>
         <a class="visuallyhidden focusable" href="#main">Skip Navigation</a>
         
@@ -46,7 +46,7 @@
       <!-- this contains the go back button & overlay-->
       <div id="overlay" class="sites-info-overlay" >
         <!--<div class="sites-info-content" style="top: 105px ;height: 3000px;">  this element will have scrollable overflow -->
-          <div id="close_overlay"class="close-sites-info-overlay" onclick = "hidePopup()" style="top: 111px; padding-top:3px;">
+          <div id="close_overlay"class="close-sites-info-overlay" onclick = "hidePopup()" style="top: 92px; padding-top:3px;">
             <span id="stop-player" style="font-size:0.7em;padding: 4px; padding-right: 7px; padding-left: 7px;  background-color: #0b3d91; border-radius:20px; color:#fff!important">
               GO BACK
               <!-- this is where there should be an svg with the arrow symbol, since the others didnt work am leaving this blank till i get another one-->
@@ -57,7 +57,7 @@
               <!-- this is designed to be empty so the json functions can be propogated here -->
               <!-- Text and Descriptions -->
                <div>
-                <img src="images/pin_google.svg" alt="" style="float:left; height:60px; width: 30px; left: 6px; position:relative; top: -5px;">
+                <img id="google-pin" src="images/pin_google.svg" alt="" title="Link to Google Maps" style="float:left; height:60px; width: 30px; left: 6px; position:relative; top: -5px;" role = "button">
                 <div id="description-title" style="padding-left:40px"></div>
                 <div id="description-paragraph" style="padding-left:40px"></div>
                </div>
@@ -79,7 +79,7 @@
     
       <!-- this will be the map image section-->
       <div id="map-wrapper">
-        <div class="container">
+        <div class="container-fluid">
           <div class="map">
             <div class ="maps-container unselectable sites_shows_content" style="height: 1200px;">
               <!-- created button with attributes to make the info icon be the backgrond -->
@@ -88,7 +88,7 @@
               <div id = "map-instructions" class="map-instructions" style="display: block">
                 <button id="close_button" class="close_button" alt="Close Button" onclick="info_click()" z-index="1000" type="button"></button>
                 <span class="map-box-header"></span>
-                <span class="map-box-text">Click on the dots to show more information.</span>
+                <span id="map-box-text" class="map-box-text">Click on the dots to show more information.</span>
               </div>
               <div id ="map-origin" class="maps-container-inner zoomedElement zoomedElement414 zoomedElement987" style="transform: scale(1); position: absolute;">
                 <div class="maps-zoomed-container">
@@ -277,6 +277,7 @@
         .then((json) => {
           document.getElementById("map-image-changable").src = "images/" + json.mapImage;
           document.getElementById("brand_area").style = "background-image: url(../images/" + json.headerImage;
+          document.getElementById("map-box-text").textContent = json.exploreText;
           
         })
     });
@@ -309,6 +310,7 @@
                   document.getElementById("overlay").style.display = "block";
                   document.getElementById("map-origin").style.display = "none";
                   document.getElementById("building-images-" + idNum).style.display = "block";
+                  document.getElementById("google-pin").onclick = function(){ window.open(filtered[idNum].googleMapsLink) }
                   slideSet = "slides-" + i;
                   dotSet = "dot-" + i;
                   showSlides(slideIndex);

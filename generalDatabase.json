@@ -2,7 +2,7 @@
     "headerImage": "MSFC_Header.svg",
     "footerText": {"nasaOfficial": "", "pageEditor": "Simone Booth"},
     "exploreHeader": "explore.svg",
-    "exploreText": "Click on the dots to show more information.",
+    "exploreText": "Click on the dots to show more information. Each item has a clickable map icon in their information section, which will lead to google maps.",
     "menuImage": "menu_icon.png",
     "menuIcons": { "mapIcon": "pin_2.svg", "exploreIcon": "explore_svg.svg", "infoIcon": "info.svg", "feedbackIcon":"feedback_02.svg" },
     "feedbackEmail": "simone.booth1002@gmail.com",
