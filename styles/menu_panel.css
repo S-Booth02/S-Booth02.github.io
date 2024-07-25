@@ -22,16 +22,6 @@
   transition: 0.3s;
 }
 
-/* change color of links on mouse hover */
-.sidenav a:hover {
-  color: #f1f1f1;
-  background-color: #1264ee;
-}
-.sidenav div:hover {
-  color: #f1f1f1;
-  background-color: #1264ee;
-}
-
 /* close button for nav */
 .sidenav .closebtn {
   position: absolute;
@@ -80,7 +70,7 @@ hr.solid {
   margin-top: 1px;
   margin-top: 24px;
   margin-left: 23px;
-  transform: scale(4);
+/*  transform: scale(4);*/
   background-image: url("../images/explore_svg.svg");
   background-size: 100%;
   width: 8px;
@@ -122,4 +112,50 @@ hr.solid {
   position: absolute;
   left: 3px;
   cursor: pointer;
+}
+.map-link {
+  background-color: #0b3d91;
+  background-image:  url("../images/pin_2.svg");
+  background-repeat:  no-repeat;
+  background-position: 5%;
+  background-size: 27px;
+  background-origin: center;
+}
+.explore-link{
+  background-color: #0b3d91;
+  background-image:  url("../images/explore_svg.svg");
+  background-repeat:  no-repeat;
+  background-position: 5%;
+  background-size: 27px;
+  background-origin: center;
+}
+.info-link {
+  background-color: #0b3d91;
+  background-image:  url("../images/info.svg");
+  background-repeat:  no-repeat;
+  background-position: 5%;
+  background-size: 27px;
+  background-origin: center;
+}
+.feedback-link {
+  background-color: #0b3d91;
+  background-image:  url("../images/feedback_04.svg");
+  background-repeat:  no-repeat;
+  background-position: 5%;
+  background-size: 27px;
+  background-origin: center;
+}
+.sidenav ul li:first-child {
+  border-top: 1px solid #e4e9ef;
+}
+.sidenav ul li{
+  cursor:pointer;
+  border-bottom: 1px solid #e4e9ef;
+}
+.sidenav ul li span{
+  margin-left:20px;
+}
+.sidenav ul li:hover {
+  color: #f1f1f1;
+  background-color: #1264ee;
 }

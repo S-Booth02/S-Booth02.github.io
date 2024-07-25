@@ -37,7 +37,7 @@
 }
 .info-title {
   font-weight: bold;
-  font-size: 18px;
+  /*font-size: 18px;*/
   position: relative;
   left: 5px;
 }
