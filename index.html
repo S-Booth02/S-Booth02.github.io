@@ -443,8 +443,9 @@
                 slides.style  = "display: none";
               }
   						var image = document.createElement("img");
-  						image.className = "all_slideshows";
-  						image.src = "images/" + jsonEle[i].images[j];  						  
+  						image.className = "all_slideshows vh-75";
+  						image.src = "images/" + jsonEle[i].images[j];  	
+              image.style = "max-height: 600px; !important"					  
   						slides.appendChild(image);
   						slideshowContainer.appendChild(slides);
   					}
