@@ -106,7 +106,7 @@
   cursor: pointer;
   position: absolute;
   width: auto;
-  /*top:50%;*/
+  top:400px;
   padding: 16px;
   color: white;
   font-weight: bold;
@@ -115,9 +115,22 @@
   border-radius: 0 3px 3px 0;
   user-select: none;
   z-index:2150;
-  margin-top: 50%; 
-  margin-bottom:50%;
-  margin: auto 0 auto 0;
+}
+@media (max-height: 600px) {
+  .site_footer_area {display:none;}
+  .all_slideshows {height: 375px;}
+}
+@media (min-height: 600px) {
+.site_footer_area {display:block;}
+}
+@media (min-height: 768px) {
+.site_footer_area {display:block;}
+}
+@media (min-height: 992px) {
+.site_footer_area {display:block;}
+}
+@media (min-height: 1200px) {
+.site_footer_area {display:block;}
 }
 /* position the next button to the right*/
 .next {
