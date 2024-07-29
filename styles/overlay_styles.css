@@ -106,7 +106,6 @@
   cursor: pointer;
   position: absolute;
   width: auto;
-  top:400px;
   padding: 16px;
   color: white;
   font-weight: bold;
@@ -119,14 +118,18 @@
 @media (max-height: 600px) {
   .site_footer_area {display:none;}
   .all_slideshows {height: 350px;}
+  .prev, .next { top: 275px; }
+    
 }
 @media (min-height: 600px) {
 .site_footer_area {display:block;}
   .all_slideshows {height: 375px;}
+  .prev, .next { top: 280px; }
 }
 @media (min-height: 768px) {
 .site_footer_area {display:block;}
   .all_slideshows {height: 600px;}
+  .prev, .next { top: 400px; }
 }
 @media (min-height: 992px) {
 .site_footer_area {display:block;}
