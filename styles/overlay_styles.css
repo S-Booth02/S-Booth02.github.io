@@ -118,19 +118,23 @@
 }
 @media (max-height: 600px) {
   .site_footer_area {display:none;}
-  .all_slideshows {height: 375px;}
+  .all_slideshows {height: 350px;}
 }
 @media (min-height: 600px) {
 .site_footer_area {display:block;}
+  .all_slideshows {height: 375px;}
 }
 @media (min-height: 768px) {
 .site_footer_area {display:block;}
+  .all_slideshows {height: 600px;}
 }
 @media (min-height: 992px) {
 .site_footer_area {display:block;}
+  .all_slideshows {height: 600px;}
 }
 @media (min-height: 1200px) {
 .site_footer_area {display:block;}
+  .all_slideshows {height: 600px;}
 }
 /* position the next button to the right*/
 .next {
