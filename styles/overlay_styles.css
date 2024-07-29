@@ -128,11 +128,13 @@ border: solid grey;
 .right {
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
+  right:20px;
 }
 
 .left {
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
+  left:20px;
 }
 @media (max-height: 600px) {
   .site_footer_area {display:none;}
