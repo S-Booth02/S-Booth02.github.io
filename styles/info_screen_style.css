@@ -1,0 +1,38 @@
+#msfc-info-screen {
+    background-color: rgb(85, 38, 129);
+    height:100%;
+    width:100%;
+    display:none;
+    margin-top: 125px;
+}
+.info-header {
+    width:100%;
+    min-height: 90px;
+    background-color: #0b3d91;
+    text-align: center;
+    font-size: xx-large;
+    color: white;
+    padding:20px;
+}
+#close-msfc-info {
+    z-index: 3;
+}
+@media (max-height: 600px) {
+    .site_header .brand_area {top: -4px; width:403px; height:95px;}
+    .menu-button {margin-top:-79px}
+    #close-msfc-info {top:106px}
+}
+@media (min-height: 600px) {
+  .site_header .brand_area { top: -4px;height:80px;width:375px;}
+  #close-msfc-info {top:92px}
+  .menu-button {margin-top:-73px}
+}
+@media (min-height: 768px) {
+  
+}
+@media (min-height: 992px) {
+
+}
+@media (min-height: 1200px) {
+  
+}
