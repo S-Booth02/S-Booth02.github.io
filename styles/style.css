@@ -94,6 +94,25 @@
   padding:.8em 0 0 .5em;
   display:block;
 }
+@media (max-height: 600px) {
+    .site_header .brand_area {top: -4px; width:403px; height:95px;}
+    .menu-button {margin-top:-79px}
+    #close_overlay {top:106px}
+}
+@media (min-height: 600px) {
+  .site_header .brand_area { top: -4px;height:80px;width:375px;}
+  #close_overlay {top:92px}
+  .menu-button {margin-top:-73px}
+}
+@media (min-height: 768px) {
+  
+}
+@media (min-height: 992px) {
+
+}
+@media (min-height: 1200px) {
+  
+}
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);

@@ -94,7 +94,7 @@
   height: 500px;
   margin: auto;
   width:100%;
-  background-color: #0b3d91;
+  background-color: #3f5c8f;
 }
 /*hide images by default*/
 .mySlides {
@@ -122,7 +122,8 @@
   padding: 11px;
 }
 .arrow hover {
-border: solid #a9a9a9;
+  border: solid #0b3d91;
+  border-width: 0 3px 3px 0;
 }
 
 .right {
@@ -175,14 +176,6 @@ border: solid #a9a9a9;
   text-align: center;
   z-index: 5000;
 }
-/* number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
 /*dot indicators*/
 .dot {
   cursor: pointer;
@@ -213,21 +206,6 @@ border: solid #a9a9a9;
   font-size: 18px;
   font-weight: normal;
 }
-.admin::after {
-    content: "Admin Complex";
-    color: blue;
-}
-.admin-desc::after {
-  content: "Description of Admin Complex";
-}
-.test::after {
-  content: "Test Section";
-  color: teal;
-}
-.test-desc::after {
-  content: "Description of Test";
-}
-
 .all_slideshows {
   margin: 0 auto;
   width: auto; 

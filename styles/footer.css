@@ -32,3 +32,22 @@
   font-size:12px;
   padding-bottom:10px;
 }
+@media (max-height: 600px) {
+    
+}
+@media (min-height: 600px) {
+  .footer_info { font-size: 16px;}
+  .site_footer_area { height: 118px;}
+  .footer_brand_area {width: 106px; height: 87px}
+}
+@media (min-height: 768px) {
+  .footer_info { font-size: 14px;}
+  .footer_brand_area {width: 106px; height: 87px}
+  .site_footer_area { height: 110px;}
+}
+@media (min-height: 992px) {
+
+}
+@media (min-height: 1200px) {
+  .site_footer { font-size: 2px;}
+}
