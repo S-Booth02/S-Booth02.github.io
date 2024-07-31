@@ -1,6 +1,8 @@
 #msfc-info-screen {
-    background-color: rgb(85, 38, 129);
-    background-image: "images/GSFC_20171208_Arc.jpg";
+    background-color: #c0c9d4;
+    /*background-image: url("../images/space.jpg");*/
+    background-repeat: no-repeat;
+    background-size: contain;
     height:100%;
     width:100%;
     display:none;

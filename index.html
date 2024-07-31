@@ -86,32 +86,30 @@
           </span>
         </div>
         
-        <div class="row" style="padding-left:50px; padding-top:30px; padding-right:50px;padding-bottom: 125px;">
-          
-        <div class="col-sm-auto col-md-6 col-lg-6" style="margin-left:20px; background-color:white; padding:0;">
-            <div class="info-header" style="font-weight:700; line-height:1.1 font-size:30px;">Marshall Space Flight Center</div>
-  <div style="padding:10px;">
-<p style="font-weight:700;font-size:20px; line-height:1.25">Since its beginning in 1960, Marshall has provided the agency with mission-critical design, development and integration of the launch and space systems required for space operations, exploration and scientific missions.</p>
-
-<p style="font-size:16px; line-height:1.6">Marshall’s legacy in rocket engineering includes providing the Saturn rockets that powered Americans to the moon and the Lunar Roving Vehicle that aided exploration of the moon; managing the development of Skylab, America’s first space station; developing space shuttle propulsion systems and experiments, including Spacelab; building the Hubble Space Telescope and the Chandra X-ray Observatory; and building the International Space Station’s laboratory modules and experiment facilities and operating station science experiments.</p>
-  </div>
-          </div>
-		  <div class="col-sm-auto h-75 col-md-6 col-lg-6">
-            <div class="row">
-              <img src="images/msfc-202100223_orig.jpg" class="shadow-1-strong rounded mx-auto flex-grow-1 w-100" style="object-fit: cover; padding:5px; height:37vh;horizontal-align:left;">
+        <div class="row justify-content-center" style="padding-left:60px; padding-top:30px; padding-right:60px;">
+          <!--text section-->
+          <div class="text-info-screen col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-8 rounded" style="background-color:white;height:auto;overflow-y: auto;margin:0px !important;padding:0  !important;">
+            <div class="info-header" style="font-weight:700; line-height:1.1; font-size:30px;">Marshall Space Flight Center</div>
+            <div>
+              <p style="font-weight:700;font-size:20px; line-height:1.25;padding: 10px;">Since its beginning in 1960, Marshall has provided the agency with mission-critical design, development and integration of the launch and space systems required for space operations, exploration and scientific missions.</p>
+              <p style="font-size:16px; line-height:1.6;padding: 10px;">Marshall’s legacy in rocket engineering includes providing the Saturn rockets that powered Americans to the moon and the Lunar Roving Vehicle that aided exploration of the moon; managing the development of Skylab, America’s first space station; developing space shuttle propulsion systems and experiments, including Spacelab; building the Hubble Space Telescope and the Chandra X-ray Observatory; and building the International Space Station’s laboratory modules and experiment facilities and operating station science experiments.</p>
             </div>
-            <div class="row"> 
-              <img src="images/msfc_070919_sls_lh2_sta_in_stand_5.jpg" class="shadow-1-strong rounded mx-auto flex-grow-1 w-100" style="object-fit: cover; padding:5px; height:37vh;vertical-align:bottom;horizontal-align:left;">
-            </div>
-            
-          </div>
-
-          <div class="col-4">
-              <img src="images/chandra.jpg" class="shadow-1-strong rounded w-100" style="object-fit: cover; padding:5px;overflow:hidden;height:74vh;horizontal-align:right;">
-
           </div>
         </div>
+        <div class="row justify-content-center" style="padding-left:60px; padding-top:5px; padding-right:60px;padding-bottom: 125px;">
+          <!--image1-->
+          <div class="col-sm-auto col-md-12 col-lg-6 col-xxl-4"style="padding:5px;">
+            <img src="images/historic_rocket.jpg" class="shadow-1-strong mx-auto flex-grow-1 rounded w-100" style="object-fit: cover; overflow:hidden;height:50vh;">
+          </div>
+          <!--image2-->
+          <div class="col-sm-auto h-75 col-md-12 col-lg-6 col-xxl-4"style="padding:5px;"> 
+            <img src="images/msfc_070919_sls_lh2_sta_in_stand_5.jpg" class="shadow-1-strong rounded mx-auto flex-grow-1 w-100" style="object-fit: cover; height:50vh;vertical-align:bottom;">
+          </div>
+              
+
+        </div>
       </div>
+      <!--end of msfc info screen-->
 
       <!-- this will be the map image section-->
       <div id="map-wrapper">
@@ -249,9 +247,11 @@
   function map() {
      document.getElementById("overlay").style.display = "none";
     document.getElementById("map-wrapper").style.display = "block";
+    window.scrollTo(0,0);
     closeNav();
   }
   function msfc_info() {
+    window.scrollTo(0,0);
     document.getElementById("msfc-info-screen").style.display = "block";
     document.getElementById("overlay").style.display = "none";
     document.getElementById("map-wrapper").style.display = "none";
@@ -260,6 +260,7 @@
   function msfc_info_quit() {
     document.getElementById("msfc-info-screen").style.display = "none";
     document.getElementById("map-wrapper").style.display = "block";
+    window.scrollTo(0,0);
     hidePopup();
   }
 

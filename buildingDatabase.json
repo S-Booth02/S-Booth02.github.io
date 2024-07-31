@@ -3,7 +3,7 @@
 		"buildingName": "Office Building", 
 		"buildingNumber": "Building 4221", 
 		"descriptionParagraph": "Building 4221 - description",
-		"images" : ["4221.jpg", "MSFC_4221.jpg", "MSFC_4221_sunset.jpg"],
+		"images" : ["msfc-202100223_orig.jpg", "MSFC_4221.jpg", "MSFC_4221_sunset.jpg"],
 		"videos": [],
 		"googleMapsLink": "https://www.google.com/maps/search/?api=1&query=MSFC+Building+4221",
 		"thumbnailIcon": "4221.jpg",
