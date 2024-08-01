@@ -74,3 +74,21 @@
     .menu-button {margin-top:-73px; transform-origin: 0 0; transform:scale(1); margin-right:0px; }
     .maps-container {top:107px;}
   }
+  @media (min-width: 575px) {
+    .menu-button{background-color: red;}
+  }
+  @media (min-width: 600px) {
+    .menu-button{background-color: orange;}
+  }
+  @media (min-width: 625px) {
+    .menu-button{background-color: yellow;}
+  }
+  @media (min-width: 650px) {
+    .menu-button{background-color: greenyellow;}
+  }
+  @media (min-width: 675px) {
+    .menu-button{background-color: green;}
+  }
+  @media (min-width: 700px) {
+    .menu-button{background-color: turquoise;}
+  }
