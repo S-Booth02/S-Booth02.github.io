@@ -23,8 +23,6 @@
     background-size: 100%;
     z-index: 300;
     display: inline-block;
-    width: 1920px;
-    height: 105px;
     background-position: right center;
   }
   .site_header .brand_area {
@@ -33,8 +31,6 @@
     background-size: 100%;
     z-index: 300;
     display: inline-block;
-    width: 375px;
-    height: 80px;
     
   }
   .site_header {

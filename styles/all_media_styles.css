@@ -11,11 +11,13 @@
   @media (max-height: 600px) {
     .all_slideshows {height: 350px;}
     .prev, .next { top: 275px; }
+    .site_footer_area { height: 98px;}
+    .footer_info { font-size:13px;}
+    .footer_brand_area {top:-2px; width:95px; height:73px;}
   }
   
   
   @media (min-height: 600px) {
-    .site_header .brand_area { top: -4px;height:80px;width:375px;}
     #close_overlay {top:92px}
     .menu-button {margin-top:-73px}
   }
@@ -58,8 +60,8 @@
   /*width*/
   @media (max-width:550px) {
     .nav_area {top: 2em;}
-    .site_header .brand_area {top: -4px; height:105px; width:470px;}
-    .menu-button {margin-top:-97px; transform-origin: 0 0; transform:scale(1.4); margin-right:59px; }
+    .site_header .brand_area {top: -4px; height:60px; width:276px;}
+    .menu-button {margin-top:-64px; margin-right:25px; }
     #close-msfc-info{top:116px;}
     #close-overlay{top:116px;}
     .info-padding {padding-top:40px;}
@@ -71,33 +73,7 @@
   @media (min-width:550px) {
     .info-padding {padding-top:30px;}
     .image-center {margin-top:0px;}
-    .menu-button {margin-top:-73px; transform-origin: 0 0; transform:scale(1); margin-right:0px; }
+    .site_header .brand_area {top: -4px; height:80px; width:375px;}
+    .menu-button {margin-top:-73px; margin-right:25px; }
     .maps-container {top:107px;}
-  }
-  @media (min-width: 700px) {
-    .menu-button{background-color: red;}
-  }
-  @media (min-width: 725px) {
-    .menu-button{background-color: orange;}
-  }
-  @media (min-width: 750px) {
-    .menu-button{background-color: yellow;}
-  }
-  @media (min-width: 775px) {
-    .menu-button{background-color: greenyellow;}
-  }
-  @media (min-width: 800px) {
-    .menu-button{background-color: green;}
-  }
-  @media (min-width: 825px) {
-    .menu-button{background-color: turquoise;}
-  }
-  @media (min-width: 850px) {
-    .menu-button{background-color: blue;}
-  }
-  @media (min-width: 875px) {
-    .menu-button{background-color: blueviolet;}
-  }
-  @media (min-width: 900px) {
-    .menu-button{background-color: purple;}
   }
