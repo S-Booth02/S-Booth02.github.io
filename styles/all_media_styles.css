@@ -14,11 +14,11 @@
     .site_footer_area { height: 98px;}
     .footer_info { font-size:13px;}
     .footer_brand_area {top:-2px; width:95px; height:73px;}
+    .maps-container{height:600px;}
   }
   
   
   @media (min-height: 600px) {
-    #close_overlay {top:92px}
     .menu-button {margin-top:-73px}
   }
   @media (min-height: 600px) {
@@ -26,7 +26,7 @@
     .prev, .next { top: 280px; }
   }
   @media (min-height: 600px) {
-    .footer_info { font-size: 16px;}
+    .footer_info { font-size: 13px;}
     .site_footer_area { height: 118px;}
     .footer_brand_area {width: 106px; height: 87px}
   }
@@ -46,6 +46,7 @@
   
   @media (min-height: 992px) {
     .all_slideshows {height: 600px;}
+    .footer_info { font-size: 16px;}
   }
   
   
@@ -62,12 +63,16 @@
     .nav_area {top: 2em;}
     .site_header .brand_area {top: -4px; height:60px; width:276px;}
     .menu-button {margin-top:-64px; margin-right:25px; }
-    #close-msfc-info{top:116px;}
-    #close-overlay{top:116px;}
+    #close-msfc-info{top:71px;}
+    #close-overlay{top:71px;}
     .info-padding {padding-top:40px;}
-    .image-center {margin-top:150px;}
-    .prev, .next {top:425px;}
-    .maps-container {top:113px;}
+    .image-center {margin-top:-24px;}
+    .prev, .next {top:290px;}
+    .maps-container {top:90px;}
+    .instructions_button { right: 7px;margin-top: 7px;}
+    #msfc-info-screen {margin-top:127px; }
+    #info-heading {font-size:16px;}
+    #info-paragraph{font-size:12px;}
   }
   
   @media (min-width:550px) {
@@ -76,4 +81,8 @@
     .site_header .brand_area {top: -4px; height:80px; width:375px;}
     .menu-button {margin-top:-73px; margin-right:25px; }
     .maps-container {top:107px;}
+    #close_overlay {top:92px}
+    .instructions_button { right: 20px;margin-top: 20px;}
+    #info-heading {font-size:20px;}
+    #info-paragraph{font-size:16px;}
   }

@@ -6,9 +6,6 @@
 @import "bootstrap/scss/mixins";
 @import "bootstrap/scss/utilities";
 
-.maps-container  {
-	top: 107px; 
-}
 .map-instructions  {
 	top: 55px; right: 15px;
 }

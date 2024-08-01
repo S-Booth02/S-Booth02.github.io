@@ -42,8 +42,6 @@
 .instructions_button {
   z-index: 1000;
   position: absolute;
-  right: 20px;
-  margin-top: 20px;
   cursor: pointer;
   opacity: 0.5;
   background-image: url("../images/info_button.png");
