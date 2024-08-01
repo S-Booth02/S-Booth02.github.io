@@ -63,8 +63,8 @@
     .nav_area {top: 2em;}
     .site_header .brand_area {top: -4px; height:60px; width:276px;}
     .menu-button {margin-top:-64px; margin-right:25px; }
-    #close-msfc-info{top:71px;}
-    #close-overlay{top:71px;}
+    #close-msfc-info{top:75px;}
+    #close-overlay{top:75px;}
     .info-padding {padding-top:40px;}
     .image-center {margin-top:-24px;}
     .prev, .next {top:290px;}
@@ -81,7 +81,8 @@
     .site_header .brand_area {top: -4px; height:80px; width:375px;}
     .menu-button {margin-top:-73px; margin-right:25px; }
     .maps-container {top:107px;}
-    #close_overlay {top:92px}
+    #close_overlay {top:95px}
+    #close-msfc-info{top:95px;}
     .instructions_button { right: 20px;margin-top: 20px;}
     #info-heading {font-size:20px;}
     #info-paragraph{font-size:16px;}

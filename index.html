@@ -51,7 +51,7 @@
       <!-- this contains the go back button & overlay-->
       <div id="overlay" class="sites-info-overlay" >
         <!--<div class="sites-info-content" style="top: 105px ;height: 3000px;">  this element will have scrollable overflow -->
-          <div id="close_overlay"class="close-sites-info-overlay" onclick = "hidePopup()" style="padding-top:3px;">
+          <div id="close_overlay"class="close-sites-info-overlay" onclick = "hidePopup()">
             <span id="stop-player" style="font-size:0.7em;padding: 4px; padding-right: 7px; padding-left: 7px;  background-color: #0b3d91; border-radius:20px; color:#fff!important">
               GO BACK
               <!-- this is where there should be an svg with the arrow symbol, since the others didnt work am leaving this blank till i get another one-->
@@ -82,7 +82,7 @@
       </div> <!-- end of overlay -->
 
       <div id="msfc-info-screen" style="display: none;">
-        <div id="close-msfc-info" class="close-sites-info-overlay" onclick="msfc_info_quit()" style="padding-top:3px;">
+        <div id="close-msfc-info" class="close-sites-info-overlay" onclick="msfc_info_quit()">
           <span id="stop-player" style="font-size:0.7em;padding: 4px; padding-right: 7px; padding-left: 7px;  background-color: #0b3d91; border-radius:20px; color:#fff!important">
             GO BACK
           </span>
@@ -258,11 +258,13 @@
     document.getElementById("msfc-info-screen").style.display = "block";
     document.getElementById("overlay").style.display = "none";
     document.getElementById("map-wrapper").style.display = "none";
+    document.getElementById("site-footer-area").style.display = "none";
     closeNav();
   }
   function msfc_info_quit() {
     document.getElementById("msfc-info-screen").style.display = "none";
     document.getElementById("map-wrapper").style.display = "block";
+    document.getElementById("site-footer-area").style.display = "block";
     window.scrollTo(0,0);
     hidePopup();
   }
