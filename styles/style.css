@@ -18,6 +18,24 @@
 .site_header {
   padding: 1.1em 0 0 2em;
 }
+@media (max-width:449px) {
+  .nav_area {top: 2em;}
+  .filter_bar { top: 90px; }
+  .site_header .brand_area {top: -4px; height:105px; width:470px;}
+  .menu-button {margin-top:-97px; tranfrorm-origin: 0 0; transform:scale(1.4); margin-right:59px; }
+  #close-msfc-info{top:116px;}
+  #close-overlay{top:116px;}
+  .info-padding {padding-top:40px;}
+  .image-center {margin-top:150px;}
+  .prev, .next {top:425px;}
+  .maps-container {top:113px;}
+}
+@media (min-width:450px) {
+  .info-padding {padding-top:30px;}
+  .image-center {margin-top:0px;}
+  .maps-container {top:107px;}
+}
+
 /*
 @media (min-width:600px) {
   .site_header_area .site_header .brand_area {width: 330px; height: 150px; background-size: 100%}
