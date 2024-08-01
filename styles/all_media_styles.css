@@ -73,6 +73,7 @@
     #msfc-info-screen {margin-top:127px; }
     #info-heading {font-size:16px;}
     #info-paragraph{font-size:12px;}
+    .marker-all { transform:scale(0.5);}
   }
   
   @media (min-width:550px) {
@@ -86,4 +87,5 @@
     .instructions_button { right: 20px;margin-top: 20px;}
     #info-heading {font-size:20px;}
     #info-paragraph{font-size:16px;}
+    .marker-all { transform:scale(1);}
   }

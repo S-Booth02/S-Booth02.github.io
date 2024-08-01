@@ -346,7 +346,7 @@
               var newDiv = document.createElement("div");
               newDiv.id = "".concat("group-marker-", i);
               newDiv.classList.add("marker-all", "marker-group");
-              newDiv.style = "display:block; transform:scale(1); left:50%; top:20%;";
+              newDiv.style = "display:block; left:50%; top:20%; transform-origin: 0 0;";
               newDiv.style.top = jsonEle[i].markerTop + '%';
               newDiv.style.left = jsonEle[i].markerLeft + '%';
               newDiv.onclick = function(){
