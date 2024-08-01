@@ -161,8 +161,11 @@
   top: 25px;
   border: 3px solid #bf7ffc;
   -webkit-border-radius: 30px;
+  border-radius: 30px;
   -webkit-animation: pulsate 2s ease-out;
+  animation: pulsate 2s ease-out;
   -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
   opacity: 0;
 }
 
@@ -187,6 +190,7 @@
   z-index: 11;
   -webkit-backface-visiblity: hidden;
   -webkit-transform: translateZ(0) scale(1,1);
+  transform: translateZ(0) scale(1,1);
 }
 .marker-group span{
   display: none;
