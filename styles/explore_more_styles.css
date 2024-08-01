@@ -2,12 +2,9 @@
   color: #0b3d91;
   font-weight: bold;
   padding: 10px 0;
-  /* having this makes the explore really small*/
-  /*font-size: 0.1em;*/
 }
 .explore-table {
   margin: 0 -10px -10px 0;
-  
 }
 .explore-info {
   border-bottom: 1px solid #ccc;
@@ -33,14 +30,9 @@
   font-size: 16px;
   left:8px;
   position: relative;
-  /* margin left was og 83px */
 }
 .info-title {
   font-weight: bold;
-  /*font-size: 18px;*/
   position: relative;
   left: 5px;
-}
-#titleone{
-  font-size: 1.0em;
 }

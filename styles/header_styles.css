@@ -1,0 +1,55 @@
+/*header and navigation*/
+.site_header {
+    padding: 1.1em 0 0 2em;
+  }
+  .site_header_area.drop_show {
+    background-color: white; 
+    -webkit-box-shadow: 0 4px 4px -1px rgba(0,0,0,0,0.15); 
+    -mox-box-shadow: 0 4px 4px -2px rgba(0,0,0,0.15); 
+    box-shadow: 0 4px 4px -2px rgba(0,0,0,0.15); 
+  }
+  .site_header_area { 
+    z-index: 2200; 
+    top:0;
+    left: 0;
+  }
+  .site_header_area {
+    position: fixed;
+    width: 100%;
+    transition: background-color .5s ease-in-out;
+  }
+  .site_header .brand_area {
+    position: relative;
+    background-size: 100%;
+    z-index: 300;
+    display: inline-block;
+    width: 1920px;
+    height: 105px;
+    background-position: right center;
+  }
+  .site_header .brand_area {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: 300;
+    display: inline-block;
+    width: 375px;
+    height: 80px;
+    
+  }
+  .site_header {
+    clear:both;
+    z-index:5;
+    width:100%;
+    height:100%;
+    position:relative;
+    margin:0 auto;
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -khtml-user-select:none;
+    -moz-user-select:-moz-none;
+    -ms-user-select:none;
+    user-select:none;
+    padding:.8em 0 0 .5em;
+    display:block;
+  }
