@@ -30,7 +30,7 @@
   .prev, .next {top:425px;}
   .maps-container {top:113px;}
 }
-@media (min-width:450px) {
+@media (min-width:600px) {
   .info-padding {padding-top:30px;}
   .image-center {margin-top:0px;}
     .menu-button {margin-top:-73px; tranfrorm-origin: 0 0; transform:scale(1); margin-right:0px; }
