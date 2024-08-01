@@ -18,7 +18,7 @@
 .site_header {
   padding: 1.1em 0 0 2em;
 }
-@media (min-width:300px) {
+@media (min-width:600px) {
   .nav_area {top: 2em;}
   .filter_bar { top: 90px; }
   .site_header .brand_area {top: -4px; height:105px; width:470px;}
@@ -30,13 +30,14 @@
   .prev, .next {top:425px;}
   .maps-container {top:113px;}
 }
+/*
 @media (min-width:600px) {
   .info-padding {padding-top:30px;}
   .image-center {margin-top:0px;}
     .menu-button {margin-top:-73px; tranfrorm-origin: 0 0; transform:scale(1); margin-right:0px; }
   .maps-container {top:107px;}
 }
-
+*/
 /*
 @media (min-width:600px) {
   .site_header_area .site_header .brand_area {width: 330px; height: 150px; background-size: 100%}
