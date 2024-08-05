@@ -59,7 +59,7 @@
   
   
   /*width*/
-  @media (max-width:550px) {
+  @media (max-width:449px) {
     .nav_area {top: 2em;}
     .site_header .brand_area {top: -4px; height:60px; width:276px;}
     .menu-button {margin-top:-64px; margin-right:25px; }
@@ -74,9 +74,10 @@
     #info-heading {font-size:16px;}
     #info-paragraph{font-size:12px;}
     .marker-all { transform:scale(0.5);}
+    .close-sites-info-overlay { top:74px;}
   }
   
-  @media (min-width:550px) {
+  @media (min-width:449px) {
     .info-padding {padding-top:30px;}
     .image-center {margin-top:0px;}
     .site_header .brand_area {top: -4px; height:80px; width:375px;}
@@ -88,4 +89,5 @@
     #info-heading {font-size:20px;}
     #info-paragraph{font-size:16px;}
     .marker-all { transform:scale(1);}
+    .close-sites-info-overlay { top:107px;}
   }

@@ -73,7 +73,7 @@
             </div><!--end of location_specific_description-->
             
             <!-- start of exploration section as a whole -->
-            <div id="exploration-div"> 
+            <div id="exploration-div" style="position:relative;"> 
               <div class="explore-more" style="padding-left:15px">EXPLORE MORE!</div>
               <!-- start of table - the div is designed to be empty, it will be filled in dynamically using the json table -->
               <div id="explore-more-id" class="explore-table container-fluid"></div>
@@ -223,7 +223,7 @@
     console.log("start hide pop-up");
     document.getElementById("site-footer-area").style.display = "block";
     document.getElementById("overlay").style.display = "none";
-    document.getElementById("map-origin").style.display = "block"; 
+    document.getElementById("map-wrapper").style.display = "block";
     document.getElementById("location-specific-description").style.display = "block";
     var allSlideshows = document.getElementsByClassName("image-center");
     for (k = 0; k < allSlideshows.length; k++) {
@@ -241,6 +241,7 @@
     document.getElementById("overlay").style.display = "block";
     document.getElementById("map-wrapper").style.display = "none";
     document.getElementById("location-specific-description").style.display = "none";
+
     var color = document.getElementsByClassName("maps-container");
     for (c = 0; c < color.length; c++){
         color[c].style.backgroundColor = "#ffffff";
