@@ -363,7 +363,7 @@
                   title.textContent = filtered[idNum].buildingName;
                   description.textContent =filtered[idNum].descriptionParagraph;
                   document.getElementById("overlay").style.display = "block";
-                  document.getElementById("map-origin").style.display = "none";
+                  document.getElementById("map-wrapper").style.display = "none";
                   document.getElementById("building-images-" + idNum).style.display = "block";
                   document.getElementById("google-pin").onclick = function(){ window.open(filtered[idNum].googleMapsLink) }
                   document.getElementById("site-footer-area").style.display = "none";
@@ -408,7 +408,7 @@
   						title.textContent = filtered[idNum].buildingName;
   						description.textContent =filtered[idNum].descriptionParagraph;
   						document.getElementById("overlay").style.display = "block";
-  						document.getElementById("map-origin").style.display = "none";
+  						document.getElementById("map-wrapper").style.display = "none";
               document.getElementById("site-footer-area").style.display = "none";
               var allSlideshows = document.getElementsByClassName("image-center");
               for (l=0;l< allSlideshows.length; l++ ) {
