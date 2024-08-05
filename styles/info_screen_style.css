@@ -1,12 +1,10 @@
 #msfc-info-screen {
     background-color: #c0c9d4;
-    /*background-image: url("../images/space.jpg");*/
     background-repeat: no-repeat;
     background-size: contain;
     height:100%;
     width:100%;
     display:none;
-    margin-top: 125px;
 }
 .info-header {
     width:100%;
