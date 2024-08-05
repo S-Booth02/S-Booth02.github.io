@@ -59,7 +59,10 @@
     .site_footer { font-size: 2px;}
   }
   
-  
+@media (max-height: 400px) {
+    #site-footer-area {display:none !important;}
+}
+
   /*width*/
   @media (max-width:449px) {
     .nav_area {top: 2em;}
