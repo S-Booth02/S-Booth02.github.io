@@ -79,8 +79,8 @@
     .marker-all { transform:scale(0.5);}
     .close-sites-info-overlay { top:74px;}
 
-    #map-instructions{width:332px;top:11px;}
-    .map-box-header {width:193px;margin-left:50px;}
+    #map-instructions{width:332px;top:43px;}
+    .map-box-header {width:193px;margin-left:auto;margin-right:auto;margin-top:-10px;}
     .map-box-text {text-align: center;}
     #row-info-container{padding-top:30px;}
   }
