@@ -70,11 +70,16 @@
     .prev, .next {top:290px;}
     .maps-container {top:90px;}
     .instructions_button { right: 7px;margin-top: 7px;}
-    #msfc-info-screen {margin-top:127px; }
+    #msfc-info-screen {margin-top:110px; }
     #info-heading {font-size:16px;}
     #info-paragraph{font-size:12px;}
     .marker-all { transform:scale(0.5);}
     .close-sites-info-overlay { top:74px;}
+
+    #map-instructions{width:332px;top:11px;}
+    .map-box-header {width:193px;margin-left:50px;}
+    .map-box-text {text-align: center;}
+    #row-info-container{padding-top:30px;}
   }
   
   @media (min-width:449px) {
@@ -90,4 +95,10 @@
     #info-paragraph{font-size:16px;}
     .marker-all { transform:scale(1);}
     .close-sites-info-overlay { top:107px;}
+
+    #msfc-info-screen {margin-top:127px; }
+    #map-instructions{width:200px;top:55px;}
+    .map-box-header {margin-left:0px;}
+    .map-box-text {text-align: left;}
+    #row-info-container{padding-top:30px;}
   }
