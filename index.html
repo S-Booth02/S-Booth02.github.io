@@ -430,6 +430,7 @@
             var infoIconHolder = document.createElement("div");
             infoIconHolder.style = "width:66px;";
             infoIconHolder.style.backgroundImage =  "url('images/more_info.png')";
+            infoIconHolder.style.backgroundSize = "cover";
   					var infoIconDiv = document.createElement("div");
   					infoIconDiv.className = "info-icon";
   					var infoIcon = document.createElement("img");
@@ -456,7 +457,7 @@
   					exploreInfoDiv.appendChild(infoIconHolder);
   					var exploreImage = document.createElement("img");
   					var imageOuterDiv = document.createElement("div");
-            imageOuterDiv.style="width:150px; background-color:yellow;margin:3px;padding:0px;";
+            imageOuterDiv.style="width:150px;margin:3px;padding:0px;";
   					exploreImage.style = "object-fit: fill; height: 100px; width: 150px; float: left;position:relative;";
   					exploreImage.src = "../images/" + jsonEle[i].thumbnailIcon;
   					var innerExploreDiv = document.createElement("h6");
@@ -467,7 +468,6 @@
   					innerExploreDiv.textContent = jsonEle[i].buildingNumber;
             var textOuterDiv = document.createElement("div");
             textOuterDiv.className = "col";
-            textOuterDiv.style="background-color:purple;";
   					imageOuterDiv.appendChild(exploreImage);
   					textOuterDiv.appendChild(textDiv);
   					textOuterDiv.appendChild(innerExploreDiv);
