@@ -107,13 +107,13 @@
   }
 @media (max-height: 400px) {
     #site-footer-area {display:none !important;}
-    .site_header .brand_area {height:62px; width:294px;}
-    .menu-button {transform:scale(0.9); margin-top:-65px;}
-    .maps-container {top:91px;}
+    .site_header .brand_area {height:62px !important;; width:294px !important;}
+    .menu-button {transform:scale(0.9);}
+    .maps-container {top:91px !important;}
 
     
-    #map-instructions{width:332px;top:11px;}
-    .map-box-header {width:193px;margin-left:50px;}
-    .map-box-text {text-align: center;}
-    #row-info-container{padding-top:30px;}
+    #map-instructions{width:332px;top:11px !important;}
+    .map-box-header {width:193px;margin-left:50px !important;}
+    .map-box-text {text-align: center !important;}
+    #row-info-container{padding-top:30px !important;}
 }
