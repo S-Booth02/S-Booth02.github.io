@@ -388,7 +388,7 @@
   				**/
   				var explore = document.getElementById("explore-more-id");
   				var exploreInfoDiv = document.createElement("div");
-  				exploreInfoDiv.className = "explore-info";
+  				exploreInfoDiv.className = "explore-info row";
   				exploreInfoDiv.id = "explore-" + [i];
   				exploreInfoDiv.style = "border-top: 1px solid #ccc;";
   				exploreInfoDiv.onclick = function(){
@@ -427,6 +427,8 @@
   					});
           }
   					console.log("start explore more");
+            var infoIconHolder = document.createElement("div");
+            infoIconHolder.style = "width:66px; background-color:#eea6a6;"
   					var infoIconDiv = document.createElement("div");
   					infoIconDiv.className = "info-icon";
   					var infoIcon = document.createElement("img");
@@ -448,9 +450,11 @@
   					}
   					console.log("end explore more");
   					infoIconDiv.appendChild(infoIcon);
-  					exploreInfoDiv.appendChild(infoIconDiv);
+            infoIconHolder.appendChild(infoIconDiv);
+  					exploreInfoDiv.appendChild(infoIconHolder);
   					var exploreImage = document.createElement("img");
   					var imageOuterDiv = document.createElement("div");
+            imageOuterDiv.style="width:147px; background-color:yellow;margin:3px;";
   					exploreImage.style = "object-fit: fill; height: 100px; width: 150px; float: left; padding-left: 14px;";
   					exploreImage.src = "../images/" + jsonEle[i].thumbnailIcon;
   					var innerExploreDiv = document.createElement("h6");
@@ -459,10 +463,14 @@
   					textDiv.className = "info-title";
   					textDiv.textContent = jsonEle[i].buildingName;
   					innerExploreDiv.textContent = jsonEle[i].buildingNumber;
+            var textOuterDiv = document.createElement("div");
+            textOuterDiv.className = "col";
+            textOuterDiv.style="background-color:purple;";
   					imageOuterDiv.appendChild(exploreImage);
-  					imageOuterDiv.appendChild(textDiv);
-  					imageOuterDiv.appendChild(innerExploreDiv);
+  					textOuterDiv.appendChild(textDiv);
+  					textOuterDiv.appendChild(innerExploreDiv);
   					exploreInfoDiv.appendChild(imageOuterDiv);
+            exploreInfoDiv.appendChild(textOuterDiv);
   					explore.insertAdjacentElement("beforeend",exploreInfoDiv);
   					console.log("start slideshow creation");
   
