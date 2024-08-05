@@ -82,6 +82,7 @@
     .map-box-header {width:193px;margin-left:50px;}
     .map-box-text {text-align: center;}
     #row-info-container{padding-top:30px;}
+      #explore-more-id {margin-bottom:102px;}
   }
   
   @media (min-width:449px) {
@@ -103,4 +104,5 @@
     .map-box-header {margin-left:0px;}
     .map-box-text {text-align: left;}
     #row-info-container{padding-top:30px;}
+      #explore-more-id {margin-bottom:122px;}
   }
