@@ -18,11 +18,12 @@
 }
 .info {
   font-size: 16px;
-  left:8px;
+  left:3px;
   position: relative;
 }
 .info-title {
   font-weight: bold;
   position: relative;
-  left: 5px;
+  left:0px;
+  margin-top:8px;
 }
