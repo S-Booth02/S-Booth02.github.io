@@ -390,7 +390,13 @@
   				var exploreInfoDiv = document.createElement("div");
   				exploreInfoDiv.className = "explore-info row";
   				exploreInfoDiv.id = "explore-" + [i];
-  				exploreInfoDiv.style = "border-top: 1px solid #ccc;";
+            if (i==0) {
+              exploreInfoDiv.style = "border-top: 1px solid #ccc;border-bottom: 1px solid #ccc;";
+            }
+            else {
+              exploreInfoDiv.style = "border-bottom: 1px solid #ccc;";
+            }
+  				
   				exploreInfoDiv.onclick = function(){
   					fetch('../buildingDatabase.json')
   					.then((response)=>response.json())
