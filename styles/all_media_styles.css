@@ -27,8 +27,8 @@
   }
   @media (min-height: 600px) {
     .footer_info { font-size: 13px;}
-    .site_footer_area { height: 118px;}
-    .footer_brand_area {width: 106px; height: 87px}
+    .site_footer_area { height: 103px;}
+    .footer_brand_area {width: 95px; height: 77px}
   }
   
   
@@ -39,7 +39,7 @@
   }
   @media (min-height: 768px) {
     .footer_info { font-size: 14px;}
-    .footer_brand_area {width: 106px; height: 87px}
+    .footer_brand_area {width: 95px; height: 77px}
     .site_footer_area { height: 110px;}
   }
   
@@ -47,6 +47,8 @@
   @media (min-height: 992px) {
     .all_slideshows {height: 600px;}
     .footer_info { font-size: 16px;}
+    .site_footer_area { height: 122px;}
+    .footer_brand_area{width:116px; height:88px;}
   }
   
   
