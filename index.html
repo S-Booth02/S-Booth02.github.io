@@ -428,10 +428,11 @@
           }
   					console.log("start explore more");
             var infoIconHolder = document.createElement("div");
-            infoIconHolder.style = "width:66px; background-color:#eea6a6;"
+            infoIconHolder.style = "width:66px; background:url("images/more_info.png");";
   					var infoIconDiv = document.createElement("div");
   					infoIconDiv.className = "info-icon";
   					var infoIcon = document.createElement("img");
+            infoIcon.style="margin-top:5px;";
   					switch (jsonEle[i].iconType){
   					  case 1:
   						infoIcon.src = "../images/aero_icon@2x.png";
@@ -455,7 +456,7 @@
   					var exploreImage = document.createElement("img");
   					var imageOuterDiv = document.createElement("div");
             imageOuterDiv.style="width:150px; background-color:yellow;margin:3px;padding:0px;";
-  					exploreImage.style = "object-fit: fill; height: 100px; width: 150px; float: left; padding-left: 14px;position:relative;";
+  					exploreImage.style = "object-fit: fill; height: 100px; width: 150px; float: left;position:relative;";
   					exploreImage.src = "../images/" + jsonEle[i].thumbnailIcon;
   					var innerExploreDiv = document.createElement("h6");
   					innerExploreDiv.className = "info";
