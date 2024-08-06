@@ -1,9 +1,9 @@
 {"buildingList":[
 	{
-		"buildingName": "Office Building", 
+		"buildingName": "Admin Complex", 
 		"buildingNumber": "Building 4221", 
 		"descriptionParagraph": "Building 4221 - description",
-		"images" : ["msfc-202100223_orig.jpg", "MSFC_4221.jpg", "MSFC_4221_sunset.jpg"],
+		"images" : ["msfc-202100223_orig.jpg", "MSFC_4221.jpg", "4203.jpg"],
 		"videos": [],
 		"googleMapsLink": "https://www.google.com/maps/search/?api=1&query=MSFC+Building+4221",
 		"thumbnailIcon": "4221.jpg",
@@ -23,8 +23,8 @@
 		"thumbnailIcon": "4205.jpg",
 		"iconType": 2,
 		"active":true,
-		"markerLeft":22, 
-		"markerTop":12,
+		"markerLeft":23, 
+		"markerTop":11,
 		"numberOfStories": 2
 	},
 	{
@@ -1362,16 +1362,17 @@
 		"markerTop":0
 	},
 	{
-		"buildingName": "Propulsion &", 
+		"buildingName": "Propulsion & Structural Test Facility", 
 		"buildingNumber": "Building 4572",
-		"descriptionParagraph": "Test json paragraph ~",
-		"images" : ["temp.jpg"], 		
+		"descriptionParagraph": "The propulsion test stand is part of a controlled access area. It was built in 1957, and was used to test the Saturn Rockets. The test stand was declared a National Historic Landmark in 1985.",
+		"images" : ["Prop-Static-Test_MSFC.jpg"], 		
 		"videos": [],
-		"thumbnailIcon": "temp.jpg",
+		"thumbnailIcon": "Prop-Static-Test_MSFC.jpg",
 		"iconType": 5,
-		"active": false, 
-		"markerLeft":0, 
-		"markerTop":0
+		"active": true, 
+		"markerLeft":96, 
+		"markerTop":55,
+		"googleMapsLink": "https://www.google.com/maps/search/?api=1&query=Saturn+I,+Saturn+I-B+Test+Stand"
 	},
 	{
 		"buildingName": "Structural Strength", 
@@ -1624,6 +1625,42 @@
 		"active": false, 
 		"markerLeft":0, 
 		"markerTop":0
+	},
+	{
+		"buildingName": "Office Building", 
+		"buildingNumber": "Building 4600",
+		"descriptionParagraph": "Test json paragraph ~",
+		"images" : ["temp.jpg"], 		
+		"videos": [],
+		"thumbnailIcon": "temp.jpg",
+		"iconType": 5,
+		"active": false, 
+		"markerLeft":0, 
+		"markerTop":0
+	},
+	{
+		"buildingName": "Office Building", 
+		"buildingNumber": "Building 4601",
+		"descriptionParagraph": "Test json paragraph ~",
+		"images" : ["temp.jpg"], 		
+		"videos": [],
+		"thumbnailIcon": "temp.jpg",
+		"iconType": 5,
+		"active": false, 
+		"markerLeft":0, 
+		"markerTop":0
+	},
+	{
+		"buildingName": "Engineering Complex", 
+		"buildingNumber": "Building 4602",
+		"descriptionParagraph": "Test json paragraph ~",
+		"images" : ["eng_complex.png"], 		
+		"videos": [],
+		"thumbnailIcon": "eng_complex.png",
+		"iconType": 5,
+		"active": true, 
+		"markerLeft":30, 
+		"markerTop":50
 	},
 	{
 		"buildingName": "Storage Building", 
@@ -2551,16 +2588,17 @@
 		"markerTop":0
 	},
 	{
-		"buildingName": "Advanced Engine Test", 
+		"buildingName": "Advanced Engine Test Stand", 
 		"buildingNumber": "Building 4670",
 		"descriptionParagraph": "Test json paragraph ~",
-		"images" : ["temp.jpg"], 	
+		"images" : ["blue-origin.jpg"], 	
 		"videos": [],
-		"thumbnailIcon": "temp.jpg",
+		"thumbnailIcon": "blue-origin.jpg",
 		"iconType": 5,
-		"active": false, 
-		"markerLeft":0, 
-		"markerTop":0
+		"active": true, 
+		"markerLeft":72, 
+		"markerTop":82,
+		"googleMapsLink": "https://www.google.com/maps/search/?api=1&query=Building+4670"
 	},
 	{
 		"buildingName": "Bunker", 

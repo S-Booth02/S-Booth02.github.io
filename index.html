@@ -130,6 +130,10 @@
                 <div class="maps-zoomed-container">
                   <div id="map-image-id" class="map-image" style="display:block;" >
                     <img id="map-image-changable" alt="Map of MSFC">
+                    <img id="admin-svg" class="hover-svg" alt="highlight for admin area">
+                    <img id="eng-svg" class="hover-svg" alt="highlight for engineering area">
+                    <img id="south-svg" class="hover-svg" alt="highlight for south test area">
+                    <img id="west-svg" class="hover-svg" alt="highlight for west test area">
                   </div>
                 </div>  
               </div>
@@ -334,6 +338,15 @@
         .then((response=>response.json()))
         .then((json) => {
           document.getElementById("map-image-changable").src = "images/" + json.mapImage;
+          document.getElementById("admin-svg").src = "images/" + json.adminArea;
+          document.getElementById("admin-svg").style = "transform-origin: 0 0; position: absolute;top:" + json.adminTop + ";left: " + json.adminLeft + "; transform:scale("+json.adminScale + ")";
+          document.getElementById("eng-svg").src = "images/" + json.engArea;
+          document.getElementById("eng-svg").style = "transform-origin: 0 0; position: absolute;top:" + json.engTop + ";left: " + json.engLeft + "; transform:scale("+json.engScale + ")";
+          document.getElementById("south-svg").src = "images/" + json.southArea;
+          document.getElementById("south-svg").style = "transform-origin: 0 0; position: absolute;top:" + json.southTop + ";left: " + json.southLeft + "; transform:scale("+json.southScale + ")";
+          document.getElementById("west-svg").src = "images/" + json.westArea;
+          document.getElementById("west-svg").style = "transform-origin: 0 0; position: absolute;top:" + json.westTop + ";left: " + json.westLeft + "; transform:scale("+json.westScale + ")";
+
           document.getElementById("brand_area").style = "background-image: url(../images/" + json.headerImage;
           document.getElementById("map-box-text").textContent = json.exploreText;
           document.getElementById("sidenav-menu").style.width = "0px";

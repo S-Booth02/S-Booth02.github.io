@@ -76,7 +76,7 @@
 }
 .maps-zoomed-container {
   position: absolute;
-  width: 578%;
+  width: 485%;
   height: 810%;
   transform: scale(0.158);
   transform-origin: 0 0;
@@ -134,4 +134,10 @@
 .map-instructions:hover {
   opacity: 1;
   background-color: #fff;
+}
+.hover-svg {
+  opacity:0;
+}
+.hover-svg:hover {
+  opacity: 1;
 }
