@@ -512,18 +512,26 @@
   					var slideshowContainer = document.createElement("div");
   					slideshowContainer.style = "background-color:#3f5c8f";
   					slideshowContainer.className = "slideshow-container"; /*change this*/
-  					/*next and prev buttons*/
-  					var nextButton = document.createElement("a");
-  					nextButton.className = "next arrow right";
-  					nextButton.onclick = function() {pushSlides(1);};
+            
+            /*variable to be used to determine if the arrows/dots should be added*/
+            var slidesTotal  = jsonEle[i].videos.length + jsonEle[i].images.length;
 
-  					var prevButton = document.createElement("a");
-  					prevButton.className = "prev arrow left";
-  					prevButton.onclick = function() {pushSlides(-1);};
-
-  					/*dot container*/
-  					var dots = document.createElement("div");
-  					dots.style = "text-align:center";
+            /*If  there  is only one slide, do not create the buttons or dots*/
+            if (slidesTotal >= 1) {
+                /*next and prev buttons*/
+      					var nextButton = document.createElement("a");
+      					nextButton.className = "next arrow right";
+      					nextButton.onclick = function() {pushSlides(1);};
+    
+      					var prevButton = document.createElement("a");
+      					prevButton.className = "prev arrow left";
+      					prevButton.onclick = function() {pushSlides(-1);};
+    
+      					/*dot container*/
+      					var dots = document.createElement("div");
+      					dots.style = "text-align:center";
+            }
+  					
   					/* get div that the slideshow will be appended to */
   					var appendSlides = document.getElementById("location-specific-description");
   					/*loops through the image array*/
@@ -563,16 +571,23 @@
               slides.appendChild(video);
               slideshowContainer.appendChild(slides);
             }
-            for (let j = 0; j < (jsonEle[i].images.length + jsonEle[i].videos.length); j++) {
-              var dotSpan = document.createElement("span");
-  						dotSpan.className = "dot dot-" + i;
-  						dotSpan.onclick = function () { currentSlide(j+1) };
-  						dots.insertAdjacentElement("beforeend",dotSpan);
+            
+            /*If  there  is only one slide, do not create the buttons or dots*/
+            if (slidesTotal >= 1) {
+                for (let j = 0; j < (jsonEle[i].images.length + jsonEle[i].videos.length); j++) {
+                  var dotSpan = document.createElement("span");
+      						dotSpan.className = "dot dot-" + i;
+      						dotSpan.onclick = function () { currentSlide(j+1) };
+      						dots.insertAdjacentElement("beforeend",dotSpan);
+                }
             }
             buildingDiv.appendChild(slideshowContainer);
-  					buildingDiv.appendChild(prevButton);
-  					buildingDiv.appendChild(nextButton);
-  					buildingDiv.appendChild(dots);
+            /*If  there  is only one slide, do not create the buttons or dots*/
+            if (slidesTotal >= 1) {
+      					buildingDiv.appendChild(prevButton);
+      					buildingDiv.appendChild(nextButton);
+      					buildingDiv.appendChild(dots);
+            }
   					appendSlides.insertAdjacentElement("afterbegin", buildingDiv);
   					console.log("created slideshow" + i);
   				}
