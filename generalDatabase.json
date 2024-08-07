@@ -9,22 +9,22 @@
     "mapImage": "render-reexport.png",
     "msfcDescription": "Since its founding in 1960, Marshall Space Flight Center has been a vital contributer of propulsion systems and hardware, flagship launch vehicles, world-class space systems, state-of-the-art engineering technologies and cutting-edge science and research projects and solutions.",
 
-    "adminArea": "admin_2.svg",
+    "adminArea": "admin_2.png",
     "adminScale": 0.15,
     "adminTop":"9.6%",
     "adminLeft":"8.0%",
 
-    "engArea": "eng_4.svg",
+    "engArea": "eng_4.png",
     "engScale": 0.15,
     "engTop":"43.6%",
     "engLeft":"22.5%",
 
-    "southArea": "south_test1.svg",
+    "southArea": "south_test1.png",
     "southScale":0.35,
     "southTop":"38.9%",
     "southLeft":"66.4%",
 
-    "westArea": "west_test1.svg",
+    "westArea": "west_test1.png",
     "westScale":0.29,
     "westTop":"61.5%",
     "westLeft":"57.8%"
