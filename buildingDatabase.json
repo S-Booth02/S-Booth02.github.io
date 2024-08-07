@@ -2,7 +2,7 @@
 	{
 		"buildingName": "Admin Complex", 
 		"buildingNumber": "Building 4221", 
-		"descriptionParagraph": "Building 4221 - description",
+		"descriptionParagraph": "Building 4221 opened April 22 of 2019 as part of an effort for more of the center to be environmentally sustainable.",
 		"images" : ["msfc-202100223_orig.jpg", "MSFC_4221.jpg", "4203.jpg"],
 		"videos": [],
 		"googleMapsLink": "https://www.google.com/maps/search/?api=1&query=MSFC+Building+4221",
@@ -19,7 +19,7 @@
 		"descriptionParagraph": "This is NASA's hub for advanced propulsion research and technology development at Marshall Space Flight Center in Huntsville, Alabama.",
 		"images" : ["4205.jpg"],
 		"videos": ["https://www.youtube.com/embed/wzGDtNROZI8?si=C9MaeKe6TEAz0kP8"],
-		"googleMapsLink": "https://www.google.com/maps/search/?api=1&query=Building+4205",
+		"googleMapsLink": "https://www.google.com/maps/search/?api=1&query=MSFC+Building+4205",
 		"thumbnailIcon": "4205.jpg",
 		"iconType": 2,
 		"active":true,
@@ -1653,7 +1653,7 @@
 	{
 		"buildingName": "Engineering Complex", 
 		"buildingNumber": "Building 4602",
-		"descriptionParagraph": "Test json paragraph ~",
+		"descriptionParagraph": "Building 4600 was the first LEED®-certified facility built by NASA. The complex is home to Marshall’s Materials and Processes Laboratory and its Spacecraft and Vehicle Systems Department.",
 		"images" : ["eng_complex.png"], 		
 		"videos": [],
 		"thumbnailIcon": "eng_complex.png",
@@ -2590,7 +2590,7 @@
 	{
 		"buildingName": "Advanced Engine Test Stand", 
 		"buildingNumber": "Building 4670",
-		"descriptionParagraph": "Test json paragraph ~",
+		"descriptionParagraph": "This test stand is part of a controlled access area. The stand was first used in 1965 for testing components of the Saturn 5 rocket. The stand was then modified several times to accomodate different testing purposes. As of 2019 the stand is in use by Blue Origin.",
 		"images" : ["blue-origin.jpg"], 	
 		"videos": [],
 		"thumbnailIcon": "blue-origin.jpg",
