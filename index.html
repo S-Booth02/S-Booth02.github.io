@@ -581,6 +581,7 @@
       						dots.insertAdjacentElement("beforeend",dotSpan);
                 }
             }
+
             console.log( "line 584: slidesTotal = " + slidesTotal);
             buildingDiv.appendChild(slideshowContainer);
             /*If  there  is only one slide, do not create the buttons or dots*/
@@ -588,6 +589,10 @@
       					buildingDiv.appendChild(prevButton);
       					buildingDiv.appendChild(nextButton);
       					buildingDiv.appendChild(dots);
+            }
+            else {
+                var breakLine = document.createElement("br");
+                buildingDiv.appendChild(breakLine); 
             }
   					appendSlides.insertAdjacentElement("afterbegin", buildingDiv);
   					console.log("created slideshow" + i);
