@@ -517,7 +517,7 @@
             var slidesTotal  = jsonEle[i].videos.length + jsonEle[i].images.length;
 
             /*If  there  is only one slide, do not create the buttons or dots*/
-            if (slidesTotal >= 1) {
+            if (slidesTotal > 1) {
                 /*next and prev buttons*/
       					var nextButton = document.createElement("a");
       					nextButton.className = "next arrow right";
@@ -573,7 +573,7 @@
             }
             
             /*If  there  is only one slide, do not create the buttons or dots*/
-            if (slidesTotal >= 1) {
+            if (slidesTotal > 1) {
                 for (let j = 0; j < (jsonEle[i].images.length + jsonEle[i].videos.length); j++) {
                   var dotSpan = document.createElement("span");
       						dotSpan.className = "dot dot-" + i;
@@ -584,7 +584,7 @@
             console.log( "line 584: slidesTotal = " + slidesTotal);
             buildingDiv.appendChild(slideshowContainer);
             /*If  there  is only one slide, do not create the buttons or dots*/
-            if (slidesTotal >= 1) {
+            if (slidesTotal > 1) {
       					buildingDiv.appendChild(prevButton);
       					buildingDiv.appendChild(nextButton);
       					buildingDiv.appendChild(dots);
