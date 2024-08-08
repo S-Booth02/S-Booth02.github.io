@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html class="js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video autio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths jPanelMenu fontawesome-i2svg-active fontawesome-i2svg-complete." lang="en">
@@ -20,7 +19,7 @@
   <link rel="stylesheet" href="styles/header_styles.css"/>
   <link rel="stylesheet" href="styles/map_styles.css"/>
   <link rel="stylesheet" href="styles/info_screen_style.css"/>
-  <link rel="icon" href="images/MSFC_Site_Icon.svg"/>
+  <link id = "site-icon" rel="icon"/>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap-utilities.css" rel="stylesheet">
@@ -29,86 +28,82 @@
 
   <script src="buildingDatabase.json" type="application.json"></script>
   <script src="generalDatabase.json" type="application.json"></script>
-  <title>MSFC Virtual Tour</title>
+  <title id="page-title"></title>
 </head>
 <body class="light_background logged_out mobile_menu" data-menu-position="closed">
   
-  <!-- header info -->
   <div class="jPanelMenu-panel" style="position: relative; transform: translated3d(0px, 0px, 0px);">
+
+    <!-- header info -->
     <div class="site_header_area drop_show navbar-nav">
       <header class="site_header">
-        <a href="https://s-booth02.github.io/" aria-label="home">
+        <a id="header-link" aria-label="home">
             <div id="brand_area" class="brand_area navbar-brand"></div>
         </a>
         <a class="visuallyhidden focusable" href="#main">Skip Navigation</a>
-        
         <div class="nav_area">
           <button id="menu-button" class="menu-button" alt="Menu Button" onclick="openNav()" type="button"></button>
         </div>
-        
       </header>
     </div>
-      <!-- this contains the go back button & overlay-->
-      <div id="overlay" class="sites-info-overlay" >
-        <!--<div class="sites-info-content" style="top: 105px ;height: 3000px;">  this element will have scrollable overflow -->
-          <div id="close_overlay"class="close-sites-info-overlay" onclick = "hidePopup()">
-            <span id="stop-player" style="font-size:0.7em;padding: 4px; padding-right: 7px; padding-left: 7px;  background-color: #0b3d91; border-radius:20px; color:#fff!important">
-              GO BACK
-              <!-- this is where there should be an svg with the arrow symbol, since the others didnt work am leaving this blank till i get another one-->
-            </span>
-          </div>          
-          <div class="sites_info_data">
-            <div id= "location-specific-description"><!--this is the start of location-->
-              <!-- this is designed to be empty so the json functions can be propogated here -->
-              <!-- Text and Descriptions -->
-               <div>
-                <img id="google-pin" src="images/pin_google.svg" alt="" title="Link to Google Maps" style="float:left; height:60px; width: 30px; left: 15px; position:relative; " role = "button">
-                <div id="description-title" style="padding-left:60px; padding-right:20px;"></div>
-                <div id="description-paragraph" style="padding-left:60px; padding-right:20px;"></div>
-               </div>
 
-              <!-- end of text and descriptions -->
-               <br>
-              <hr>
-            </div><!--end of location_specific_description-->
-            
-            <!-- start of exploration section as a whole -->
-            <div id="exploration-div" style="position:relative;"> 
-              <div class="explore-more" style="padding-left:15px">EXPLORE MORE!</div>
-              <!-- start of table - the div is designed to be empty, it will be filled in dynamically using the json table -->
-              <div id="explore-more-id" class="explore-table container-fluid"></div>
-            </div> <!-- end of exploration section as a whole -->
-          </div> <!-- end of sites_info_data -->
-      </div> <!-- end of overlay -->
+    <!-- this contains the go back button & overlay - shows when a blinking marker is clicked -->
+    <div id="overlay" class="sites-info-overlay" >
+      <div id="close_overlay"class="close-sites-info-overlay" onclick = "hidePopup()">
+        <span id="stop-player" style="font-size:0.7em;padding: 4px; padding-right: 7px; padding-left: 7px;  background-color: #0b3d91; border-radius:20px; color:#fff!important">
+          GO BACK
+          <!-- this is where there should be an svg with the arrow symbol, since the others didnt work am leaving this blank till i get another one-->
+        </span>
+      </div>          
+      <div class="sites_info_data">
+        <div id= "location-specific-description">
 
+          <!-- this is designed to be empty so the json functions can be propogated here -->
+
+          <div>
+            <img id="google-pin" src="images/pin_google.svg" alt="" title="Link to Google Maps" style="float:left; height:60px; width: 30px; left: 15px; position:relative; " role = "button">
+            <div id="description-title" style="padding-left:60px; padding-right:20px;"></div>
+            <div id="description-paragraph" style="padding-left:60px; padding-right:20px;"></div>
+          </div>
+          <br>
+          <hr>
+        </div>
+        <div id="exploration-div" style="position:relative;"> 
+          <div class="explore-more" style="padding-left:15px">EXPLORE MORE!</div>
+
+          <!-- start of table - the div is designed to be empty, it will be filled in dynamically using the json table -->
+
+          <div id="explore-more-id" class="explore-table container-fluid"></div>
+        </div>
+      </div>
+    </div>
+      <!-- info screen - displayed on info click from menu -->
       <div id="msfc-info-screen" style="display: none;">
         <div id="close-msfc-info" class="close-sites-info-overlay" onclick="msfc_info_quit()">
           <span id="stop-player" style="font-size:0.7em;padding: 4px; padding-right: 7px; padding-left: 7px;  background-color: #0b3d91; border-radius:20px; color:#fff!important">
             GO BACK
           </span>
         </div>
-        
         <div id="row-info-container"class="row justify-content-center" style="padding-left:60px; padding-right:60px;">
           <!--text section-->
           <div class="text-info-screen col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-8 rounded" style="background-color:white;height:auto;overflow-y: auto;margin:0px !important;padding:0  !important;">
             <div class="info-header" style="font-weight:700; line-height:1.1; font-size:30px;">Marshall Space Flight Center</div>
             <div>
-              <p id="info-heading"  style="font-weight:700;font-size:20px; line-height:1.25;padding: 10px;">Since its beginning in 1960, Marshall has provided the agency with mission-critical design, development and integration of the launch and space systems required for space operations, exploration and scientific missions.</p>
-              <p id="info-paragraph" style="font-size:16px; line-height:1.6;padding: 10px;">Marshall’s legacy in rocket engineering includes providing the Saturn rockets that powered Americans to the moon and the Lunar Roving Vehicle that aided exploration of the moon; managing the development of Skylab, America’s first space station; developing space shuttle propulsion systems and experiments, including Spacelab; building the Hubble Space Telescope and the Chandra X-ray Observatory; and building the International Space Station’s laboratory modules and experiment facilities and operating station science experiments.</p>
+              <!-- both info heading and paragraph are located in generalDatabase.json - will be filled on page start -->
+              <p id="info-heading"  style="font-weight:700;font-size:20px; line-height:1.25;padding: 10px;"></p>
+              <p id="info-paragraph" style="font-size:16px; line-height:1.6;padding: 10px;"></p>
             </div>
           </div>
         </div>
         <div class="row justify-content-center" style="padding-left:60px; padding-top:5px; padding-right:60px;padding-bottom: 125px;">
-          <!--image1-->
+          <!-- image1 src located in generalDatabase.json - will be filled on page start -->
           <div class="col-sm-auto col-md-12 col-lg-6 col-xxl-4"style="padding:5px;">
-            <img src="images/historic_rocket.jpg" class="shadow-1-strong mx-auto flex-grow-1 rounded w-100" style="object-fit: cover; overflow:hidden;height:50vh;">
+            <img id="info-image-1" class="shadow-1-strong mx-auto flex-grow-1 rounded w-100" style="object-fit: cover; overflow:hidden;height:50vh;">
           </div>
-          <!--image2-->
+          <!-- image2 src located in generalDatabase.json - will be filled on page start -->
           <div class="col-sm-auto h-75 col-md-12 col-lg-6 col-xxl-4"style="padding:5px;"> 
-            <img src="images/msfc_070919_sls_lh2_sta_in_stand_5.jpg" class="shadow-1-strong rounded mx-auto flex-grow-1 w-100" style="object-fit: cover; height:50vh;vertical-align:bottom;">
+            <img id="info-image-2" class="shadow-1-strong rounded mx-auto flex-grow-1 w-100" style="object-fit: cover; height:50vh;vertical-align:bottom;">
           </div>
-              
-
         </div>
       </div>
       <!--end of msfc info screen-->
@@ -130,6 +125,7 @@
                 <div class="maps-zoomed-container">
                   <div id="map-image-id" class="map-image" style="display:block;" >
                     <img id="map-image-changable" alt="Map of MSFC">
+                    <!-- these svgs should be temporary, will hopefully be incorporated into generalDatabase.json -->
                     <img id="admin-svg" class="hover-svg" alt="highlight for admin area">
                     <img id="eng-svg" class="hover-svg" alt="highlight for engineering area">
                     <img id="south-svg" class="hover-svg" alt="highlight for south test area">
@@ -142,8 +138,8 @@
         </div>
       </div>
       <!-- end of image section -->
-
     </div>
+
     <!-- footer -->
     <div id="site-footer-area" class ="site_footer_area" style="border-top: 1px solid #aaa;">
       <footer  class="site_footer">
@@ -152,8 +148,8 @@
         </a>
         <div class="footer_info">
           <div class="nasa-center">NASA Marshall Space Flight Center</div>
-          <div class="nasa-responsible">Responsible NASA Official:</div>
-          <div class="nasa-curator">Page Editor: Simone Booth</div>
+          <div id = "nasa-responsible-id" class="nasa-responsible"></div>
+          <div id ="nasa-curator-id" class="nasa-curator"></div>
           <div class="footer-legal">
             <div class="nasa-privacy-accesiblity">
               <a href="https://www.nasa.gov/nasa-web-privacy-policy-and-important-notices/" aria-label="Privacy Policy">Privacy Policy</a>
@@ -185,7 +181,8 @@
           </a>
         </li>
         <li class="nav-item feedback-link">
-          <a href="mailto:simone.booth1002@gmail.com?subject=Virtual Tour Feedback">
+          <!-- href for mail to will be assigned using email in generalDatabase.json -->
+          <a id="email-feedback">
             <span>Feedback</span>
           </a>
         </li>
@@ -193,9 +190,8 @@
     </div>
   
   </div>
-  <!-- Script area - has function definitions and description below -->
-  <!-- info_click - this function will toggle the visibility of the  instructions and close button if either the close button or the info button is clicked -->
-
+  <!-- Script area -->
+  
   <script>
   /*this function will toggle the visibility of the  instructions and close button if either the close button or the info button is clicked*/
   function info_click() {
@@ -213,18 +209,16 @@
   /*this function will change the width of the sidenav from 0 to 300 on menu click*/
   function openNav() {
     document.getElementById("sidenav-menu").style.width = "300px";
-    /*document.getElementById("off-menu-click").style.display="block";*/
   }
 
   /*this function will change the width of the sidenav from 300 to 0 on exit menu click*/
   function closeNav() {
     document.getElementById("sidenav-menu").style.width = "0px";
-    /*document.getElementById("off-menu-click").style.display="none";*/
   }
+
   /*this function toggles the visibility of any items that can be included in the overlay
     there is one line for each of the image slide shows to account for any of them being open*/
   function hidePopup() {
-    console.log("start hide pop-up");
     document.getElementById("site-footer-area").style.display = "block";
     document.getElementById("overlay").style.display = "none";
     document.getElementById("map-wrapper").style.display = "block";
@@ -238,9 +232,9 @@
       color[c].style.backgroundColor = "#dcdcdc";
     }
     window.scrollTo(0,0);
-    console.log("pop-up hidden");
   }
-    /*this function shows the explore more section when clicked in the menu*/
+
+  /*this function shows the explore more section when clicked in the menu*/
   function exploreMore() {
     document.getElementById("overlay").style.display = "block";
     document.getElementById("map-wrapper").style.display = "none";
@@ -254,6 +248,8 @@
     window.scrollTo(0,0);
     closeNav();
   }
+
+  /*this function shows the map when clicked in the menu*/
   function map() {
      document.getElementById("overlay").style.display = "none";
     document.getElementById("map-wrapper").style.display = "block";
@@ -262,6 +258,8 @@
     window.scrollTo(0,0);
     closeNav();
   }
+
+  /*this function shows the information overlay when clicked in the menu*/
   function msfc_info() {
     window.scrollTo(0,0);
     document.getElementById("msfc-info-screen").style.display = "block";
@@ -270,6 +268,8 @@
     document.getElementById("site-footer-area").style.display = "none";
     closeNav();
   }
+
+  /*this function exits the information overlay and returns the user to the map screen*/
   function msfc_info_quit() {
     document.getElementById("msfc-info-screen").style.display = "none";
     document.getElementById("map-wrapper").style.display = "block";
@@ -277,13 +277,11 @@
     window.scrollTo(0,0);
     hidePopup();
   }
-
   </script>
+
   <!-- slideshow script-->
   <script>
     let slideIndex =1;
-    /*commenting out to see if this fixes error*/
-    /*showSlides(slideIndex);*/
 
     function pushSlides(n) {
       showSlides(slideIndex +=n);
@@ -316,11 +314,9 @@
        closeNav();
       }
     })
-
   </script>
 
-
-<!--current working area -->
+<!-- database load script -->
   <script>
     /**this will be called on load to get and filter the json data
      * it will call the createEle function, which is designed to populate the map with clickable dots based on the information in the database
@@ -329,38 +325,48 @@
       fetch('../buildingDatabase.json')
         .then((response)=>response.json())
         .then((json) => {
-          console.log(json);
           var filtered = json.buildingList.filter(a => a.active == true);
-          
           createEle(filtered);
         })
       fetch('../generalDatabase.json')
         .then((response=>response.json()))
         .then((json) => {
-          document.getElementById("map-image-changable").src = "images/" + json.mapImage;
-          document.getElementById("admin-svg").src = "images/" + json.adminArea;
+          /* loads any non-building information that should be changed in GeneralDatabase.json as needed */
+          document.getElementById("map-image-changable").src = json.mapImage;
+          document.getElementById("admin-svg").src = json.adminArea;
           document.getElementById("admin-svg").style = "transform-origin: 0 0; position: absolute;top:" + json.adminTop + ";left: " + json.adminLeft + "; transform:scale("+json.adminScale + ")";
-          document.getElementById("eng-svg").src = "images/" + json.engArea;
+          document.getElementById("eng-svg").src = json.engArea;
           document.getElementById("eng-svg").style = "transform-origin: 0 0; position: absolute;top:" + json.engTop + ";left: " + json.engLeft + "; transform:scale("+json.engScale + ")";
-          document.getElementById("south-svg").src = "images/" + json.southArea;
+          document.getElementById("south-svg").src = json.southArea;
           document.getElementById("south-svg").style = "transform-origin: 0 0; position: absolute;top:" + json.southTop + ";left: " + json.southLeft + "; transform:scale("+json.southScale + ")";
-          document.getElementById("west-svg").src = "images/" + json.westArea;
+          document.getElementById("west-svg").src = json.westArea;
           document.getElementById("west-svg").style = "transform-origin: 0 0; position: absolute;top:" + json.westTop + ";left: " + json.westLeft + "; transform:scale("+json.westScale + ")";
 
-          document.getElementById("brand_area").style = "background-image: url(../images/" + json.headerImage;
+          document.getElementById("nasa-responsible-id").textContent = "Responsible NASA Official: " + json.footerText.nasaOfficial;
+          document.getElementById("nasa-curator-id").textContent = "Page Editor: " + json.footerText.pageEditor;
+          document.getElementById("header-link").href = json.homeLink;
+          document.getElementById("site-icon").href = json.siteIcon;
+          document.getElementById("page-title").textContent = json.pageTitle;
+          document.getElementById("info-heading").textContent = json.infoPageText.header;
+          document.getElementById("info-paragraph").textContent = json.infoPageText.paragraph;
+          document.getElementById("info-image-1").src = json.infoPageText.image1;
+          document.getElementById("info-image-2").src = json.infoPageText.image2;
+          document.getElementById("email-feedback").href = "mailto:" + json.feedbackEmail + "?subject=Virtual Tour Feedback";
+
+          document.getElementById("brand_area").style = "background-image: url(../" + json.headerImage + ")";
           document.getElementById("map-box-text").textContent = json.exploreText;
           document.getElementById("sidenav-menu").style.width = "0px";
+          
         })
     });
     /**
-     * for every element within the JSON file that is currently active
+     * for every element within the database JSON file that is currently active
      * this function will create a clickable dot using the information within the file
     **/
     function createEle(jsonEle){
   		console.log("start of createEle function");
       console.log("length: "+ jsonEle.length);
           for (let i = 0; i < jsonEle.length; i++) {
-  			console.log("start of element"+ i);
               var newDiv = document.createElement("div");
               newDiv.id = "".concat("group-marker-", i);
               newDiv.classList.add("marker-all", "marker-group");
@@ -386,7 +392,6 @@
                   slideSet = "slides-" + i;
                   dotSet = "dot-" + i;
                   showSlides(slideIndex);
-                  console.log("content loaded - line 35");
   				      });
               }
   				var newA =  document.createElement("a");
@@ -397,7 +402,6 @@
   				newDiv.appendChild(newSpan);
   				var space = document.getElementById("map-image-id");
   				space.insertAdjacentElement("afterend", newDiv);
-  				console.log("line 386");
   		
   				/**create elements for the explore more section
   				 * get the div that will be used to insert items 
@@ -445,10 +449,8 @@
   						slideSet = "slides-" + i;
   						dotSet = "dot-" + i;
   						showSlides(slideIndex);
-  						console.log("content loaded - line 70");
   					});
           }
-  					console.log("start explore more");
             var infoIconHolder = document.createElement("div");
             infoIconHolder.style = "width:66px;";
             infoIconHolder.style.backgroundImage =  "url('images/more_info.png')";
@@ -477,7 +479,6 @@
   					  default:
   						infoIcon.src = "../images/temp.jpg";
   					}
-  					console.log("end explore more");
   					infoIconDiv.appendChild(infoIcon);
             infoIconHolder.appendChild(infoIconDiv);
   					exploreInfoDiv.appendChild(infoIconHolder);
@@ -485,7 +486,7 @@
   					var imageOuterDiv = document.createElement("div");
             imageOuterDiv.style="width:150px;margin:3px;padding:0px;";
   					exploreImage.style = "object-fit: fill; height: 100px; width: 150px; float: left;position:relative;";
-  					exploreImage.src = "../images/" + jsonEle[i].thumbnailIcon;
+  					exploreImage.src = jsonEle[i].thumbnailIcon;
   					var innerExploreDiv = document.createElement("p");
   					innerExploreDiv.className = "info";
   					var textDiv = document.createElement("h6");
@@ -500,7 +501,6 @@
   					exploreInfoDiv.appendChild(imageOuterDiv);
             exploreInfoDiv.appendChild(textOuterDiv);
   					explore.insertAdjacentElement("beforeend",exploreInfoDiv);
-  					console.log("start slideshow creation");
   
   				  /*create elements for the slideshow based on the JSON file*/
   					var buildingDiv = document.createElement("div");
@@ -546,7 +546,7 @@
               }
   						var image = document.createElement("img");
   						image.className = "all_slideshows vh-75";
-  						image.src = "images/" + jsonEle[i].images[j];  	
+  						image.src = jsonEle[i].images[j];  	
               image.style = "max-height: 600px; !important"					  
   						slides.appendChild(image);
   						slideshowContainer.appendChild(slides);
@@ -581,8 +581,6 @@
       						dots.insertAdjacentElement("beforeend",dotSpan);
                 }
             }
-
-            console.log( "line 584: slidesTotal = " + slidesTotal);
             buildingDiv.appendChild(slideshowContainer);
             /*If  there  is only one slide, do not create the buttons or dots*/
             if (slidesTotal > 1) {
@@ -595,13 +593,8 @@
                 buildingDiv.appendChild(breakLine); 
             }
   					appendSlides.insertAdjacentElement("afterbegin", buildingDiv);
-  					console.log("created slideshow" + i);
   				}
-            console.log("line 506");
-  			
-  			console.log("New Elements Created")
     }
-    
   </script>
 </body>
 </html>
