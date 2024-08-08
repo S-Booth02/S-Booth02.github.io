@@ -1,5 +1,5 @@
 {
-    "headerImage": "MSFC_Header.svg",
+    "headerImage": "images/MSFC_Header.svg",
     "footerText": {"nasaOfficial": "", "pageEditor": "Simone Booth"},
     "exploreHeader": "explore.svg",
     "exploreText": "Click on the dots to show more information. Each item has a clickable map icon in their information section, which will lead to google maps.",
